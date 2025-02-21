@@ -1,0 +1,3997 @@
+{
+    "love.directorydropped": {
+        "prefix": "love.directorydropped",
+        "body": "love.directorydropped(${1:path (string)})",
+        "description": "当一个目录被拖拽并放置在窗口上时触发的回调函数。"
+    },
+    "love.draw": {
+        "prefix": "love.draw",
+        "body": "love.draw()",
+        "description": "用于每一帧在屏幕上绘制内容的回调函数。"
+    },
+    "love.errhand": {
+        "prefix": "love.errhand",
+        "body": "love.errhand(${1:msg (string)})",
+        "description": "错误处理程序，用于显示错误信息。"
+    },
+    "love.filedropped": {
+        "prefix": "love.filedropped",
+        "body": "love.filedropped(${1:file (File)})",
+        "description": "当文件被拖拽并放置在窗口上时触发的回调函数。"
+    },
+    "love.focus": {
+        "prefix": "love.focus",
+        "body": "love.focus(${1:focus (boolean)})",
+        "description": "当窗口获得或失去焦点时触发的回调函数。"
+    },
+    "love.gamepadaxis": {
+        "prefix": "love.gamepadaxis",
+        "body": "love.gamepadaxis(${1:joystick (Joystick)}, ${2:axis (GamepadAxis)})",
+        "description": "当一个手柄的虚拟游戏杆轴被移动时被调用。"
+    },
+    "love.gamepadpressed": {
+        "prefix": "love.gamepadpressed",
+        "body": "love.gamepadpressed(${1:joystick (Joystick)}, ${2:button (GamepadButton)})",
+        "description": "当一个手柄的虚拟游戏手柄按钮被按下时被调用。"
+    },
+    "love.gamepadreleased": {
+        "prefix": "love.gamepadreleased",
+        "body": "love.gamepadreleased(${1:joystick (Joystick)}, ${2:button (GamepadButton)})",
+        "description": "当一个游戏手柄的虚拟游戏手柄按钮被释放时被调用。"
+    },
+    "love.joystickadded": {
+        "prefix": "love.joystickadded",
+        "body": "love.joystickadded(${1:joystick (Joystick)})",
+        "description": "当游戏手柄连接时被调用。这个回调在游戏启动时，对于已经连接的游戏手柄也会在love.load之后被触发。"
+    },
+    "love.joystickaxis": {
+        "prefix": "love.joystickaxis",
+        "body": "love.joystickaxis(${1:joystick (Joystick)}, ${2:axis (number)}, ${3:value (number)})",
+        "description": "当游戏手柄的轴移动时被调用。"
+    },
+    "love.joystickhat": {
+        "prefix": "love.joystickhat",
+        "body": "love.joystickhat(${1:joystick (Joystick)}, ${2:hat (number)}, ${3:direction (JoystickHat)})",
+        "description": "当操纵杆的方向帽发生变化时被调用。"
+    },
+    "love.joystickpressed": {
+        "prefix": "love.joystickpressed",
+        "body": "love.joystickpressed(${1:joystick (number)}, ${2:button (number)})",
+        "description": "当游戏手柄的按钮被按下时调用。"
+    },
+    "love.joystickreleased": {
+        "prefix": "love.joystickreleased",
+        "body": "love.joystickreleased(${1:joystick (number)}, ${2:button (number)})",
+        "description": "当游戏手柄按钮被释放时调用。"
+    },
+    "love.joystickremoved": {
+        "prefix": "love.joystickremoved",
+        "body": "love.joystickremoved(${1:joystick (Joystick)})",
+        "description": "当一个游戏手柄断开连接时被调用。"
+    },
+    "love.keypressed": {
+        "prefix": "love.keypressed",
+        "body": "love.keypressed(${1:key (KeyConstant)}, ${2:scancode (Scancode)}, ${3:isrepeat (boolean)})",
+        "description": "当按键被按下时触发的回调函数。"
+    },
+    "love.keyreleased": {
+        "prefix": "love.keyreleased",
+        "body": "love.keyreleased(${1:key (KeyConstant)})",
+        "description": "当键盘按键被释放时触发的回调函数。"
+    },
+    "love.load": {
+        "prefix": "love.load",
+        "body": "love.load(${1:arg (table)})",
+        "description": "这个函数在游戏开始时恰好被调用一次。"
+    },
+    "love.lowmemory": {
+        "prefix": "love.lowmemory",
+        "body": "love.lowmemory()",
+        "description": "当移动设备系统内存不足时触发的回调函数。移动操作系统可能会在游戏使用过多内存时强制关闭游戏，因此在这个事件触发时，如果可能的话，应该移除任何非关键资源（通过将所有引用资源的变量设置为nil，并调用collectgarbage()），特别是声音和图像通常占用最多的内存。"
+    },
+    "love.mousefocus": {
+        "prefix": "love.mousefocus",
+        "body": "love.mousefocus(${1:focus (boolean)})",
+        "description": "当窗口获得或失去鼠标焦点时触发的回调函数。"
+    },
+    "love.mousemoved": {
+        "prefix": "love.mousemoved",
+        "body": "love.mousemoved(${1:x (number)}, ${2:y (number)}, ${3:dx (number)}, ${4:dy (number)})",
+        "description": "当鼠标移动时触发的回调函数。"
+    },
+    "love.mousepressed": {
+        "prefix": "love.mousepressed",
+        "body": "love.mousepressed(${1:x (number)}, ${2:y (number)}, ${3:button (number)}, ${4:isTouch (boolean)})",
+        "description": "当鼠标按钮被按下时触发的回调函数。"
+    },
+    "love.mousereleased": {
+        "prefix": "love.mousereleased",
+        "body": "love.mousereleased(${1:x (number)}, ${2:y (number)}, ${3:button (number)}, ${4:isTouch (boolean)})",
+        "description": "当鼠标按钮被释放时触发的回调函数。"
+    },
+    "love.quit": {
+        "prefix": "love.quit",
+        "body": "love.quit()",
+        "description": "当游戏关闭时触发的回调函数。"
+    },
+    "love.resize": {
+        "prefix": "love.resize",
+        "body": "love.resize(${1:w (number)}, ${2:h (number)})",
+        "description": "当窗口被调整大小时会被调用，例如用户调整窗口大小，或者当`love.window.setMode`被调用时，如果不支持的宽度或高度被设置为全屏，窗口会选择最接近的合适大小。对`love.window.setMode`的调用只会在调用后窗口的宽度或高度与请求的宽度和高度不匹配时触发此事件。这可能发生在请求的全屏模式与任何支持的模式都不匹配时，或者如果全屏类型是'desktop'且请求的宽度或高度与桌面分辨率不匹配时。"
+    },
+    "love.run": {
+        "prefix": "love.run",
+        "body": "love.run()",
+        "description": "主函数，包含主循环。如果省略，将使用一个合理的默认值。"
+    },
+    "love.textedited": {
+        "prefix": "love.textedited",
+        "body": "love.textedited(${1:text (string)}, ${2:start (number)}, ${3:length (number)})",
+        "description": "当输入法编辑器（IME）的候选文本发生变化时被调用。候选文本并不是用户最终会选择的文本。使用love.textinput获取最终文本。"
+    },
+    "love.textinput": {
+        "prefix": "love.textinput",
+        "body": "love.textinput(${1:text (string)})",
+        "description": "当用户输入文本时被调用。例如，如果在美式键盘布局上按下shift-2，将生成文本“@”。"
+    },
+    "love.threaderror": {
+        "prefix": "love.threaderror",
+        "body": "love.threaderror(${1:thread (Thread)}, ${2:errorstr (string)})",
+        "description": "当线程遇到错误时触发的回调函数。"
+    },
+    "love.touchmoved": {
+        "prefix": "love.touchmoved",
+        "body": "love.touchmoved(${1:id (light userdata)}, ${2:x (number)}, ${3:y (number)}, ${4:dx (number)}, ${5:dy (number)}, ${6:pressure (number)})",
+        "description": "当触摸屏内的触摸按压移动时触发的回调函数。"
+    },
+    "love.touchpressed": {
+        "prefix": "love.touchpressed",
+        "body": "love.touchpressed(${1:id (light userdata)}, ${2:x (number)}, ${3:y (number)}, ${4:dx (number)}, ${5:dy (number)}, ${6:pressure (number)})",
+        "description": "当触摸屏被触摸时触发的回调函数。"
+    },
+    "love.touchreleased": {
+        "prefix": "love.touchreleased",
+        "body": "love.touchreleased(${1:id (light userdata)}, ${2:x (number)}, ${3:y (number)}, ${4:dx (number)}, ${5:dy (number)}, ${6:pressure (number)})",
+        "description": "当触摸屏停止被触摸时触发的回调函数。"
+    },
+    "love.update": {
+        "prefix": "love.update",
+        "body": "love.update(${1:dt (number)})",
+        "description": "当按键被按下时触发的回调函数。"
+    },
+    "love.visible": {
+        "prefix": "love.visible",
+        "body": "love.visible(${1:visible (boolean)})",
+        "description": "当窗口被用户最小化/隐藏或取消最小化时触发的回调函数。"
+    },
+    "love.wheelmoved": {
+        "prefix": "love.wheelmoved",
+        "body": "love.wheelmoved(${1:x (number)}, ${2:y (number)})",
+        "description": "当鼠标滚轮移动时触发的回调函数。"
+    },
+    "Source:clone": {
+        "prefix": "Source:clone",
+        "body": "Source:clone()",
+        "description": "创建一个处于停止状态的源的相同副本。静态源如果使用Source:clone来创建，而不是love.audio.newSource，将使用更少的内存，并且创建时间会更短，因此当制作多个播放相同声音的源时，应该优先使用这种方法。克隆的源继承了原始源的所有可设置状态，但是它们被初始化为停止状态。"
+    },
+    "Source:getAttenuationDistances": {
+        "prefix": "Source:getAttenuationDistances",
+        "body": "Source:getAttenuationDistances()",
+        "description": "返回声源的引用和最大距离。"
+    },
+    "Source:getChannels": {
+        "prefix": "Source:getChannels",
+        "body": "Source:getChannels()",
+        "description": "获取源（Source）中的通道数。只有单通道（单声道）的源（Source）可以使用方向性和位置性效果。"
+    },
+    "Source:getCone": {
+        "prefix": "Source:getCone",
+        "body": "Source:getCone()",
+        "description": "获取 Source 的方向性音量锥体。与 Source:setDirection 一起，锥体角度允许根据其方向改变 Source 的音量。"
+    },
+    "Source:getDirection": {
+        "prefix": "Source:getDirection",
+        "body": "Source:getDirection()",
+        "description": "获取源的方向。"
+    },
+    "Source:getDuration": {
+        "prefix": "Source:getDuration",
+        "body": "Source:getDuration(${1:unit (TimeUnit)})",
+        "description": "获取源的持续时间。对于流式源，它可能并不总是精确到样本，如果无法确定持续时间，则可能返回-1。"
+    },
+    "Source:getPitch": {
+        "prefix": "Source:getPitch",
+        "body": "Source:getPitch()",
+        "description": "获取当前音频源的音高。"
+    },
+    "Source:getPosition": {
+        "prefix": "Source:getPosition",
+        "body": "Source:getPosition()",
+        "description": "获取源的位置。"
+    },
+    "Source:getRolloff": {
+        "prefix": "Source:getRolloff",
+        "body": "Source:getRolloff()",
+        "description": "返回声源的滚降因子。"
+    },
+    "Source:getType": {
+        "prefix": "Source:getType",
+        "body": "Source:getType()",
+        "description": "获取源（Source）的类型（静态或流）。"
+    },
+    "Source:getVelocity": {
+        "prefix": "Source:getVelocity",
+        "body": "Source:getVelocity()",
+        "description": "获取源的速率。"
+    },
+    "Source:getVolume": {
+        "prefix": "Source:getVolume",
+        "body": "Source:getVolume()",
+        "description": "获取当前音频源的音量。"
+    },
+    "Source:getVolumeLimits": {
+        "prefix": "Source:getVolumeLimits",
+        "body": "Source:getVolumeLimits()",
+        "description": "返回音频源的音量限制。"
+    },
+    "Source:isLooping": {
+        "prefix": "Source:isLooping",
+        "body": "Source:isLooping()",
+        "description": "返回音频源是否会循环播放。"
+    },
+    "Source:isPaused": {
+        "prefix": "Source:isPaused",
+        "body": "Source:isPaused()",
+        "description": "返回源是否已暂停。"
+    },
+    "Source:isPlaying": {
+        "prefix": "Source:isPlaying",
+        "body": "Source:isPlaying()",
+        "description": "返回源（Source）是否正在播放。"
+    },
+    "Source:isStopped": {
+        "prefix": "Source:isStopped",
+        "body": "Source:isStopped()",
+        "description": "返回源是否已停止。"
+    },
+    "Source:pause": {
+        "prefix": "Source:pause",
+        "body": "Source:pause()",
+        "description": "暂停 Source。"
+    },
+    "Source:play": {
+        "prefix": "Source:play",
+        "body": "Source:play()",
+        "description": "开始播放源文件。"
+    },
+    "Source:resume": {
+        "prefix": "Source:resume",
+        "body": "Source:resume()",
+        "description": "恢复一个已暂停的音频源。"
+    },
+    "Source:rewind": {
+        "prefix": "Source:rewind",
+        "body": "Source:rewind()",
+        "description": "倒带一个音频源。"
+    },
+    "Source:seek": {
+        "prefix": "Source:seek",
+        "body": "Source:seek(${1:position (number)}, ${2:unit (TimeUnit)})",
+        "description": "设置源的播放位置。"
+    },
+    "Source:setDirection": {
+        "prefix": "Source:setDirection",
+        "body": "Source:setDirection(${1:x (number)}, ${2:y (number)}, ${3:z (number)})",
+        "description": "设置源的方向向量。零向量会使源变为非定向的。"
+    },
+    "Source:setAttenuationDistances": {
+        "prefix": "Source:setAttenuationDistances",
+        "body": "Source:setAttenuationDistances(${1:ref (number)}, ${2:max (number)})",
+        "description": "设置声源的参考和最大距离。"
+    },
+    "Source:setCone": {
+        "prefix": "Source:setCone",
+        "body": "Source:setCone(${1:innerAngle (number)}, ${2:outerAngle (number)}, ${3:outerVolume (number)})",
+        "description": "设置源的方向性音量锥。与Source:setDirection一起，音量锥角度允许根据源的方向变化音量。"
+    },
+    "Source:setLooping": {
+        "prefix": "Source:setLooping",
+        "body": "Source:setLooping(${1:loop (boolean)})",
+        "description": "设置音频源是否应该循环播放。"
+    },
+    "Source:setPitch": {
+        "prefix": "Source:setPitch",
+        "body": "Source:setPitch(${1:pitch (number)})",
+        "description": "设置声音源的音高。"
+    },
+    "Source:setPosition": {
+        "prefix": "Source:setPosition",
+        "body": "Source:setPosition(${1:x (number)}, ${2:y (number)}, ${3:z (number)})",
+        "description": "设置源的位置。"
+    },
+    "Source:setRolloff": {
+        "prefix": "Source:setRolloff",
+        "body": "Source:setRolloff(${1:rolloff (number)})",
+        "description": "设置衰减因子，该因子影响所使用的距离衰减的强度。更多详细信息和详细公式可以在OpenAL 1.1规范的“3.4. 按距离衰减”章节中找到。"
+    },
+    "Source:setVelocity": {
+        "prefix": "Source:setVelocity",
+        "body": "Source:setVelocity(${1:x (number)}, ${2:y (number)}, ${3:z (number)})",
+        "description": "设置声源的速度。这不改变声源的位置，但用于计算多普勒效应。"
+    },
+    "Source:setVolume": {
+        "prefix": "Source:setVolume",
+        "body": "Source:setVolume(${1:volume (number)})",
+        "description": "设置 Source 的音量。"
+    },
+    "Source:setVolumeLimits": {
+        "prefix": "Source:setVolumeLimits",
+        "body": "Source:setVolumeLimits(${1:min (number)}, ${2:max (number)})",
+        "description": "设置音频源的音量限制。限制值必须是0到1之间的数字。"
+    },
+    "Source:stop": {
+        "prefix": "Source:stop",
+        "body": "Source:stop()",
+        "description": "停止一个音频源。"
+    },
+    "Source:tell": {
+        "prefix": "Source:tell",
+        "body": "Source:tell(${1:unit (TimeUnit)})",
+        "description": "获取当前正在播放的音频源的位置。"
+    },
+    "love.audio.getDistanceModel": {
+        "prefix": "love.audio.getDistanceModel",
+        "body": "love.audio.getDistanceModel()",
+        "description": "返回距离衰减模型。"
+    },
+    "love.audio.getDopplerScale": {
+        "prefix": "love.audio.getDopplerScale",
+        "body": "love.audio.getDopplerScale()",
+        "description": "获取当前用于基于速度的多普勒效应的全局比例因子。"
+    },
+    "love.audio.getSourceCount": {
+        "prefix": "love.audio.getSourceCount",
+        "body": "love.audio.getSourceCount()",
+        "description": "返回当前正在播放或暂停的音频源的数量。"
+    },
+    "love.audio.getOrientation": {
+        "prefix": "love.audio.getOrientation",
+        "body": "love.audio.getOrientation()",
+        "description": "返回监听器的方向。"
+    },
+    "love.audio.getPosition": {
+        "prefix": "love.audio.getPosition",
+        "body": "love.audio.getPosition()",
+        "description": "返回监听器的位置。"
+    },
+    "love.audio.getVelocity": {
+        "prefix": "love.audio.getVelocity",
+        "body": "love.audio.getVelocity()",
+        "description": "返回监听器的速度。"
+    },
+    "love.audio.getVolume": {
+        "prefix": "love.audio.getVolume",
+        "body": "love.audio.getVolume()",
+        "description": "返回主音量。"
+    },
+    "love.audio.newSource": {
+        "prefix": "love.audio.newSource",
+        "body": "love.audio.newSource(${1:filename (string)}, ${2:type (SourceType)})",
+        "description": "从文件或SoundData创建一个新的源。从SoundData创建的源总是静态的。"
+    },
+    "love.audio.pause": {
+        "prefix": "love.audio.pause",
+        "body": "love.audio.pause()",
+        "description": "暂停当前播放的音频源。"
+    },
+    "love.audio.play": {
+        "prefix": "love.audio.play",
+        "body": "love.audio.play(${1:source (Source)})",
+        "description": "播放指定的音频源。"
+    },
+    "love.audio.resume": {
+        "prefix": "love.audio.resume",
+        "body": "love.audio.resume()",
+        "description": "恢复所有音频"
+    },
+    "love.audio.rewind": {
+        "prefix": "love.audio.rewind",
+        "body": "love.audio.rewind()",
+        "description": "回退所有正在播放的音频。"
+    },
+    "love.audio.setDistanceModel": {
+        "prefix": "love.audio.setDistanceModel",
+        "body": "love.audio.setDistanceModel(${1:model (DistanceModel)})",
+        "description": "设置距离衰减模型。"
+    },
+    "love.audio.setDopplerScale": {
+        "prefix": "love.audio.setDopplerScale",
+        "body": "love.audio.setDopplerScale(${1:scale (number)})",
+        "description": "设置基于速度的多普勒效应的全局缩放因子。默认的缩放值为1。"
+    },
+    "love.audio.setOrientation": {
+        "prefix": "love.audio.setOrientation",
+        "body": "love.audio.setOrientation(${1:fx (number)}, ${2:fy (number)}, ${3:fz (number)}, ${4:ux (number)}, ${5:uy (number)}, ${6:uz (number)})",
+        "description": "设置监听器的方向。"
+    },
+    "love.audio.setPosition": {
+        "prefix": "love.audio.setPosition",
+        "body": "love.audio.setPosition(${1:x (number)}, ${2:y (number)}, ${3:z (number)})",
+        "description": "设置监听器的位置，这决定了声音的播放方式。"
+    },
+    "love.audio.setVelocity": {
+        "prefix": "love.audio.setVelocity",
+        "body": "love.audio.setVelocity(${1:x (number)}, ${2:y (number)}, ${3:z (number)})",
+        "description": "设置监听器的速度。"
+    },
+    "love.audio.setVolume": {
+        "prefix": "love.audio.setVolume",
+        "body": "love.audio.setVolume(${1:volume (number)})",
+        "description": "设置主音量。"
+    },
+    "love.audio.stop": {
+        "prefix": "love.audio.stop",
+        "body": "love.audio.stop()",
+        "description": "停止当前播放的音频源。"
+    },
+    "love.event.clear": {
+        "prefix": "love.event.clear",
+        "body": "love.event.clear()",
+        "description": "清除事件队列。"
+    },
+    "love.event.poll": {
+        "prefix": "love.event.poll",
+        "body": "love.event.poll()",
+        "description": "返回事件队列中消息的迭代器。"
+    },
+    "love.event.pump": {
+        "prefix": "love.event.pump",
+        "body": "love.event.pump()",
+        "description": "将事件泵入事件队列。这是一个低级函数，通常不是由用户调用，而是由love.run调用。请注意，这需要被调用以使任何操作系统都认为你仍在运行，并且如果你想处理由操作系统生成的事件（例如回调）。love.event.pump只能在主线程中被调用，但之后，love.event的其余部分可以从任何其他线程中使用。"
+    },
+    "love.event.push": {
+        "prefix": "love.event.push",
+        "body": "love.event.push(${1:e (Event)}, ${2:a (mixed)}, ${3:b (mixed)}, ${4:c (mixed)}, ${5:d (mixed)})",
+        "description": "将事件添加到事件队列中。"
+    },
+    "love.event.quit": {
+        "prefix": "love.event.quit",
+        "body": "love.event.quit(${1:exitstatus (number)})",
+        "description": "将退出事件添加到队列中。退出事件是事件处理器关闭LÖVE的信号。可以使用love.quit回调来中止退出过程。"
+    },
+    "love.event.wait": {
+        "prefix": "love.event.wait",
+        "body": "love.event.wait()",
+        "description": "类似于 love.event.poll，但是会阻塞直到队列中有事件。"
+    },
+    "File:close": {
+        "prefix": "File:close",
+        "body": "File:close()",
+        "description": "关闭一个文件。"
+    },
+    "File:flush": {
+        "prefix": "File:flush",
+        "body": "File:flush()",
+        "description": "将文件中任何缓冲的写入数据刷新到磁盘上。"
+    },
+    "File:getBuffer": {
+        "prefix": "File:getBuffer",
+        "body": "File:getBuffer()",
+        "description": "获取文件的缓冲模式。"
+    },
+    "File:getFilename": {
+        "prefix": "File:getFilename",
+        "body": "File:getFilename()",
+        "description": "获取创建文件对象时使用的文件名。如果文件对象来自love.filedropped回调，则文件名将是完整的平台依赖文件路径。"
+    },
+    "File:getMode": {
+        "prefix": "File:getMode",
+        "body": "File:getMode()",
+        "description": "获取文件以何种文件模式被打开。"
+    },
+    "File:getSize": {
+        "prefix": "File:getSize",
+        "body": "File:getSize()",
+        "description": "返回文件大小。"
+    },
+    "File:isEOF": {
+        "prefix": "File:isEOF",
+        "body": "File:isEOF()",
+        "description": "获取是否已到达文件末尾。"
+    },
+    "File:isOpen": {
+        "prefix": "File:isOpen",
+        "body": "File:isOpen()",
+        "description": "获取文件是否打开。"
+    },
+    "File:lines": {
+        "prefix": "File:lines",
+        "body": "File:lines()",
+        "description": "遍历文件中的所有行"
+    },
+    "File:open": {
+        "prefix": "File:open",
+        "body": "File:open(${1:mode (FileMode)})",
+        "description": "打开文件以进行写入、读取或追加。如果您收到“无法设置写入目录”的错误消息，请尝试设置保存目录。这可以通过使用`love.filesystem.setIdentity`或者在`love.conf`中设置`identity`字段来完成。"
+    },
+    "File:read": {
+        "prefix": "File:read",
+        "body": "File:read(${1:bytes (number)})",
+        "description": "从文件中读取一定数量的字节。"
+    },
+    "File:seek": {
+        "prefix": "File:seek",
+        "body": "File:seek(${1:position (number)})",
+        "description": "在文件中定位到一个位置。"
+    },
+    "File:setBuffer": {
+        "prefix": "File:setBuffer",
+        "body": "File:setBuffer(${1:mode (BufferMode)}, ${2:size (number)})",
+        "description": "设置用于写入或追加的文件的缓冲模式。启用缓冲的文件不会将数据写入磁盘，直到达到缓冲区大小限制，具体取决于缓冲模式。"
+    },
+    "File:write": {
+        "prefix": "File:write",
+        "body": "File:write(${1:data (string)}, ${2:size (number)})",
+        "description": "将数据写入文件。"
+    },
+    "FileData:getExtension": {
+        "prefix": "FileData:getExtension",
+        "body": "FileData:getExtension()",
+        "description": "获取FileData的扩展名。"
+    },
+    "FileData:getFilename": {
+        "prefix": "FileData:getFilename",
+        "body": "FileData:getFilename()",
+        "description": "获取FileData的文件名。"
+    },
+    "love.filesystem.append": {
+        "prefix": "love.filesystem.append",
+        "body": "love.filesystem.append(${1:name (string)}, ${2:data (string)}, ${3:size (number)})",
+        "description": "向现有文件追加数据。"
+    },
+    "love.filesystem.areSymlinksEnabled": {
+        "prefix": "love.filesystem.areSymlinksEnabled",
+        "body": "love.filesystem.areSymlinksEnabled()",
+        "description": "获取love.filesystem是否遵循符号链接。"
+    },
+    "love.filesystem.createDirectory": {
+        "prefix": "love.filesystem.createDirectory",
+        "body": "love.filesystem.createDirectory(${1:name (string)})",
+        "description": "创建一个目录。"
+    },
+    "love.filesystem.exists": {
+        "prefix": "love.filesystem.exists",
+        "body": "love.filesystem.exists(${1:filename (string)})",
+        "description": "检查文件或目录是否存在。"
+    },
+    "love.filesystem.getAppdataDirectory": {
+        "prefix": "love.filesystem.getAppdataDirectory",
+        "body": "love.filesystem.getAppdataDirectory()",
+        "description": "返回应用程序数据目录（可能与 getUserDirectory 相同）"
+    },
+    "love.filesystem.getDirectoryItems": {
+        "prefix": "love.filesystem.getDirectoryItems",
+        "body": "love.filesystem.getDirectoryItems(${1:dir (string)})",
+        "description": "返回一个包含指定路径中文件和子目录名称的表。该表没有任何排序；顺序是未定义的。如果传递给函数的路径在游戏和保存目录中都存在，它将列出这两个地方的文件和目录。"
+    },
+    "love.filesystem.getIdentity": {
+        "prefix": "love.filesystem.getIdentity",
+        "body": "love.filesystem.getIdentity(${1:name (string)})",
+        "description": "获取你的游戏的写入目录名称。请注意，这只返回存储文件的文件夹名称，而不是完整位置。"
+    },
+    "love.filesystem.getLastModified": {
+        "prefix": "love.filesystem.getLastModified",
+        "body": "love.filesystem.getLastModified(${1:filename (string)})",
+        "description": "获取文件的最后修改时间。"
+    },
+    "love.filesystem.getRealDirectory": {
+        "prefix": "love.filesystem.getRealDirectory",
+        "body": "love.filesystem.getRealDirectory(${1:filepath (string)})",
+        "description": "获取包含文件路径的平台特定的绝对路径。这可以用来确定一个文件是在保存目录内还是游戏的源文件 .love 中。"
+    },
+    "love.filesystem.getRequirePath": {
+        "prefix": "love.filesystem.getRequirePath",
+        "body": "love.filesystem.getRequirePath()",
+        "description": "获取当调用require时将被搜索的文件系统路径。这个函数返回的路径字符串是由分号分隔的一系列路径模板。传递给require的参数将替换每个模板中的问号（\"?\"）字符（在传递给require的参数中的点字符被替换为目录分隔符之后）。这些路径是相对于游戏的源代码和保存目录，以及任何使用love.filesystem.mount挂载的路径。"
+    },
+    "love.filesystem.getSaveDirectory": {
+        "prefix": "love.filesystem.getSaveDirectory",
+        "body": "love.filesystem.getSaveDirectory()",
+        "description": "获取指定保存目录的完整路径。如果您想使用标准io库（或其他库）在保存目录中读取或写入，这可能会很有用。"
+    },
+    "love.filesystem.getSize": {
+        "prefix": "love.filesystem.getSize",
+        "body": "love.filesystem.getSize(${1:filename (string)})",
+        "description": "获取文件的大小（以字节为单位）。"
+    },
+    "love.filesystem.getSourceBaseDirectory": {
+        "prefix": "love.filesystem.getSourceBaseDirectory",
+        "body": "love.filesystem.getSourceBaseDirectory()",
+        "description": "返回包含.love文件的目录的完整路径。如果游戏被融合到LÖVE可执行文件中，则返回包含可执行文件的目录。如果love.filesystem.isFused为真，则此函数返回的路径可以传递给love.filesystem.mount，这将使包含主游戏的目录可以被love.filesystem读取。"
+    },
+    "love.filesystem.getUserDirectory": {
+        "prefix": "love.filesystem.getUserDirectory",
+        "body": "love.filesystem.getUserDirectory()",
+        "description": "返回用户目录的路径。"
+    },
+    "love.filesystem.getWorkingDirectory": {
+        "prefix": "love.filesystem.getWorkingDirectory",
+        "body": "love.filesystem.getWorkingDirectory()",
+        "description": "获取当前工作目录。"
+    },
+    "love.filesystem.isDirectory": {
+        "prefix": "love.filesystem.isDirectory",
+        "body": "love.filesystem.isDirectory(${1:path (string)})",
+        "description": "检查某物是否是一个目录。"
+    },
+    "love.filesystem.isFile": {
+        "prefix": "love.filesystem.isFile",
+        "body": "love.filesystem.isFile(${1:path (string)})",
+        "description": "检查某物是否是一个文件。"
+    },
+    "love.filesystem.isFused": {
+        "prefix": "love.filesystem.isFused",
+        "body": "love.filesystem.isFused()",
+        "description": "获取游戏是否处于融合模式。如果游戏处于融合模式，其存档目录将直接位于Appdata目录下，而不是Appdata/LOVE/。游戏还将能够加载位于存档目录中的C Lua动态库。如果源.love文件已与可执行文件融合（参见游戏分发），或者在启动游戏时以命令行参数形式给出了\"--fused\"，则游戏处于融合模式。"
+    },
+    "love.filesystem.isSymlink": {
+        "prefix": "love.filesystem.isSymlink",
+        "body": "love.filesystem.isSymlink(${1:path (string)})",
+        "description": "获取一个文件路径是否实际上是一个符号链接。如果符号链接没有启用（通过love.filesystem.setSymlinksEnabled），这个函数将始终返回false。"
+    },
+    "love.filesystem.lines": {
+        "prefix": "love.filesystem.lines",
+        "body": "love.filesystem.lines(${1:name (string)})",
+        "description": "遍历文件中的行。"
+    },
+    "love.filesystem.load": {
+        "prefix": "love.filesystem.load",
+        "body": "love.filesystem.load(${1:name (string)})",
+        "description": "加载一个文件（但不运行它）。"
+    },
+    "love.filesystem.mount": {
+        "prefix": "love.filesystem.mount",
+        "body": "love.filesystem.mount(${1:archive (string)}, ${2:mountpoint (string)})",
+        "description": "将游戏存档目录中的zip文件或文件夹挂载为只读。"
+    },
+    "love.filesystem.newFile": {
+        "prefix": "love.filesystem.newFile",
+        "body": "love.filesystem.newFile(${1:filename (string)}, ${2:mode (FileMode)})",
+        "description": "创建一个新的文件对象。在访问之前需要先打开它。"
+    },
+    "love.filesystem.newFileData": {
+        "prefix": "love.filesystem.newFileData",
+        "body": "love.filesystem.newFileData(${1:contents (string)}, ${2:name (string)}, ${3:decoder (FileDecoder)})",
+        "description": "创建一个新的FileData对象。"
+    },
+    "love.filesystem.read": {
+        "prefix": "love.filesystem.read",
+        "body": "love.filesystem.read(${1:name (string)}, ${2:bytes (number)})",
+        "description": "读取文件的内容。"
+    },
+    "love.filesystem.remove": {
+        "prefix": "love.filesystem.remove",
+        "body": "love.filesystem.remove(${1:name (string)})",
+        "description": "移除一个文件或目录。"
+    },
+    "love.filesystem.setIdentity": {
+        "prefix": "love.filesystem.setIdentity",
+        "body": "love.filesystem.setIdentity(${1:name (string)}, ${2:appendToPath (boolean)})",
+        "description": "设置你的游戏的写入目录。请注意，你只能设置存储文件的文件夹名称，而不能设置位置。"
+    },
+    "love.filesystem.setRequirePath": {
+        "prefix": "love.filesystem.setRequirePath",
+        "body": "love.filesystem.setRequirePath(${1:paths (string)})",
+        "description": "设置当调用require时将搜索的文件系统路径。传递给此函数的路径字符串是一系列由分号分隔的路径模板。传递给require的参数将替换每个模板中的任何问号（\"?\"）字符（在传递给require的参数中的点字符被替换为目录分隔符之后）。这些路径是相对于游戏的源代码和保存目录，以及任何使用love.filesystem.mount挂载的路径。"
+    },
+    "love.filesystem.setSource": {
+        "prefix": "love.filesystem.setSource",
+        "body": "love.filesystem.setSource(${1:path (string)})",
+        "description": "设置游戏的源代码位置。这个函数只能被调用一次，通常由LÖVE自动完成。"
+    },
+    "love.filesystem.setSymlinksEnabled": {
+        "prefix": "love.filesystem.setSymlinksEnabled",
+        "body": "love.filesystem.setSymlinksEnabled(${1:enable (boolean)})",
+        "description": "设置love.filesystem是否遵循符号链接。在0.10.0及更高版本中默认启用，在0.9.2中默认禁用。"
+    },
+    "love.filesystem.unmount": {
+        "prefix": "love.filesystem.unmount",
+        "body": "love.filesystem.unmount(${1:archive (string)})",
+        "description": "卸载一个之前使用 love.filesystem.mount 挂载用于读取的 zip 文件或文件夹。"
+    },
+    "love.filesystem.write": {
+        "prefix": "love.filesystem.write",
+        "body": "love.filesystem.write(${1:name (string)}, ${2:data (string)}, ${3:size (number)})",
+        "description": "将数据写入文件。如果您收到错误消息“无法设置写入目录”，请尝试设置保存目录。这可以通过`love.filesystem.setIdentity`或在`love.conf`中设置identity字段来完成。"
+    },
+    "Canvas:getDimensions": {
+        "prefix": "Canvas:getDimensions",
+        "body": "Canvas:getDimensions()",
+        "description": "获取画布的宽度和高度。"
+    },
+    "Canvas:getFilter": {
+        "prefix": "Canvas:getFilter",
+        "body": "Canvas:getFilter()",
+        "description": "获取画布的过滤模式。"
+    },
+    "Canvas:getFormat": {
+        "prefix": "Canvas:getFormat",
+        "body": "Canvas:getFormat()",
+        "description": "获取画布的纹理格式。"
+    },
+    "Canvas:getHeight": {
+        "prefix": "Canvas:getHeight",
+        "body": "Canvas:getHeight()",
+        "description": "获取画布的高度。"
+    },
+    "Canvas:getMSAA": {
+        "prefix": "Canvas:getMSAA",
+        "body": "Canvas:getMSAA()",
+        "description": "获取在绘制到画布时使用的多重采样抗锯齿（MSAA）样本数量。如果运行LÖVE的系统不支持该数量，这可能与作为参数传递给love.graphics.newCanvas的数量不同。"
+    },
+    "Canvas:getWidth": {
+        "prefix": "Canvas:getWidth",
+        "body": "Canvas:getWidth()",
+        "description": "获取画布的宽度。"
+    },
+    "Canvas:getWrap": {
+        "prefix": "Canvas:getWrap",
+        "body": "Canvas:getWrap()",
+        "description": "获取画布的包装属性。这个函数返回当前为画布设置的水平和垂直包装模式。"
+    },
+    "Canvas:newImageData": {
+        "prefix": "Canvas:newImageData",
+        "body": "Canvas:newImageData()",
+        "description": "从画布的内容生成ImageData。"
+    },
+    "Canvas:renderTo": {
+        "prefix": "Canvas:renderTo",
+        "body": "Canvas:renderTo(${1:func (function)})",
+        "description": "使用函数将内容渲染到画布上。"
+    },
+    "Canvas:setFilter": {
+        "prefix": "Canvas:setFilter",
+        "body": "Canvas:setFilter(${1:min (FilterMode)}, ${2:mag (FilterMode)}, ${3:anisotropy (number)})",
+        "description": "设置画布的滤镜。"
+    },
+    "Canvas:setWrap": {
+        "prefix": "Canvas:setWrap",
+        "body": "Canvas:setWrap(${1:horizontal (WrapMode)}, ${2:vertical (WrapMode)})",
+        "description": "设置画布的包装属性。这个函数设置了当画布被缩放或旋转时，其边缘的处理方式。如果将WrapMode设置为\"clamp\"，边缘将不会被插值处理。如果设置为\"repeat\"，边缘将与帧缓冲区对侧的像素一起进行插值处理。"
+    },
+    "Font:getAscent": {
+        "prefix": "Font:getAscent",
+        "body": "Font:getAscent()",
+        "description": "获取字体的上升高度。上升高度是指基线到最远离基线的字形顶部之间的距离。"
+    },
+    "Font:getBaseline": {
+        "prefix": "Font:getBaseline",
+        "body": "Font:getBaseline()",
+        "description": "获取字体的基线。大多数脚本都有基线的概念：一条假想的水平线，字符在此线上休息。在一些脚本中，字形的部分位于基线下方。"
+    },
+    "Font:getDescent": {
+        "prefix": "Font:getDescent",
+        "body": "Font:getDescent()",
+        "description": "获取字体的下降量。下降量是指在一种字体中，基线与最低下降字形之间的距离。"
+    },
+    "Font:getFilter": {
+        "prefix": "Font:getFilter",
+        "body": "Font:getFilter()",
+        "description": "获取字体的过滤模式。"
+    },
+    "Font:getHeight": {
+        "prefix": "Font:getHeight",
+        "body": "Font:getHeight()",
+        "description": "获取字体的高度。字体的高度包括任何间距；它将需要的高度。"
+    },
+    "Font:getLineHeight": {
+        "prefix": "Font:getLineHeight",
+        "body": "Font:getLineHeight()",
+        "description": "获取行高。这将是之前通过 Font:setLineHeight 设置的值，或者默认为 1.0。"
+    },
+    "Font:getWidth": {
+        "prefix": "Font:getWidth",
+        "body": "Font:getWidth(${1:line (string)})",
+        "description": "确定一行文本所需的水平尺寸。不支持换行。"
+    },
+    "Font:getWrap": {
+        "prefix": "Font:getWrap",
+        "body": "Font:getWrap(${1:text (string)}, ${2:wraplimit (number)})",
+        "description": "获取给定换行限制的文本格式化信息。此函数正确处理换行符（即 '\\n'）。"
+    },
+    "Font:hasGlyphs": {
+        "prefix": "Font:hasGlyphs",
+        "body": "Font:hasGlyphs(${1:character (string)})",
+        "description": "获取字体是否可以渲染特定的字符。"
+    },
+    "Font:setFallbacks": {
+        "prefix": "Font:setFallbacks",
+        "body": "Font:setFallbacks(${1:fallbackfont1 (Font)}, ${2:... (Font)})",
+        "description": "设置备用字体。当字体不包含某个字形时，它将从下一个后续的备用字体中替换字形。这类似于在层叠样式表（CSS）中设置“字体堆栈”。"
+    },
+    "Font:setFilter": {
+        "prefix": "Font:setFilter",
+        "body": "Font:setFilter(${1:min (FilterMode)}, ${2:mag (FilterMode)}, ${3:anisotropy (number)})",
+        "description": "设置字体的过滤模式。"
+    },
+    "Font:setLineHeight": {
+        "prefix": "Font:setLineHeight",
+        "body": "Font:setLineHeight(${1:height (number)})",
+        "description": "设置行高。在按行渲染字体时，实际高度将由行高乘以字体的高度来确定。默认值为1.0。"
+    },
+    "Mesh:attachAttribute": {
+        "prefix": "Mesh:attachAttribute",
+        "body": "Mesh:attachAttribute(${1:name (string)}, ${2:mesh (Mesh)})",
+        "description": "将来自另一个网格的顶点属性附加到此网格上，以便于绘制时使用。这可以用于在几个不同的网格之间共享顶点属性数据。"
+    },
+    "Mesh:getDrawMode": {
+        "prefix": "Mesh:getDrawMode",
+        "body": "Mesh:getDrawMode()",
+        "description": "获取绘制网格时使用的模式。"
+    },
+    "Mesh:getDrawRange": {
+        "prefix": "Mesh:getDrawRange",
+        "body": "Mesh:getDrawRange()",
+        "description": "获取绘制网格时使用的顶点范围。如果网格的绘制范围之前没有使用Mesh:setDrawRange设置过，这个函数将返回nil。"
+    },
+    "Mesh:getTexture": {
+        "prefix": "Mesh:getTexture",
+        "body": "Mesh:getTexture()",
+        "description": "获取绘制网格时使用的纹理（图像或画布）。"
+    },
+    "Mesh:getVertex": {
+        "prefix": "Mesh:getVertex",
+        "body": "Mesh:getVertex(${1:index (number)})",
+        "description": "获取网格中顶点的属性。"
+    },
+    "Mesh:getVertexAttribute": {
+        "prefix": "Mesh:getVertexAttribute",
+        "body": "Mesh:getVertexAttribute(${1:vertexindex (number)}, ${2:attributeindex (number)})",
+        "description": "获取网格中特定顶点的属性。在没有指定自定义顶点格式的网格中，love.graphics.newMesh 将位置作为第一个属性，纹理坐标作为第二个属性，颜色作为第三个属性。"
+    },
+    "Mesh:getVertexCount": {
+        "prefix": "Mesh:getVertexCount",
+        "body": "Mesh:getVertexCount()",
+        "description": "返回网格中顶点的总数。"
+    },
+    "Mesh:getVertexFormat": {
+        "prefix": "Mesh:getVertexFormat",
+        "body": "Mesh:getVertexFormat()",
+        "description": "获取创建网格时使用的顶点格式。"
+    },
+    "Mesh:getVertexMap": {
+        "prefix": "Mesh:getVertexMap",
+        "body": "Mesh:getVertexMap()",
+        "description": "获取网格的顶点映射。顶点映射描述了绘制网格时顶点的使用顺序。顶点、顶点映射和网格绘制模式共同决定了屏幕上显示的内容。如果之前没有通过Mesh:setVertexMap设置过顶点映射，那么在LÖVE 0.10.0+中这个函数将返回nil，或者在0.9.2及更早版本中返回一个空表。"
+    },
+    "Mesh:isAttributeEnabled": {
+        "prefix": "Mesh:isAttributeEnabled",
+        "body": "Mesh:isAttributeEnabled(${1:name (string)})",
+        "description": "获取Mesh中特定顶点属性是否启用。在绘制Mesh时，禁用属性的顶点数据不会被使用。"
+    },
+    "Mesh:setAttributeEnabled": {
+        "prefix": "Mesh:setAttributeEnabled",
+        "body": "Mesh:setAttributeEnabled(${1:name (string)}, ${2:enable (boolean)})",
+        "description": "启用或禁用Mesh中的特定顶点属性。在绘制Mesh时，禁用属性的顶点数据不会被使用。"
+    },
+    "Mesh:setDrawMode": {
+        "prefix": "Mesh:setDrawMode",
+        "body": "Mesh:setDrawMode(${1:mode (MeshDrawMode)})",
+        "description": "设置绘制网格时使用的模式。"
+    },
+    "Mesh:setDrawRange": {
+        "prefix": "Mesh:setDrawRange",
+        "body": "Mesh:setDrawRange(${1:min (number)}, ${2:max (number)})",
+        "description": "将网格绘制的顶点限制为总数的一个子集。如果网格使用了顶点映射，此方法将设置顶点映射数组中的一个值的子集来使用，而不是网格中总顶点数的一个子集。例如，如果调用了 Mesh:setVertexMap(1, 2, 3, 1, 3, 4) 和 Mesh:setDrawRange(4, 6)，那么将绘制顶点 1、3 和 4。"
+    },
+    "Mesh:setTexture": {
+        "prefix": "Mesh:setTexture",
+        "body": "Mesh:setTexture()",
+        "description": "设置用于绘制网格（Mesh）的纹理（Image或Canvas）。如果没有参数被调用，则禁用纹理。未上色的网格默认为白色。"
+    },
+    "Mesh:setVertex": {
+        "prefix": "Mesh:setVertex",
+        "body": "Mesh:setVertex(${1:index (number)}, ${2:attributecomponent (number)}, ${3:... (number)})",
+        "description": "设置网格中顶点的属性。"
+    },
+    "Mesh:setVertexAttribute": {
+        "prefix": "Mesh:setVertexAttribute",
+        "body": "Mesh:setVertexAttribute(${1:vertexindex (number)}, ${2:attributeindex (number)}, ${3:value1 (number)}, ${4:value2 (number)}, ${5:... (number)})",
+        "description": "设置网格中特定顶点的属性。在没有指定自定义顶点格式的网格中，love.graphics.newMesh 将位置作为第一个属性，纹理坐标作为第二个属性，颜色作为第三个属性。"
+    },
+    "Mesh:setVertexColors": {
+        "prefix": "Mesh:setVertexColors",
+        "body": "Mesh:setVertexColors(${1:on (boolean)})",
+        "description": "设置在渲染时是否使用每个顶点的颜色而不是常量颜色（常量颜色是指love.graphics.setColor或SpriteBatch:setColor）。当创建一个新的Mesh或执行Mesh:setVertex时，默认情况下会自动启用每个顶点的颜色，但前提是至少有一个顶点颜色不是默认值（255,255,255,255）。"
+    },
+    "Mesh:setVertexMap": {
+        "prefix": "Mesh:setVertexMap",
+        "body": "Mesh:setVertexMap(${1:map (table)})",
+        "description": "设置网格的顶点映射。顶点映射描述了在绘制网格时顶点的使用顺序。顶点、顶点映射和网格绘制模式共同决定了屏幕上显示的内容。顶点映射允许你在绘制时重新排序或重用顶点，而无需更改实际的顶点参数或复制顶点。当与不同的网格绘制模式结合使用时，它尤其有用。"
+    },
+    "Mesh:setVertices": {
+        "prefix": "Mesh:setVertices",
+        "body": "Mesh:setVertices(${1:vertices (table)})",
+        "description": "替换网格中的一系列顶点为新的顶点。在创建网格后，网格中的顶点总数不能被改变。"
+    },
+    "Image:getData": {
+        "prefix": "Image:getData",
+        "body": "Image:getData()",
+        "description": "获取用于创建图像的原始ImageData或CompressedImageData。所有图像都会保留对用于创建图像的数据的引用。当调用love.window.setMode或Image:refresh时，数据用于刷新图像。"
+    },
+    "Image:getDimensions": {
+        "prefix": "Image:getDimensions",
+        "body": "Image:getDimensions()",
+        "description": "获取图像的宽度和高度。"
+    },
+    "Image:getFilter": {
+        "prefix": "Image:getFilter",
+        "body": "Image:getFilter()",
+        "description": "获取图像的滤镜模式。"
+    },
+    "Image:getFlags": {
+        "prefix": "Image:getFlags",
+        "body": "Image:getFlags()",
+        "description": "获取创建图像时使用的标记。"
+    },
+    "Image:getHeight": {
+        "prefix": "Image:getHeight",
+        "body": "Image:getHeight()",
+        "description": "获取图像的高度。"
+    },
+    "Image:getMipmapFilter": {
+        "prefix": "Image:getMipmapFilter",
+        "body": "Image:getMipmapFilter()",
+        "description": "获取一个图像的mipmap滤波模式。"
+    },
+    "Image:getWidth": {
+        "prefix": "Image:getWidth",
+        "body": "Image:getWidth()",
+        "description": "获取图像的宽度。"
+    },
+    "Image:getWrap": {
+        "prefix": "Image:getWrap",
+        "body": "Image:getWrap()",
+        "description": "获取图像的包装属性。这个函数返回图像当前设置的水平和垂直包装模式。"
+    },
+    "Image:refresh": {
+        "prefix": "Image:refresh",
+        "body": "Image:refresh()",
+        "description": "重新从用于创建图像的ImageData或CompressedImageData加载图像的内容。"
+    },
+    "Image:setFilter": {
+        "prefix": "Image:setFilter",
+        "body": "Image:setFilter(${1:min (FilterMode)}, ${2:mag (FilterMode)})",
+        "description": "设置图像的过滤模式。"
+    },
+    "Image:setMipmapFilter": {
+        "prefix": "Image:setMipmapFilter",
+        "body": "Image:setMipmapFilter(${1:filtermode (FilterMode)}, ${2:sharpness (number)})",
+        "description": "为图像设置mipmap（多级渐进纹理）过滤模式。当以缩小的比例绘制图像时，mipmap非常有用。它可以提高性能并减少抗锯齿问题。在0.10.0及更新版本中，图像必须使用mipmaps标志创建，mipmap过滤器才能产生任何效果。"
+    },
+    "Image:setWrap": {
+        "prefix": "Image:setWrap",
+        "body": "Image:setWrap(${1:horizontal (WrapMode)}, ${2:vertical (WrapMode)})",
+        "description": "设置图像的包装属性。这个函数设置了当使用比图像范围更大的四边形（Quad）绘制图像时，图像的重复方式。图像可以被夹紧或在水平和垂直方向上设置为重复。夹紧的图像只显示一次，但重复的图像会根据四边形中的空间重复多次。如果您使用的四边形比图像范围大，并且不使用重复平铺，可能会出现图像拉伸以填充整个四边形的不想要的视觉效果。如果出现这种情况，为所有需要重复的图像设置`Image:getWrap(\"repeat\", \"repeat\")`，并使用适当大小的四边形，将获得最佳的视觉效果。"
+    },
+    "ParticleSystem:clone": {
+        "prefix": "ParticleSystem:clone",
+        "body": "ParticleSystem:clone()",
+        "description": "创建一个处于停止状态的ParticleSystem的相同副本。克隆的ParticleSystem继承了原始ParticleSystem的所有可设置状态，但它们被初始化为停止状态。"
+    },
+    "ParticleSystem:emit": {
+        "prefix": "ParticleSystem:emit",
+        "body": "ParticleSystem:emit(${1:numparticles (number)})",
+        "description": "从粒子发射器发射出一束粒子。"
+    },
+    "ParticleSystem:getCount": {
+        "prefix": "ParticleSystem:getCount",
+        "body": "ParticleSystem:getCount()",
+        "description": "获取当前系统中存在的粒子数量。"
+    },
+    "ParticleSystem:getAreaSpread": {
+        "prefix": "ParticleSystem:getAreaSpread",
+        "body": "ParticleSystem:getAreaSpread()",
+        "description": "获取基于区域的粒子生成参数。"
+    },
+    "ParticleSystem:getBufferSize": {
+        "prefix": "ParticleSystem:getBufferSize",
+        "body": "ParticleSystem:getBufferSize()",
+        "description": "获取缓冲区的大小（系统中允许的最大粒子数量）。"
+    },
+    "ParticleSystem:getColors": {
+        "prefix": "ParticleSystem:getColors",
+        "body": "ParticleSystem:getColors()",
+        "description": "获取一系列颜色以应用于粒子精灵。粒子系统将在粒子的生命周期内均匀地在每种颜色之间进行插值。需要激活颜色调制才能使此函数产生效果。参数以四组一组的形式传递，代表所需的RGBA值的各个分量。至少需要指定一种颜色。最多可以使用八种颜色。"
+    },
+    "ParticleSystem:getDirection": {
+        "prefix": "ParticleSystem:getDirection",
+        "body": "ParticleSystem:getDirection()",
+        "description": "获取粒子发射的方向。"
+    },
+    "ParticleSystem:getEmissionRate": {
+        "prefix": "ParticleSystem:getEmissionRate",
+        "body": "ParticleSystem:getEmissionRate()",
+        "description": "获取每秒发射的粒子数量。"
+    },
+    "ParticleSystem:getInsertMode": {
+        "prefix": "ParticleSystem:getInsertMode",
+        "body": "ParticleSystem:getInsertMode()",
+        "description": "获取ParticleSystem添加新粒子时使用的模式。"
+    },
+    "ParticleSystem:getLinearAcceleration": {
+        "prefix": "ParticleSystem:getLinearAcceleration",
+        "body": "ParticleSystem:getLinearAcceleration()",
+        "description": "获取粒子的线性加速度（沿x轴和y轴的加速度）。每个创建的粒子都会在x轴的xmin和xmax之间、y轴的ymin和ymax之间加速。"
+    },
+    "ParticleSystem:getLinearDamping": {
+        "prefix": "ParticleSystem:getLinearDamping",
+        "body": "ParticleSystem:getLinearDamping()",
+        "description": "获取粒子的线性阻尼（恒定减速）量。"
+    },
+    "ParticleSystem:getEmitterLifetime": {
+        "prefix": "ParticleSystem:getEmitterLifetime",
+        "body": "ParticleSystem:getEmitterLifetime()",
+        "description": "获取粒子系统应该发射粒子的时间长度（如果是-1，则表示它将永远发射粒子）。"
+    },
+    "ParticleSystem:getOffset": {
+        "prefix": "ParticleSystem:getOffset",
+        "body": "ParticleSystem:getOffset()",
+        "description": "获取粒子精灵围绕旋转的偏移位置。如果未使用此函数，则粒子围绕其中心旋转。"
+    },
+    "ParticleSystem:getParticleLifetime": {
+        "prefix": "ParticleSystem:getParticleLifetime",
+        "body": "ParticleSystem:getParticleLifetime()",
+        "description": "获取粒子的生命周期。"
+    },
+    "ParticleSystem:getPosition": {
+        "prefix": "ParticleSystem:getPosition",
+        "body": "ParticleSystem:getPosition()",
+        "description": "获取发射器的位置。"
+    },
+    "ParticleSystem:getRadialAcceleration": {
+        "prefix": "ParticleSystem:getRadialAcceleration",
+        "body": "ParticleSystem:getRadialAcceleration()",
+        "description": "获取径向加速度（远离发射源）。"
+    },
+    "ParticleSystem:getRotation": {
+        "prefix": "ParticleSystem:getRotation",
+        "body": "ParticleSystem:getRotation()",
+        "description": "获取粒子创建时图像的旋转角度（以弧度为单位）。"
+    },
+    "ParticleSystem:getSizes": {
+        "prefix": "ParticleSystem:getSizes",
+        "body": "ParticleSystem:getSizes()",
+        "description": "获取一系列用于缩放粒子精灵的大小。1.0是正常大小。粒子系统将在粒子的生命周期内均匀地插值每个大小。至少必须指定一个大小。最多可以使用八个。"
+    },
+    "ParticleSystem:getSizeVariation": {
+        "prefix": "ParticleSystem:getSizeVariation",
+        "body": "ParticleSystem:getSizeVariation()",
+        "description": "获取变化程度（0表示无变化，1表示从开始到结束的完全变化）。"
+    },
+    "ParticleSystem:getSpeed": {
+        "prefix": "ParticleSystem:getSpeed",
+        "body": "ParticleSystem:getSpeed()",
+        "description": "获取粒子的速度。"
+    },
+    "ParticleSystem:getSpin": {
+        "prefix": "ParticleSystem:getSpin",
+        "body": "ParticleSystem:getSpin()",
+        "description": "获取精灵的旋转速度。"
+    },
+    "ParticleSystem:getSpinVariation": {
+        "prefix": "ParticleSystem:getSpinVariation",
+        "body": "ParticleSystem:getSpinVariation()",
+        "description": "获取变化的程度（0表示没有变化，1表示从开始到结束的完全变化）。"
+    },
+    "ParticleSystem:getSpread": {
+        "prefix": "ParticleSystem:getSpread",
+        "body": "ParticleSystem:getSpread()",
+        "description": "获取系统的扩散量。"
+    },
+    "ParticleSystem:getTexture": {
+        "prefix": "ParticleSystem:getTexture",
+        "body": "ParticleSystem:getTexture()",
+        "description": "获取要发射的图像或画布。"
+    },
+    "ParticleSystem:getTangentialAcceleration": {
+        "prefix": "ParticleSystem:getTangentialAcceleration",
+        "body": "ParticleSystem:getTangentialAcceleration()",
+        "description": "获取切向加速度（垂直于粒子方向的加速度）。"
+    },
+    "ParticleSystem:hasRelativeRotation": {
+        "prefix": "ParticleSystem:hasRelativeRotation",
+        "body": "ParticleSystem:hasRelativeRotation()",
+        "description": "获取粒子角度和旋转是否相对于它们的速度。如果启用，粒子将与它们的速度角度对齐，并相对于该角度旋转。"
+    },
+    "ParticleSystem:isActive": {
+        "prefix": "ParticleSystem:isActive",
+        "body": "ParticleSystem:isActive()",
+        "description": "检查粒子系统是否正在积极地发射粒子。"
+    },
+    "ParticleSystem:isPaused": {
+        "prefix": "ParticleSystem:isPaused",
+        "body": "ParticleSystem:isPaused()",
+        "description": "检查粒子系统是否已暂停。"
+    },
+    "ParticleSystem:isStopped": {
+        "prefix": "ParticleSystem:isStopped",
+        "body": "ParticleSystem:isStopped()",
+        "description": "检查粒子系统是否已停止。"
+    },
+    "ParticleSystem:moveTo": {
+        "prefix": "ParticleSystem:moveTo",
+        "body": "ParticleSystem:moveTo(${1:x (number)}, ${2:y (number)})",
+        "description": "移动发射器的位置。这将导致比每帧使用ParticleSystem:setPosition更平滑的粒子生成行为。"
+    },
+    "ParticleSystem:pause": {
+        "prefix": "ParticleSystem:pause",
+        "body": "ParticleSystem:pause()",
+        "description": "暂停粒子发射器。"
+    },
+    "ParticleSystem:reset": {
+        "prefix": "ParticleSystem:reset",
+        "body": "ParticleSystem:reset()",
+        "description": "重置粒子发射器，移除任何现有的粒子并重置生命周期计数器。"
+    },
+    "ParticleSystem:setAreaSpread": {
+        "prefix": "ParticleSystem:setAreaSpread",
+        "body": "ParticleSystem:setAreaSpread(${1:distribution (AreaSpreadDistribution)}, ${2:dx (number)}, ${3:dy (number)})",
+        "description": "设置基于区域的粒子生成参数。新创建的粒子将根据此函数的参数在发射器周围的区域内生成。"
+    },
+    "ParticleSystem:setBufferSize": {
+        "prefix": "ParticleSystem:setBufferSize",
+        "body": "ParticleSystem:setBufferSize(${1:buffer (number)})",
+        "description": "设置缓冲区的大小（系统中允许的最大粒子数量）。"
+    },
+    "ParticleSystem:setColors": {
+        "prefix": "ParticleSystem:setColors",
+        "body": "ParticleSystem:setColors(${1:r1 (number)}, ${2:g1 (number)}, ${3:b1 (number)}, ${4:a1 (number)}, ${5:r2 (number)}, ${6:g2 (number)}, ${7:b2 (number)}, ${8:a2 (number)}, ${9:... (number)})",
+        "description": "设置一系列颜色应用于粒子精灵。粒子系统将在粒子的生命周期内均匀地在每种颜色之间进行插值。要使这个函数生效，需要激活颜色调制。参数以每组四个的形式传递，代表所需的RGBA值的组成部分。至少需要指定一种颜色。最多可以使用八种颜色。"
+    },
+    "ParticleSystem:setDirection": {
+        "prefix": "ParticleSystem:setDirection",
+        "body": "ParticleSystem:setDirection(${1:direction (number)})",
+        "description": "设置粒子发射的方向。"
+    },
+    "ParticleSystem:setEmissionRate": {
+        "prefix": "ParticleSystem:setEmissionRate",
+        "body": "ParticleSystem:setEmissionRate(${1:rate (number)})",
+        "description": "设置每秒发射的粒子数量。"
+    },
+    "ParticleSystem:setEmitterLifetime": {
+        "prefix": "ParticleSystem:setEmitterLifetime",
+        "body": "ParticleSystem:setEmitterLifetime(${1:life (number)})",
+        "description": "设置粒子系统发射粒子的时间长度（如果为-1，则表示粒子系统会永远发射粒子）。"
+    },
+    "ParticleSystem:setInsertMode": {
+        "prefix": "ParticleSystem:setInsertMode",
+        "body": "ParticleSystem:setInsertMode(${1:mode (ParticleInsertMode)})",
+        "description": "设置ParticleSystem添加新粒子时使用的模式。"
+    },
+    "ParticleSystem:setLinearAcceleration": {
+        "prefix": "ParticleSystem:setLinearAcceleration",
+        "body": "ParticleSystem:setLinearAcceleration(${1:xmin (number)}, ${2:ymin (number)}, ${3:xmax (number)}, ${4:ymax (number)})",
+        "description": "设置粒子的线性加速度（沿x轴和y轴的加速度）。每个创建的粒子都会在xmin, ymin和xmax, ymax之间沿x轴和y轴加速。"
+    },
+    "ParticleSystem:setLinearDamping": {
+        "prefix": "ParticleSystem:setLinearDamping",
+        "body": "ParticleSystem:setLinearDamping(${1:min (number)}, ${2:max (number)})",
+        "description": "设置粒子的线性阻尼量（恒定减速）。"
+    },
+    "ParticleSystem:setOffset": {
+        "prefix": "ParticleSystem:setOffset",
+        "body": "ParticleSystem:setOffset(${1:x (number)}, ${2:y (number)})",
+        "description": "设置粒子精灵旋转的偏移位置。如果未使用此函数，粒子将围绕其中心旋转。"
+    },
+    "ParticleSystem:setParticleLifetime": {
+        "prefix": "ParticleSystem:setParticleLifetime",
+        "body": "ParticleSystem:setParticleLifetime(${1:min (number)}, ${2:max (number)})",
+        "description": "设置粒子的生命周期。"
+    },
+    "ParticleSystem:setPosition": {
+        "prefix": "ParticleSystem:setPosition",
+        "body": "ParticleSystem:setPosition(${1:x (number)}, ${2:y (number)})",
+        "description": "设置发射器的位置。"
+    },
+    "ParticleSystem:setQuads": {
+        "prefix": "ParticleSystem:setQuads",
+        "body": "ParticleSystem:setQuads(${1:quad1 (Quad)}, ${2:quad2 (Quad)})",
+        "description": "设置一系列用于粒子精灵的四边形（Quads）。粒子将根据粒子的当前生命周期从列表中选择一个四边形，从而允许在粒子系统中使用动画精灵表。"
+    },
+    "ParticleSystem:setRadialAcceleration": {
+        "prefix": "ParticleSystem:setRadialAcceleration",
+        "body": "ParticleSystem:setRadialAcceleration(${1:min (number)}, ${2:max (number)})",
+        "description": "设置径向加速度（远离发射器）。"
+    },
+    "ParticleSystem:setRelativeRotation": {
+        "prefix": "ParticleSystem:setRelativeRotation",
+        "body": "ParticleSystem:setRelativeRotation(${1:enable (boolean)})",
+        "description": "设置粒子的角度和旋转是否相对于它们的速度。如果启用，粒子将与它们的速度角度对齐，并相对于该角度旋转。"
+    },
+    "ParticleSystem:setRotation": {
+        "prefix": "ParticleSystem:setRotation",
+        "body": "ParticleSystem:setRotation(${1:min (number)}, ${2:max (number)})",
+        "description": "设置粒子创建时的图像旋转（以弧度为单位）。"
+    },
+    "ParticleSystem:setSizes": {
+        "prefix": "ParticleSystem:setSizes",
+        "body": "ParticleSystem:setSizes(${1:size1 (number)}, ${2:size2 (number)}, ${3:... (number)})",
+        "description": "设置一系列大小，用于缩放粒子精灵。1.0是正常大小。粒子系统将在粒子的生命周期内均匀插值每个大小。至少必须指定一个大小。最多可以使用八个。"
+    },
+    "ParticleSystem:setSizeVariation": {
+        "prefix": "ParticleSystem:setSizeVariation",
+        "body": "ParticleSystem:setSizeVariation(${1:variation (number)})",
+        "description": "设置变化的程度（0表示没有变化，1表示从开始到结束的完全变化）。"
+    },
+    "ParticleSystem:setSpeed": {
+        "prefix": "ParticleSystem:setSpeed",
+        "body": "ParticleSystem:setSpeed(${1:min (number)}, ${2:max (number)})",
+        "description": "设置粒子的速度。"
+    },
+    "ParticleSystem:setSpin": {
+        "prefix": "ParticleSystem:setSpin",
+        "body": "ParticleSystem:setSpin(${1:min (number)}, ${2:max (number)})",
+        "description": "设置精灵的旋转。"
+    },
+    "ParticleSystem:setSpinVariation": {
+        "prefix": "ParticleSystem:setSpinVariation",
+        "body": "ParticleSystem:setSpinVariation(${1:variation (number)})",
+        "description": "设置变化的程度（0表示没有变化，1表示从开始到结束的完全变化）。"
+    },
+    "ParticleSystem:setSpread": {
+        "prefix": "ParticleSystem:setSpread",
+        "body": "ParticleSystem:setSpread(${1:spread (number)})",
+        "description": "设置系统的扩散量。"
+    },
+    "ParticleSystem:setTexture": {
+        "prefix": "ParticleSystem:setTexture",
+        "body": "ParticleSystem:setTexture(${1:texture (Texture)})",
+        "description": "设置要发射的图像或画布。"
+    },
+    "ParticleSystem:setTangentialAcceleration": {
+        "prefix": "ParticleSystem:setTangentialAcceleration",
+        "body": "ParticleSystem:setTangentialAcceleration(${1:min (number)}, ${2:max (number)})",
+        "description": "设置切向加速度（垂直于粒子方向的加速度）。"
+    },
+    "ParticleSystem:start": {
+        "prefix": "ParticleSystem:start",
+        "body": "ParticleSystem:start()",
+        "description": "启动粒子发射器。"
+    },
+    "ParticleSystem:stop": {
+        "prefix": "ParticleSystem:stop",
+        "body": "ParticleSystem:stop()",
+        "description": "停止粒子发射器，重置生命周期计数器。"
+    },
+    "ParticleSystem:update": {
+        "prefix": "ParticleSystem:update",
+        "body": "ParticleSystem:update(${1:dt (number)})",
+        "description": "更新粒子系统；移动、创建和销毁粒子。"
+    },
+    "Quad:getViewport": {
+        "prefix": "Quad:getViewport",
+        "body": "Quad:getViewport()",
+        "description": "获取此四边形的当前视口。"
+    },
+    "Quad:setViewport": {
+        "prefix": "Quad:setViewport",
+        "body": "Quad:setViewport()",
+        "description": "根据视口设置纹理坐标。"
+    },
+    "Shader:getExternVariable": {
+        "prefix": "Shader:getExternVariable",
+        "body": "Shader:getExternVariable(${1:name (string)})",
+        "description": "获取有关着色器中“extern”（“uniform”）变量的信息。"
+    },
+    "Shader:getWarnings": {
+        "prefix": "Shader:getWarnings",
+        "body": "Shader:getWarnings()",
+        "description": "返回编译着色器代码时的任何警告和错误消息。如果图形硬件对某些内容不满意，这可以用于调试您的着色器。"
+    },
+    "Shader:send": {
+        "prefix": "Shader:send",
+        "body": "Shader:send(${1:name (string)}, ${2:number (number)}, ${3:... (number)})",
+        "description": "向着色器中的一个或多个特殊（外部）变量发送值。"
+    },
+    "Shader:sendColor": {
+        "prefix": "Shader:sendColor",
+        "body": "Shader:sendColor(${1:name (string)}, ${2:color (table)}, ${3:... (table)})",
+        "description": "将一个或多个颜色发送到着色器中的一个特殊（外部/统一）vec3或vec4变量。颜色分量必须在[0, 255]范围内，与Shader:send不同。如果启用了全局伽马校正，则颜色会被伽马校正。"
+    },
+    "SpriteBatch:add": {
+        "prefix": "SpriteBatch:add",
+        "body": "SpriteBatch:add(${1:x (number)}, ${2:y (number)}, ${3:r (number)}, ${4:sx (number)}, ${5:sy (number)}, ${6:ox (number)}, ${7:oy (number)}, ${8:kx (number)}, ${9:ky (number)})",
+        "description": "将一个精灵添加到批次中。"
+    },
+    "SpriteBatch:attachAttribute": {
+        "prefix": "SpriteBatch:attachAttribute",
+        "body": "SpriteBatch:attachAttribute(${1:name (string)}, ${2:mesh (Mesh)})",
+        "description": "将一个网格的每个顶点属性附加到这个精灵批次上，用于绘图时。这可以与着色器结合使用，以增加精灵批次的每个顶点或每个精灵的额外信息，而不仅仅是每个精灵的颜色。精灵批次中的每个精灵都有4个顶点，顺序如下：左上角、左下角、右上角、右下角。通过精灵批次:add（以及精灵批次:set使用的）返回的索引可以乘以4来确定特定精灵的第一个顶点。"
+    },
+    "SpriteBatch:clear": {
+        "prefix": "SpriteBatch:clear",
+        "body": "SpriteBatch:clear()",
+        "description": "从缓冲区中移除所有精灵。"
+    },
+    "SpriteBatch:flush": {
+        "prefix": "SpriteBatch:flush",
+        "body": "SpriteBatch:flush()",
+        "description": "立即将批次中所有新的和修改过的精灵数据发送到显卡。"
+    },
+    "SpriteBatch:getBufferSize": {
+        "prefix": "SpriteBatch:getBufferSize",
+        "body": "SpriteBatch:getBufferSize()",
+        "description": "获取SpriteBatch可以容纳的最大精灵数量。"
+    },
+    "SpriteBatch:getColor": {
+        "prefix": "SpriteBatch:getColor",
+        "body": "SpriteBatch:getColor()",
+        "description": "获取下一次添加和设置操作将使用的颜色。如果没有使用 SpriteBatch:setColor 设置颜色，或者当前 SpriteBatch 的颜色已被清除，此方法将返回 nil。"
+    },
+    "SpriteBatch:getCount": {
+        "prefix": "SpriteBatch:getCount",
+        "body": "SpriteBatch:getCount()",
+        "description": "获取当前SpriteBatch中的精灵数量。"
+    },
+    "SpriteBatch:getTexture": {
+        "prefix": "SpriteBatch:getTexture",
+        "body": "SpriteBatch:getTexture()",
+        "description": "返回SpriteBatch使用的Image或Canvas。"
+    },
+    "SpriteBatch:set": {
+        "prefix": "SpriteBatch:set",
+        "body": "SpriteBatch:set(${1:id (number)}, ${2:x (number)}, ${3:y (number)}, ${4:r (number)}, ${5:sx (number)}, ${6:sy (number)}, ${7:ox (number)}, ${8:oy (number)}, ${9:kx (number)}, ${10:ky (number)})",
+        "description": "更改批次中的精灵。这需要由add和addq返回的标识符。"
+    },
+    "SpriteBatch:setBufferSize": {
+        "prefix": "SpriteBatch:setBufferSize",
+        "body": "SpriteBatch:setBufferSize(${1:size (number)})",
+        "description": "设置 SpriteBatch 可以持有的最大精灵数量。当调用此函数时，批次中现有的精灵（达到新的最大值）不会被清除。"
+    },
+    "SpriteBatch:setColor": {
+        "prefix": "SpriteBatch:setColor",
+        "body": "SpriteBatch:setColor(${1:r (number)}, ${2:g (number)}, ${3:b (number)}, ${4:a (number)})",
+        "description": "设置下一次添加和设置操作将使用的颜色。不带参数调用该函数将清除颜色。使用love.graphics.setColor设置的全局颜色不会对SpriteBatch起作用，如果任何精灵有自己的颜色。"
+    },
+    "SpriteBatch:setTexture": {
+        "prefix": "SpriteBatch:setTexture",
+        "body": "SpriteBatch:setTexture(${1:texture (Texture)})",
+        "description": "替换用于精灵的图像或画布。"
+    },
+    "Text:add": {
+        "prefix": "Text:add",
+        "body": "Text:add(${1:textstring (string)}, ${2:x (number)}, ${3:y (number)}, ${4:angle (number)}, ${5:sx (number)}, ${6:sy (number)}, ${7:ox (number)}, ${8:oy (number)}, ${9:kx (number)}, ${10:ky (number)})",
+        "description": "在指定位置向文本对象添加额外的彩色文本。"
+    },
+    "Text:addf": {
+        "prefix": "Text:addf",
+        "body": "Text:addf(${1:textstring (string)}, ${2:wraplimit (number)}, ${3:align (AlignMode)}, ${4:x (number)}, ${5:y (number)}, ${6:angle (number)}, ${7:sx (number)}, ${8:sy (number)}, ${9:ox (number)}, ${10:oy (number)}, ${11:kx (number)}, ${12:ky (number)})",
+        "description": "在指定位置向文本对象添加额外的格式化/彩色文本。"
+    },
+    "Text:clear": {
+        "prefix": "Text:clear",
+        "body": "Text:clear()",
+        "description": "清除文本对象的内容。"
+    },
+    "Text:getDimensions": {
+        "prefix": "Text:getDimensions",
+        "body": "Text:getDimensions()",
+        "description": "获取文本的宽度和高度（以像素为单位）。"
+    },
+    "Text:getFont": {
+        "prefix": "Text:getFont",
+        "body": "Text:getFont()",
+        "description": "获取用于文本对象的字体。"
+    },
+    "Text:getHeight": {
+        "prefix": "Text:getHeight",
+        "body": "Text:getHeight()",
+        "description": "获取文本的高度（以像素为单位）。"
+    },
+    "Text:getWidth": {
+        "prefix": "Text:getWidth",
+        "body": "Text:getWidth()",
+        "description": "获取文本的像素宽度。"
+    },
+    "Text:set": {
+        "prefix": "Text:set",
+        "body": "Text:set(${1:textstring (string)})",
+        "description": "用一个新的未格式化的字符串替换文本对象的内容。"
+    },
+    "Text:setf": {
+        "prefix": "Text:setf",
+        "body": "Text:setf(${1:textstring (string)}, ${2:wraplimit (number)}, ${3:align (AlignMode)})",
+        "description": "用一个新的格式化字符串替换Text对象的内容。"
+    },
+    "Text:setFont": {
+        "prefix": "Text:setFont",
+        "body": "Text:setFont(${1:font (Font)})",
+        "description": "替换用于文本的字体。"
+    },
+    "Video:getDimensions": {
+        "prefix": "Video:getDimensions",
+        "body": "Video:getDimensions()",
+        "description": "获取视频的宽度和高度（以像素为单位）。"
+    },
+    "Video:getFilter": {
+        "prefix": "Video:getFilter",
+        "body": "Video:getFilter()",
+        "description": "获取在绘制视频时使用的缩放滤镜。"
+    },
+    "Video:getHeight": {
+        "prefix": "Video:getHeight",
+        "body": "Video:getHeight()",
+        "description": "获取视频的高度（以像素为单位）。"
+    },
+    "Video:getSource": {
+        "prefix": "Video:getSource",
+        "body": "Video:getSource()",
+        "description": "获取用于播放视频音频的音频源。如果视频没有音频，或者使用Video:setSource方法传入了一个nil参数，可能会返回nil。"
+    },
+    "Video:getStream": {
+        "prefix": "Video:getStream",
+        "body": "Video:getStream()",
+        "description": "获取用于解码和控制视频的VideoStream对象。"
+    },
+    "Video:getWidth": {
+        "prefix": "Video:getWidth",
+        "body": "Video:getWidth()",
+        "description": "获取视频的宽度（以像素为单位）。"
+    },
+    "Video:isPlaying": {
+        "prefix": "Video:isPlaying",
+        "body": "Video:isPlaying()",
+        "description": "获取视频是否正在播放。"
+    },
+    "Video:pause": {
+        "prefix": "Video:pause",
+        "body": "Video:pause()",
+        "description": "暂停视频。"
+    },
+    "Video:play": {
+        "prefix": "Video:play",
+        "body": "Video:play()",
+        "description": "开始播放视频。为了让视频出现在屏幕上，必须使用 love.graphics.draw 来绘制。"
+    },
+    "Video:rewind": {
+        "prefix": "Video:rewind",
+        "body": "Video:rewind()",
+        "description": "将视频倒回到开始。"
+    },
+    "Video:seek": {
+        "prefix": "Video:seek",
+        "body": "Video:seek(${1:offset (number)})",
+        "description": "设置视频的当前播放位置。"
+    },
+    "Video:setFilter": {
+        "prefix": "Video:setFilter",
+        "body": "Video:setFilter(${1:min (FilterMode)}, ${2:mag (FilterMode)}, ${3:anisotropy (number)})",
+        "description": "设置在绘制视频时使用的缩放滤镜。"
+    },
+    "Video:setSource": {
+        "prefix": "Video:setSource",
+        "body": "Video:setSource(${1:source (Source)})",
+        "description": "设置用于播放视频音频的音频源。音频源还控制播放速度和同步。"
+    },
+    "Video:tell": {
+        "prefix": "Video:tell",
+        "body": "Video:tell(${1:seconds (number)})",
+        "description": "获取视频当前的播放位置。"
+    },
+    "love.graphics.arc": {
+        "prefix": "love.graphics.arc",
+        "body": "love.graphics.arc(${1:drawmode (DrawMode)}, ${2:x (number)}, ${3:y (number)}, ${4:radius (number)}, ${5:angle1 (number)}, ${6:angle2 (number)}, ${7:segments (number)})",
+        "description": "在位置（x，y）处绘制一个填充或未填充的弧形。该弧形从角度1绘制到角度2，单位为弧度。segments参数决定了绘制弧形时使用多少个线段。线段越多，边缘越平滑。"
+    },
+    "love.graphics.circle": {
+        "prefix": "love.graphics.circle",
+        "body": "love.graphics.circle(${1:mode (DrawMode)}, ${2:x (number)}, ${3:y (number)}, ${4:radius (number)}, ${5:segments (number)})",
+        "description": "绘制一个圆。"
+    },
+    "love.graphics.clear": {
+        "prefix": "love.graphics.clear",
+        "body": "love.graphics.clear()",
+        "description": "清除屏幕到背景颜色，在 LÖVE 0.9.2 及更早版本中，或者在 0.10.0 及更新版本中清除到指定的颜色。这个函数在默认的 love.run 函数中，在 love.draw 之前自动被调用。参见 love.run 中的示例，了解这个函数的典型用法。注意，裁剪区域限定了清除区域。"
+    },
+    "love.graphics.discard": {
+        "prefix": "love.graphics.discard",
+        "body": "love.graphics.discard(${1:discardcolor (boolean)}, ${2:discardstencil (boolean)})",
+        "description": "丢弃（清除）屏幕或活动画布的内容。这是一个具有特定用例的性能优化函数。如果活动画布刚刚被更改，并且即将使用“替换”混合模式来绘制覆盖整个屏幕的内容，调用 `love.graphics.discard` 而不是调用 `love.graphics.clear` 或什么都不做，可能会提高移动设备上的性能。在某些桌面系统上，这个函数可能什么都不做。"
+    },
+    "love.graphics.draw": {
+        "prefix": "love.graphics.draw",
+        "body": "love.graphics.draw(${1:drawable (Drawable)}, ${2:x (number)}, ${3:y (number)}, ${4:r (number)}, ${5:sx (number)}, ${6:sy (number)}, ${7:ox (number)}, ${8:oy (number)}, ${9:kx (number)}, ${10:ky (number)})",
+        "description": "在屏幕上绘制一个可绘制对象（一个图像、画布、精灵批次、粒子系统、网格或视频），可选地进行旋转、缩放和倾斜。对象是相对于它们自己的坐标系绘制的。默认情况下，原点位于图像和画布的左上角。所有的缩放、倾斜和旋转参数都是相对于该点变换对象的。同样，可以在屏幕坐标系中指定原点的位置。可以通过将原点偏移到中心来围绕对象的中心旋转。角度必须以弧度给出以进行旋转。同样，可以使用负缩放因子在其中心线周围翻转。注意，偏移是在旋转、缩放或倾斜之前应用的；缩放和倾斜是在旋转之前应用的。对象的右边缘和底部边缘根据倾斜因子定义的角度进行偏移。"
+    },
+    "love.graphics.ellipse": {
+        "prefix": "love.graphics.ellipse",
+        "body": "love.graphics.ellipse(${1:mode (DrawMode)}, ${2:x (number)}, ${3:y (number)}, ${4:radiusx (number)}, ${5:radiusy (number)})",
+        "description": "绘制一个椭圆。"
+    },
+    "love.graphics.getBackgroundColor": {
+        "prefix": "love.graphics.getBackgroundColor",
+        "body": "love.graphics.getBackgroundColor()",
+        "description": "获取当前的背景颜色。"
+    },
+    "love.graphics.getBlendMode": {
+        "prefix": "love.graphics.getBlendMode",
+        "body": "love.graphics.getBlendMode()",
+        "description": "获取混合模式。"
+    },
+    "love.graphics.getCanvas": {
+        "prefix": "love.graphics.getCanvas",
+        "body": "love.graphics.getCanvas()",
+        "description": "获取当前目标画布。"
+    },
+    "love.graphics.getCanvasFormats": {
+        "prefix": "love.graphics.getCanvasFormats",
+        "body": "love.graphics.getCanvasFormats()",
+        "description": "获取可用的画布格式，以及每种格式是否受支持。"
+    },
+    "love.graphics.getColor": {
+        "prefix": "love.graphics.getColor",
+        "body": "love.graphics.getColor()",
+        "description": "获取当前颜色。"
+    },
+    "love.graphics.getColorMask": {
+        "prefix": "love.graphics.getColorMask",
+        "body": "love.graphics.getColorMask()",
+        "description": "获取用于绘图时的活动颜色组件。通常所有4个组件都是活动的，除非使用了love.graphics.setColorMask。颜色掩码决定了绘制对象的颜色的各个组件是否会影响屏幕的颜色。它们也影响love.graphics.clear和Canvas:clear。"
+    },
+    "love.graphics.getCompressedImageFormats": {
+        "prefix": "love.graphics.getCompressedImageFormats",
+        "body": "love.graphics.getCompressedImageFormats()",
+        "description": "获取可用的压缩图像格式以及每种格式是否受支持。"
+    },
+    "love.graphics.getDefaultFilter": {
+        "prefix": "love.graphics.getDefaultFilter",
+        "body": "love.graphics.getDefaultFilter()",
+        "description": "返回用于图像、画布和字体的默认缩放过滤器。"
+    },
+    "love.graphics.getDimensions": {
+        "prefix": "love.graphics.getDimensions",
+        "body": "love.graphics.getDimensions()",
+        "description": "获取窗口的宽度和高度。"
+    },
+    "love.graphics.getFont": {
+        "prefix": "love.graphics.getFont",
+        "body": "love.graphics.getFont()",
+        "description": "获取当前的字体对象。"
+    },
+    "love.graphics.getHeight": {
+        "prefix": "love.graphics.getHeight",
+        "body": "love.graphics.getHeight()",
+        "description": "获取窗口的高度。"
+    },
+    "love.graphics.getLineJoin": {
+        "prefix": "love.graphics.getLineJoin",
+        "body": "love.graphics.getLineJoin()",
+        "description": "获取线条连接样式。"
+    },
+    "love.graphics.getLineStyle": {
+        "prefix": "love.graphics.getLineStyle",
+        "body": "love.graphics.getLineStyle()",
+        "description": "获取线条样式。"
+    },
+    "love.graphics.getLineWidth": {
+        "prefix": "love.graphics.getLineWidth",
+        "body": "love.graphics.getLineWidth()",
+        "description": "获取当前线条宽度。"
+    },
+    "love.graphics.getShader": {
+        "prefix": "love.graphics.getShader",
+        "body": "love.graphics.getShader()",
+        "description": "返回当前的着色器。如果没有设置，则返回nil。"
+    },
+    "love.graphics.getStats": {
+        "prefix": "love.graphics.getStats",
+        "body": "love.graphics.getStats()",
+        "description": "获取与性能相关的渲染统计数据。"
+    },
+    "love.graphics.getStencilTest": {
+        "prefix": "love.graphics.getStencilTest",
+        "body": "love.graphics.getStencilTest()",
+        "description": "获取是否启用了模板测试。当启用模板测试时，所有绘制的几何体将根据是否与之前绘制到模板缓冲区的内容相交来被裁剪/模板化。每个画布都有自己的模板缓冲区。"
+    },
+    "love.graphics.getSupported": {
+        "prefix": "love.graphics.getSupported",
+        "body": "love.graphics.getSupported()",
+        "description": "获取可选的图形特性以及它们是否在系统上得到支持。一些旧的或低端系统并不总是支持所有图形特性。"
+    },
+    "love.graphics.getSystemLimits": {
+        "prefix": "love.graphics.getSystemLimits",
+        "body": "love.graphics.getSystemLimits()",
+        "description": "获取系统依赖的love.graphics特性的最大值。"
+    },
+    "love.graphics.getPointSize": {
+        "prefix": "love.graphics.getPointSize",
+        "body": "love.graphics.getPointSize()",
+        "description": "获取点大小。"
+    },
+    "love.graphics.getRendererInfo": {
+        "prefix": "love.graphics.getRendererInfo",
+        "body": "love.graphics.getRendererInfo()",
+        "description": "获取系统显卡和驱动程序的信息。"
+    },
+    "love.graphics.getScissor": {
+        "prefix": "love.graphics.getScissor",
+        "body": "love.graphics.getScissor()",
+        "description": "获取当前的裁剪框。"
+    },
+    "love.graphics.getWidth": {
+        "prefix": "love.graphics.getWidth",
+        "body": "love.graphics.getWidth()",
+        "description": "获取窗口的宽度。"
+    },
+    "love.graphics.intersectScissor": {
+        "prefix": "love.graphics.intersectScissor",
+        "body": "love.graphics.intersectScissor(${1:x (number)}, ${2:y (number)}, ${3:width (number)}, ${4:height (number)})",
+        "description": "设置裁剪区域为指定矩形与现有裁剪区域的交集。如果尚未激活任何裁剪区域，则其行为类似于 `love.graphics.setScissor`。裁剪限制了绘图区域到一个特定的矩形。这会影响所有图形调用，包括 `love.graphics.clear`。裁剪的尺寸不受图形变换（平移、缩放等）的影响。"
+    },
+    "love.graphics.isGammaCorrect": {
+        "prefix": "love.graphics.isGammaCorrect",
+        "body": "love.graphics.isGammaCorrect()",
+        "description": "获取是否支持并启用了伽马校正渲染。可以通过在love.conf中设置t.gammacorrect = true来启用。并非所有设备都支持伽马校正渲染，在这种情况下，它将自动被禁用，此函数将返回false。它在支持OpenGL 3 / DirectX 10的桌面系统和可以使用OpenGL ES 3的iOS设备上得到支持。"
+    },
+    "love.graphics.isWireframe": {
+        "prefix": "love.graphics.isWireframe",
+        "body": "love.graphics.isWireframe()",
+        "description": "获取在绘制时是否使用线框模式。"
+    },
+    "love.graphics.line": {
+        "prefix": "love.graphics.line",
+        "body": "love.graphics.line(${1:x1 (number)}, ${2:y1 (number)}, ${3:x2 (number)}, ${4:y2 (number)}, ${5:... (number)})",
+        "description": "绘制点之间的线条。"
+    },
+    "love.graphics.newCanvas": {
+        "prefix": "love.graphics.newCanvas",
+        "body": "love.graphics.newCanvas(${1:width (number)}, ${2:height (number)}, ${3:format (CanvasFormat)}, ${4:msaa (number)})",
+        "description": "创建一个新的用于离屏渲染的Canvas对象。抗锯齿Canvas比普通Canvas有更高的系统要求。此外，系统支持的最大MSAA样本数量也因系统而异。可以使用love.graphics.getSystemLimit来检查。如果指定的MSAA样本数量大于系统支持的最大值，Canvas仍然会被创建，但只会使用系统支持的最大数量（包括0）。"
+    },
+    "love.graphics.newFont": {
+        "prefix": "love.graphics.newFont",
+        "body": "love.graphics.newFont(${1:filename (string)}, ${2:size (number)})",
+        "description": "创建一个新的字体。"
+    },
+    "love.graphics.newMesh": {
+        "prefix": "love.graphics.newMesh",
+        "body": "love.graphics.newMesh(${1:vertices (table)}, ${2:mode (MeshDrawMode)}, ${3:usage (SpriteBatchUsage)})",
+        "description": "创建一个新的网格。如果网格在绘制时应该使用图像或画布进行纹理处理，请使用Mesh:setTexture。"
+    },
+    "love.graphics.newImage": {
+        "prefix": "love.graphics.newImage",
+        "body": "love.graphics.newImage(${1:filename (string)})",
+        "description": "从一个文件路径、文件数据、图像数据或压缩图像数据创建一个新的图像，并可选择生成或指定图像的.mipmaps。"
+    },
+    "love.graphics.newImageFont": {
+        "prefix": "love.graphics.newImageFont",
+        "body": "love.graphics.newImageFont(${1:filename (string)}, ${2:glyphs (string)}, ${3:extraspacing (number)})",
+        "description": "通过加载一个特定格式的图像来创建一个新的字体。在0.9.0版本之前的版本中，LÖVE期望字形字符串使用ISO 8859-1编码。"
+    },
+    "love.graphics.newParticleSystem": {
+        "prefix": "love.graphics.newParticleSystem",
+        "body": "love.graphics.newParticleSystem(${1:texture (Texture)}, ${2:buffer (number)})",
+        "description": "创建一个新的粒子系统。"
+    },
+    "love.graphics.newShader": {
+        "prefix": "love.graphics.newShader",
+        "body": "love.graphics.newShader(${1:code (string)})",
+        "description": "创建一个新的Shader对象，用于硬件加速的顶点和像素效果。Shader包含顶点着色器代码、像素着色器代码或两者都有。顶点着色器代码必须至少包含一个名为position的函数，该函数将产生屏幕空间中绘制对象的变换顶点位置。像素着色器代码必须至少包含一个名为effect的函数，该函数将产生绘制对象触及的每个像素在屏幕上混合的颜色。"
+    },
+    "love.graphics.newText": {
+        "prefix": "love.graphics.newText",
+        "body": "love.graphics.newText(${1:font (Font)}, ${2:textstring (string)})",
+        "description": "创建一个新的字体。"
+    },
+    "love.graphics.newQuad": {
+        "prefix": "love.graphics.newQuad",
+        "body": "love.graphics.newQuad(${1:x (number)}, ${2:y (number)}, ${3:width (number)}, ${4:height (number)}, ${5:sw (number)}, ${6:sh (number)})",
+        "description": "创建一个新的四边形（Quad）。四边形的目的是描述对任何可绘制对象进行以下变换后的结果。首先，将对象缩放到 sw * sh 的尺寸。然后，四边形描述了一个尺寸为 width * height 的矩形区域，其左上角位于缩放后对象内的位置 (x, y)。"
+    },
+    "love.graphics.newScreenshot": {
+        "prefix": "love.graphics.newScreenshot",
+        "body": "love.graphics.newScreenshot(${1:copyAlpha (boolean)})",
+        "description": "创建一个屏幕截图并返回图像数据。"
+    },
+    "love.graphics.newSpriteBatch": {
+        "prefix": "love.graphics.newSpriteBatch",
+        "body": "love.graphics.newSpriteBatch(${1:texture (Texture)}, ${2:maxsprites (number)}, ${3:usage (SpriteBatchUsage)})",
+        "description": "创建一个新的精灵批处理对象。"
+    },
+    "love.graphics.newVideo": {
+        "prefix": "love.graphics.newVideo",
+        "body": "love.graphics.newVideo(${1:filename (string)}, ${2:loadaudio (boolean)})",
+        "description": "创建一个新的可绘制的视频。目前仅支持Ogg Theora视频文件。"
+    },
+    "love.graphics.origin": {
+        "prefix": "love.graphics.origin",
+        "body": "love.graphics.origin()",
+        "description": "重置当前坐标变换。这个函数总是用来撤销之前对 love.graphics.rotate、love.graphics.scale、love.graphics.shear 或 love.graphics.translate 的任何调用。它将当前变换状态恢复到默认值。"
+    },
+    "love.graphics.points": {
+        "prefix": "love.graphics.points",
+        "body": "love.graphics.points(${1:x (number)}, ${2:y (number)}, ${3:... (number)})",
+        "description": "绘制一个或多个点。"
+    },
+    "love.graphics.polygon": {
+        "prefix": "love.graphics.polygon",
+        "body": "love.graphics.polygon(${1:mode (DrawMode)}, ${2:... (number)})",
+        "description": "绘制一个多边形。根据 mode 参数，这个函数可以接受多个数字参数或一个包含数字参数的单个表格。在任何情况下，参数都被解释为多边形顶点的交替 x 和 y 坐标。当处于填充模式时，多边形必须是凸形和简单的，否则可能会出现渲染伪影。"
+    },
+    "love.graphics.pop": {
+        "prefix": "love.graphics.pop",
+        "body": "love.graphics.pop()",
+        "description": "从变换堆栈中弹出当前坐标变换。这个函数总是用来撤销之前的 push 操作。它将当前的变换状态恢复到最后一次 push 之前的状态。例如，可以参考 love.graphics.push 的描述。"
+    },
+    "love.graphics.present": {
+        "prefix": "love.graphics.present",
+        "body": "love.graphics.present()",
+        "description": "在屏幕上显示绘图操作的结果。当编写自己的love.run函数时使用此函数。它将所有绘图操作的结果呈现在屏幕上。参见love.run中的示例，了解这个函数的典型用法。"
+    },
+    "love.graphics.print": {
+        "prefix": "love.graphics.print",
+        "body": "love.graphics.print(${1:text (string)}, ${2:x (number)}, ${3:y (number)}, ${4:r (number)}, ${5:sx (number)}, ${6:sy (number)}, ${7:ox (number)}, ${8:oy (number)}, ${9:kx (number)}, ${10:ky (number)})",
+        "description": "在屏幕上绘制文本。如果没有设置字体，需要时将创建并设置一个字体（仅一次）。在使用翻译和缩放函数绘制文本时，此函数假设首先发生缩放。如果您不按照这个思路编写脚本，文本将不在正确的位置，甚至可能完全不在屏幕上。love.graphics.print在遇到第一个'\\0'（空）字符时停止。如果您正在将按键追加到字符串中，这可能会让您陷入困境，因为其中一些按键是多字节的Unicode字符，很可能包含空字节。"
+    },
+    "love.graphics.printf": {
+        "prefix": "love.graphics.printf",
+        "body": "love.graphics.printf(${1:text (string)}, ${2:x (number)}, ${3:y (number)}, ${4:limit (number)}, ${5:align (AlignMode)}, ${6:r (number)}, ${7:sx (number)}, ${8:sy (number)}, ${9:ox (number)}, ${10:oy (number)}, ${11:kx (number)}, ${12:ky (number)})",
+        "description": "绘制格式化文本，具有自动换行和对齐功能。有关love.graphics.print的额外说明，请参见文档。在0.9.2版本及更早版本中，换行是通过按空格分隔单词并将它们重新组合在一起来实现的，以确保文本能够很好地适应所提供的宽度限制。然而，由于这种方式，打印到屏幕上时单词之间的额外空格会消失，有些行可能会超出提供的换行限制。从0.10.0版本及更新版本开始，这种情况不再发生。"
+    },
+    "love.graphics.push": {
+        "prefix": "love.graphics.push",
+        "body": "love.graphics.push(${1:stack (StackType)})",
+        "description": "复制并推送当前坐标变换到变换栈。这个函数总是用来为稍后的对应弹出操作做准备。它将当前坐标变换状态存储到变换栈中，并保持其活动状态。稍后对变换的更改可以通过使用弹出操作来撤销，该操作将坐标变换恢复到调用推送之前的状态。"
+    },
+    "love.graphics.rectangle": {
+        "prefix": "love.graphics.rectangle",
+        "body": "love.graphics.rectangle(${1:mode (DrawMode)}, ${2:x (number)}, ${3:y (number)}, ${4:width (number)}, ${5:height (number)})",
+        "description": "绘制一个矩形。"
+    },
+    "love.graphics.reset": {
+        "prefix": "love.graphics.reset",
+        "body": "love.graphics.reset()",
+        "description": "重置当前的图形设置。调用reset会将当前绘图颜色设置为白色，背景颜色设置为黑色，重置任何活动的Canvas或Shader，并移除任何裁剪设置。它将BlendMode设置为alpha。它还将点和线绘图模式都设置为平滑，并将它们的大小设置为1.0。"
+    },
+    "love.graphics.rotate": {
+        "prefix": "love.graphics.rotate",
+        "body": "love.graphics.rotate(${1:angle (number)})",
+        "description": "旋转二维坐标系。调用这个函数会通过给定的弧度量围绕原点旋转坐标系，影响所有未来的绘图操作。这种变化持续到love.draw退出。"
+    },
+    "love.graphics.scale": {
+        "prefix": "love.graphics.scale",
+        "body": "love.graphics.scale(${1:sx (number)}, ${2:sy (number)})",
+        "description": "在二维空间中缩放坐标系统。默认情况下，LÖVE中的坐标系统与显示像素在水平和垂直方向上是一对一对应的，x轴向右增加，y轴向下增加。缩放坐标系统会改变这种关系。在通过sx和sy缩放后，所有坐标都被视为乘以sx和sy。每个绘图操作的结果也会相应地缩放，因此，例如，通过(2, 2)缩放意味着在x和y方向上将所有内容放大两倍。通过负值缩放会翻转相应方向上的坐标系统，这也意味着所有内容都会被翻转或上下颠倒，或两者兼有。通过零缩放不是一个有用的操作。缩放和转换不是交换操作，因此，以不同的顺序调用它们会改变结果。缩放持续到love.draw退出。"
+    },
+    "love.graphics.setBackgroundColor": {
+        "prefix": "love.graphics.setBackgroundColor",
+        "body": "love.graphics.setBackgroundColor(${1:r (number)}, ${2:g (number)}, ${3:b (number)}, ${4:a (number)})",
+        "description": "设置背景颜色。"
+    },
+    "love.graphics.setBlendMode": {
+        "prefix": "love.graphics.setBlendMode",
+        "body": "love.graphics.setBlendMode(${1:mode (BlendMode)})",
+        "description": "设置混合模式。"
+    },
+    "love.graphics.setCanvas": {
+        "prefix": "love.graphics.setCanvas",
+        "body": "love.graphics.setCanvas()",
+        "description": "将渲染目标设置为一个或多个画布。直到下一个love.graphics.setCanvas调用之前，所有的绘图操作将被重定向到指定的画布上，并且不会显示在屏幕上。所有的画布参数必须具有相同的宽度、高度和纹理类型。通常情况下，每个画布上绘制的内容是相同的，但如果使用“effects”函数而不是常规效果来使用像素着色器，那么可以改变这一点。并非所有计算机都支持画布，也并非所有支持画布的计算机都支持多个渲染目标。使用love.graphics.isSupported来检查。当不带参数调用时，渲染目标将重置回屏幕。"
+    },
+    "love.graphics.setColor": {
+        "prefix": "love.graphics.setColor",
+        "body": "love.graphics.setColor(${1:red (number)}, ${2:green (number)}, ${3:blue (number)}, ${4:alpha (number)})",
+        "description": "设置用于绘图的颜色。"
+    },
+    "love.graphics.setColorMask": {
+        "prefix": "love.graphics.setColorMask",
+        "body": "love.graphics.setColorMask()",
+        "description": "设置颜色掩码。在渲染和清除屏幕时启用或禁用特定的颜色组件。例如，如果将红色设置为false，则不会再对任何像素的红色分量进行更改。在没有参数调用时启用所有颜色组件。"
+    },
+    "love.graphics.setDefaultFilter": {
+        "prefix": "love.graphics.setDefaultFilter",
+        "body": "love.graphics.setDefaultFilter(${1:min (FilterMode)}, ${2:mag (FilterMode)}, ${3:anisotropy (number)})",
+        "description": "设置用于图像、画布和字体的默认缩放过滤器。这个函数不会追溯性地应用于已加载的图像。"
+    },
+    "love.graphics.setFont": {
+        "prefix": "love.graphics.setFont",
+        "body": "love.graphics.setFont(${1:font (Font)})",
+        "description": "设置一个已经加载的字体为当前字体，或者从文件和大小创建并加载一个新的字体。建议在加载阶段使用 `love.graphics.newFont` 创建字体对象，然后在绘制阶段将这些对象传递给这个函数。"
+    },
+    "love.graphics.setLineJoin": {
+        "prefix": "love.graphics.setLineJoin",
+        "body": "love.graphics.setLineJoin(${1:join (LineJoin)})",
+        "description": "设置线条连接样式。"
+    },
+    "love.graphics.setLineStyle": {
+        "prefix": "love.graphics.setLineStyle",
+        "body": "love.graphics.setLineStyle(${1:style (LineStyle)})",
+        "description": "设置线条样式。"
+    },
+    "love.graphics.setLineWidth": {
+        "prefix": "love.graphics.setLineWidth",
+        "body": "love.graphics.setLineWidth(${1:width (number)})",
+        "description": "设置线宽。"
+    },
+    "love.graphics.setNewFont": {
+        "prefix": "love.graphics.setNewFont",
+        "body": "love.graphics.setNewFont(${1:filename (string)}, ${2:size (number)})",
+        "description": "创建并设置一个新的字体。"
+    },
+    "love.graphics.setShader": {
+        "prefix": "love.graphics.setShader",
+        "body": "love.graphics.setShader()",
+        "description": "设置或重置一个着色器作为当前的像素效果或顶点着色器。所有绘图操作直到下一个love.graphics.setShader调用都会使用指定的着色器对象。当不带参数调用时，禁用着色器。"
+    },
+    "love.graphics.setPointSize": {
+        "prefix": "love.graphics.setPointSize",
+        "body": "love.graphics.setPointSize(${1:size (number)})",
+        "description": "设置点大小。"
+    },
+    "love.graphics.setScissor": {
+        "prefix": "love.graphics.setScissor",
+        "body": "love.graphics.setScissor(${1:x (number)}, ${2:y (number)}, ${3:width (number)}, ${4:height (number)})",
+        "description": "设置或禁用裁剪区域。裁剪区域将绘图区域限制在指定的矩形内。这会影响所有的图形调用，包括love.graphics.clear。"
+    },
+    "love.graphics.setStencilTest": {
+        "prefix": "love.graphics.setStencilTest",
+        "body": "love.graphics.setStencilTest(${1:comparemode (CompareMode)}, ${2:comparevalue (number)})",
+        "description": "配置或禁用模板测试。当启用模板测试时，之后绘制的所有几何体将根据此函数的参数与每个像素的模板值之间的比较结果被剪辑/模板化。像素的模板值通过 `love.graphics.stencil` 受到影响。每个 Canvas 都有自己的每个像素的模板值。"
+    },
+    "love.graphics.setWireframe": {
+        "prefix": "love.graphics.setWireframe",
+        "body": "love.graphics.setWireframe(${1:enable (boolean)})",
+        "description": "设置在绘图时是否使用线框线。线框模式仅应用于调试。启用时绘制的线条不像常规的love.graphics线条：它们的宽度不会随着坐标变换或love.graphics.setLineWidth进行缩放，并且它们不使用平滑的LineStyle。"
+    },
+    "love.graphics.shear": {
+        "prefix": "love.graphics.shear",
+        "body": "love.graphics.shear(${1:kx (number)}, ${2:ky (number)})",
+        "description": "裁剪坐标系。"
+    },
+    "love.graphics.stencil": {
+        "prefix": "love.graphics.stencil",
+        "body": "love.graphics.stencil(${1:stencilfunction (function)}, ${2:action (StencilAction)}, ${3:value (number)}, ${4:keepvalues (boolean)})",
+        "description": "将几何图形作为模板绘制。由提供的函数绘制的几何图形会设置像素的不可见模板值，而不是设置像素颜色。像素的模板值可以像遮罩/模板一样作用——之后可以使用love.graphics.setStencilTest来确定进一步的渲染如何受到每个像素模板值的影响。每个画布都有自己的每个像素的模板值。模板值的范围在[0, 255]之内。"
+    },
+    "love.graphics.translate": {
+        "prefix": "love.graphics.translate",
+        "body": "love.graphics.translate(${1:dx (number)}, ${2:dy (number)})",
+        "description": "在二维空间中平移坐标系。当这个函数用两个数字dx和dy调用时，所有随后的绘图操作都会像它们的x和y坐标分别是x+dx和y+dy一样生效。缩放和平移不是可交换的操作，因此，以不同的顺序调用它们会改变结果。这种改变一直持续到调用love.graphics.clear（在默认的love.run函数中，在love.draw之前自动调用），或者一个love.graphics.pop撤销到之前的坐标系状态。使用整数进行平移可以防止在平移后绘制的图像和字体出现撕裂/模糊。"
+    },
+    "CompressedImageData:getDimensions": {
+        "prefix": "CompressedImageData:getDimensions",
+        "body": "CompressedImageData:getDimensions()",
+        "description": "获取CompressedImageData的宽度和高度。"
+    },
+    "CompressedImageData:getFormat": {
+        "prefix": "CompressedImageData:getFormat",
+        "body": "CompressedImageData:getFormat()",
+        "description": "获取CompressedImageData的格式。"
+    },
+    "CompressedImageData:getHeight": {
+        "prefix": "CompressedImageData:getHeight",
+        "body": "CompressedImageData:getHeight()",
+        "description": "获取CompressedImageData的高度。"
+    },
+    "CompressedImageData:getMipmapCount": {
+        "prefix": "CompressedImageData:getMipmapCount",
+        "body": "CompressedImageData:getMipmapCount(${1:mipmaps (number)})",
+        "description": "获取CompressedImageData中的mipmap级别数量。基础mipmap级别（原始图像）包含在计数中。"
+    },
+    "CompressedImageData:getWidth": {
+        "prefix": "CompressedImageData:getWidth",
+        "body": "CompressedImageData:getWidth()",
+        "description": "获取CompressedImageData的宽度。"
+    },
+    "ImageData:encode": {
+        "prefix": "ImageData:encode",
+        "body": "ImageData:encode(${1:format (ImageFormat)}, ${2:filename (string)})",
+        "description": "编码ImageData，并可选择性地将其写入保存目录。"
+    },
+    "ImageData:getDimensions": {
+        "prefix": "ImageData:getDimensions",
+        "body": "ImageData:getDimensions()",
+        "description": "获取ImageData的宽度和高度（以像素为单位）。"
+    },
+    "ImageData:getHeight": {
+        "prefix": "ImageData:getHeight",
+        "body": "ImageData:getHeight()",
+        "description": "获取ImageData的高度（像素）。"
+    },
+    "ImageData:getPixel": {
+        "prefix": "ImageData:getPixel",
+        "body": "ImageData:getPixel(${1:x (number)}, ${2:y (number)})",
+        "description": "获取图像中特定位置像素的颜色。有效的 x 和 y 值从 0 开始，一直到图像的宽度和高度减去 1。"
+    },
+    "ImageData:getWidth": {
+        "prefix": "ImageData:getWidth",
+        "body": "ImageData:getWidth()",
+        "description": "获取ImageData的宽度，以像素为单位。"
+    },
+    "ImageData:mapPixel": {
+        "prefix": "ImageData:mapPixel",
+        "body": "ImageData:mapPixel(${1:pixelFunction (function)})",
+        "description": "将一个函数应用于每个像素以变换图像。这个函数是一个高阶函数。它接受另一个函数作为参数，并为ImageData中的每个像素调用一次该函数。函数参数针对每个像素依次被调用，并带有六个参数。这些参数是代表像素的x和y坐标及其红色、绿色、蓝色和alpha值的数字。函数参数可以返回多达四个数字值，这些值成为像素的新r、g、b和a值。如果函数返回的值少于四个，剩余的组件将被设置为0。"
+    },
+    "ImageData:paste": {
+        "prefix": "ImageData:paste",
+        "body": "ImageData:paste(${1:source (ImageData)}, ${2:dx (number)}, ${3:dy (number)}, ${4:sx (number)}, ${5:sy (number)}, ${6:sw (number)}, ${7:sh (number)})",
+        "description": "将另一个源图像数据粘贴到图像数据中。"
+    },
+    "ImageData:setPixel": {
+        "prefix": "ImageData:setPixel",
+        "body": "ImageData:setPixel(${1:x (number)}, ${2:y (number)}, ${3:r (number)}, ${4:g (number)}, ${5:b (number)}, ${6:a (number)})",
+        "description": "设置像素的颜色。有效的 x 和 y 值从 0 开始，一直到图像宽度和高度减去 1。"
+    },
+    "love.image.isCompressed": {
+        "prefix": "love.image.isCompressed",
+        "body": "love.image.isCompressed(${1:filename (string)})",
+        "description": "确定一个文件是否可以作为压缩图像数据加载。"
+    },
+    "love.image.newCompressedData": {
+        "prefix": "love.image.newCompressedData",
+        "body": "love.image.newCompressedData(${1:filename (string)})",
+        "description": "从压缩的图像文件创建一个新的 CompressedImageData 对象。LÖVE 支持多种压缩纹理格式，在 CompressedImageFormat 页面中有枚举。"
+    },
+    "love.image.newImageData": {
+        "prefix": "love.image.newImageData",
+        "body": "love.image.newImageData(${1:width (number)}, ${2:height (number)})",
+        "description": "创建一个新的ImageData对象。"
+    },
+    "Joystick:getAxes": {
+        "prefix": "Joystick:getAxes",
+        "body": "Joystick:getAxes()",
+        "description": "获取每个轴的方向。"
+    },
+    "Joystick:getAxis": {
+        "prefix": "Joystick:getAxis",
+        "body": "Joystick:getAxis(${1:axis (number)})",
+        "description": "获取一个轴的方向。"
+    },
+    "Joystick:getAxisCount": {
+        "prefix": "Joystick:getAxisCount",
+        "body": "Joystick:getAxisCount()",
+        "description": "获取游戏手柄上的轴数。"
+    },
+    "Joystick:getButtonCount": {
+        "prefix": "Joystick:getButtonCount",
+        "body": "Joystick:getButtonCount()",
+        "description": "获取游戏手柄上的按钮数量。"
+    },
+    "Joystick:getGUID": {
+        "prefix": "Joystick:getGUID",
+        "body": "Joystick:getGUID()",
+        "description": "获取一个稳定的GUID，该GUID对于物理操纵杆的类型是唯一的，并且不会随时间改变。例如，在OS X上，所有的索尼Dualshock 3控制器都有相同的GUID。这个值是平台依赖的。"
+    },
+    "Joystick:getGamepadAxis": {
+        "prefix": "Joystick:getGamepadAxis",
+        "body": "Joystick:getGamepadAxis(${1:axis (GamepadAxis)})",
+        "description": "获取虚拟游戏手柄轴的方向。如果摇杆未被识别为游戏手柄或未连接，此函数将始终返回0。"
+    },
+    "Joystick:getGamepadMapping": {
+        "prefix": "Joystick:getGamepadMapping",
+        "body": "Joystick:getGamepadMapping(${1:axis (GamepadAxis)})",
+        "description": "获取一个虚拟游戏手柄输入绑定的按钮、轴或帽子。"
+    },
+    "Joystick:getHat": {
+        "prefix": "Joystick:getHat",
+        "body": "Joystick:getHat(${1:hat (number)})",
+        "description": "获取帽子的方向。"
+    },
+    "Joystick:getHatCount": {
+        "prefix": "Joystick:getHatCount",
+        "body": "Joystick:getHatCount()",
+        "description": "获取摇杆上的帽子数量。"
+    },
+    "Joystick:getID": {
+        "prefix": "Joystick:getID",
+        "body": "Joystick:getID()",
+        "description": "获取游戏手柄的唯一标识符。即使游戏手柄断开连接然后重新连接，该标识符在游戏中的生命周期内将保持不变，但如果游戏重新启动，它将会改变。"
+    },
+    "Joystick:getName": {
+        "prefix": "Joystick:getName",
+        "body": "Joystick:getName()",
+        "description": "获取手柄的名称。"
+    },
+    "Joystick:getVibration": {
+        "prefix": "Joystick:getVibration",
+        "body": "Joystick:getVibration()",
+        "description": "获取具有震动支持的手柄当前的振动电机强度。"
+    },
+    "Joystick:isConnected": {
+        "prefix": "Joystick:isConnected",
+        "body": "Joystick:isConnected()",
+        "description": "获取游戏手柄是否已连接。"
+    },
+    "Joystick:isDown": {
+        "prefix": "Joystick:isDown",
+        "body": "Joystick:isDown(${1:... (number)})",
+        "description": "检查游戏手柄上的某个按钮是否被按下。LÖVE 0.9.0版本中存在一个bug，要求传递给Joystick:isDown的按钮索引必须是0基的而不是1基的，例如按钮1在这个函数中会是0。这个bug在0.9.1版本中被修复。"
+    },
+    "Joystick:isGamepad": {
+        "prefix": "Joystick:isGamepad",
+        "body": "Joystick:isGamepad()",
+        "description": "获取是否将手柄识别为游戏手柄。如果是这样，手柄的按钮和轴可以通过 Joystick:getGamepadAxis 和相关函数以标准化的方式在不同的操作系统和手柄模型中使用。LÖVE 自动识别大多数与 Xbox 360 控制器布局相似的流行控制器作为游戏手柄，但您可以通过 love.joystick.setGamepadMapping 添加更多。"
+    },
+    "Joystick:isGamepadDown": {
+        "prefix": "Joystick:isGamepadDown",
+        "body": "Joystick:isGamepadDown(${1:... (GamepadButton)})",
+        "description": "检查 Joystick 上的虚拟游戏手柄按钮是否被按下。如果 Joystick 没有被识别为游戏手柄或未连接，则此函数总是返回 false。"
+    },
+    "Joystick:isVibrationSupported": {
+        "prefix": "Joystick:isVibrationSupported",
+        "body": "Joystick:isVibrationSupported()",
+        "description": "获取是否支持游戏手柄震动功能。"
+    },
+    "Joystick:setVibration": {
+        "prefix": "Joystick:setVibration",
+        "body": "Joystick:setVibration(${1:left (number)}, ${2:right (number)})",
+        "description": "设置具有震动支持的手柄的振动电机速度。"
+    },
+    "love.joystick.getJoystickCount": {
+        "prefix": "love.joystick.getJoystickCount",
+        "body": "love.joystick.getJoystickCount()",
+        "description": "获取已连接的手柄数量。"
+    },
+    "love.joystick.getJoysticks": {
+        "prefix": "love.joystick.getJoysticks",
+        "body": "love.joystick.getJoysticks()",
+        "description": "获取一个连接的手柄列表。"
+    },
+    "love.joystick.loadGamepadMappings": {
+        "prefix": "love.joystick.loadGamepadMappings",
+        "body": "love.joystick.loadGamepadMappings(${1:filename (string)})",
+        "description": "加载一个使用love.joystick.saveGamepadMappings创建的游戏手柄映射字符串或文件。"
+    },
+    "love.joystick.saveGamepadMappings": {
+        "prefix": "love.joystick.saveGamepadMappings",
+        "body": "love.joystick.saveGamepadMappings(${1:filename (string)})",
+        "description": "保存所有被识别为游戏手柄的虚拟游戏手柄映射，这些手柄要么最近被使用过，要么它们的游戏手柄绑定已经被修改过。"
+    },
+    "love.joystick.setGamepadMapping": {
+        "prefix": "love.joystick.setGamepadMapping",
+        "body": "love.joystick.setGamepadMapping(${1:guid (string)}, ${2:button (GamepadButton)}, ${3:inputtype (JoystickInputType)}, ${4:inputindex (number)}, ${5:hatdirection (JoystickHat)})",
+        "description": "将虚拟游戏手柄输入绑定到所有特定类型的摇杆的按钮、轴或帽子上。例如，如果这个函数与OS X中Dualshock 3控制器返回的GUID一起使用，那么绑定将影响在OS X上运行游戏时所有Dualshock 3控制器的Joystick:getGamepadAxis和Joystick:isGamepadDown。LÖVE包括了许多常见控制器的内置游戏手柄绑定。这个函数允许你更改绑定或为默认不被识别为游戏手柄的摇杆类型添加新的绑定。虚拟游戏手柄按钮和轴的设计围绕Xbox 360控制器布局。"
+    },
+    "love.keyboard.getKeyFromScancode": {
+        "prefix": "love.keyboard.getKeyFromScancode",
+        "body": "love.keyboard.getKeyFromScancode(${1:scancode (Scancode)})",
+        "description": "获取与给定硬件扫描码对应的键。与键常量不同，扫描码是与键盘布局无关的。例如，如果按下与美国键盘上“w”键相同位置的键，无论键上的标签是什么，或者用户的操作系统设置是什么，都会生成扫描码“w”。扫描码适用于创建在所有系统上具有相同物理位置的默认控件。"
+    },
+    "love.keyboard.getScancodeFromKey": {
+        "prefix": "love.keyboard.getScancodeFromKey",
+        "body": "love.keyboard.getScancodeFromKey(${1:key (KeyConstant)})",
+        "description": "获取与给定键相对应的硬件扫描码。与键常量不同，扫描码与键盘布局无关。例如，如果按下与美国键盘上“w”键相同位置的键，无论键上贴的是什么标签或者用户的操作系统设置是什么，都会生成扫描码“w”。扫描码适用于创建在所有系统上具有相同物理位置的默认控件。"
+    },
+    "love.keyboard.hasKeyRepeat": {
+        "prefix": "love.keyboard.hasKeyRepeat",
+        "body": "love.keyboard.hasKeyRepeat()",
+        "description": "获取是否启用了按键重复。"
+    },
+    "love.keyboard.hasTextInput": {
+        "prefix": "love.keyboard.hasTextInput",
+        "body": "love.keyboard.hasTextInput()",
+        "description": "获取文本输入事件是否启用。"
+    },
+    "love.keyboard.isDown": {
+        "prefix": "love.keyboard.isDown",
+        "body": "love.keyboard.isDown(${1:key (KeyConstant)})",
+        "description": "检查某个特定的按键是否被按下。不要与love.keypressed或love.keyreleased混淆。"
+    },
+    "love.keyboard.isScancodeDown": {
+        "prefix": "love.keyboard.isScancodeDown",
+        "body": "love.keyboard.isScancodeDown(${1:scancode (Scancode)}, ${2:... (Scancode)})",
+        "description": "检查指定的扫描码是否被按下。不要与love.keypressed或love.keyreleased混淆。与常规的KeyConstants不同，扫描码是与键盘布局无关的。如果按下的键与美国键盘上“w”键的位置相同，则使用扫描码“w”，无论该键上贴的是什么标签，或者用户的操作系统设置是什么。"
+    },
+    "love.keyboard.setKeyRepeat": {
+        "prefix": "love.keyboard.setKeyRepeat",
+        "body": "love.keyboard.setKeyRepeat(${1:enable (boolean)})",
+        "description": "启用或禁用按键重复。默认情况下是禁用的。重复之间的间隔取决于用户的系统设置。"
+    },
+    "love.keyboard.setTextInput": {
+        "prefix": "love.keyboard.setTextInput",
+        "body": "love.keyboard.setTextInput(${1:enable (boolean)})",
+        "description": "启用或禁用文本输入事件。默认情况下，在Windows、Mac和Linux上启用，在iOS和Android上禁用。"
+    },
+    "BezierCurve:evalulate": {
+        "prefix": "BezierCurve:evalulate",
+        "body": "BezierCurve:evalulate(${1:t (number)})",
+        "description": "在参数t处评估贝塞尔曲线。参数必须在0和1之间（包括0和1）。这个函数可以用来沿着路径移动对象或插值参数。但是，它不应用于渲染曲线，为此目的，请参见BezierCurve:render。"
+    },
+    "BezierCurve:getControlPoint": {
+        "prefix": "BezierCurve:getControlPoint",
+        "body": "BezierCurve:getControlPoint(${1:i (number)})",
+        "description": "获取第 i 个控制点的坐标。索引从 1 开始。"
+    },
+    "BezierCurve:getControlPointCount": {
+        "prefix": "BezierCurve:getControlPointCount",
+        "body": "BezierCurve:getControlPointCount()",
+        "description": "获取贝塞尔曲线中的控制点数量。"
+    },
+    "BezierCurve:getDegree": {
+        "prefix": "BezierCurve:getDegree",
+        "body": "BezierCurve:getDegree()",
+        "description": "获取贝塞尔曲线的度数。度数等于控制点数量减1。"
+    },
+    "BezierCurve:getDerivative": {
+        "prefix": "BezierCurve:getDerivative",
+        "body": "BezierCurve:getDerivative()",
+        "description": "获取贝塞尔曲线的导数。这个函数可以用来旋转沿曲线移动的精灵，使其朝向移动方向，并计算在某个参数t处与曲线垂直的方向。"
+    },
+    "BezierCurve:getSegment": {
+        "prefix": "BezierCurve:getSegment",
+        "body": "BezierCurve:getSegment(${1:startpoint (number)}, ${2:endpoint (number)})",
+        "description": "获取与这个贝塞尔曲线指定部分相对应的贝塞尔曲线。"
+    },
+    "BezierCurve:insertControlPoint": {
+        "prefix": "BezierCurve:insertControlPoint",
+        "body": "BezierCurve:insertControlPoint(${1:x (number)}, ${2:y (number)}, ${3:i (number)})",
+        "description": "在第i个控制点之后插入控制点。索引从1开始。负索引会循环：-1是最后一个控制点，-2是倒数第二个控制点，依此类推。"
+    },
+    "BezierCurve:removeControlPoint": {
+        "prefix": "BezierCurve:removeControlPoint",
+        "body": "BezierCurve:removeControlPoint(${1:index (number)})",
+        "description": "移除指定的控制点。"
+    },
+    "BezierCurve:render": {
+        "prefix": "BezierCurve:render",
+        "body": "BezierCurve:render(${1:depth (number)})",
+        "description": "获取一个坐标列表，用于与love.graphics.line一起使用。这个函数通过递归细分来采样贝塞尔曲线。你可以使用depth参数来控制递归深度。如果你只是想知道给定参数在曲线上的位置，请使用BezierCurve:evaluate。"
+    },
+    "BezierCurve:renderSegment": {
+        "prefix": "BezierCurve:renderSegment",
+        "body": "BezierCurve:renderSegment(${1:startpoint (number)}, ${2:endpoint (number)}, ${3:depth (number)})",
+        "description": "获取曲线特定部分上的一系列坐标，用于与love.graphics.line一起使用。这个函数通过递归细分来采样贝塞尔曲线。你可以使用depth参数来控制递归深度。如果你只需要知道给定参数时曲线上的位置，请使用BezierCurve:evaluate。"
+    },
+    "BezierCurve:rotate": {
+        "prefix": "BezierCurve:rotate",
+        "body": "BezierCurve:rotate(${1:angle (number)}, ${2:ox (number)}, ${3:oy (number)})",
+        "description": "旋转贝塞尔曲线一个角度。"
+    },
+    "BezierCurve:scale": {
+        "prefix": "BezierCurve:scale",
+        "body": "BezierCurve:scale(${1:s (number)}, ${2:ox (number)}, ${3:oy (number)})",
+        "description": "将贝塞尔曲线按一个因子进行缩放。"
+    },
+    "BezierCurve:setControlPoint": {
+        "prefix": "BezierCurve:setControlPoint",
+        "body": "BezierCurve:setControlPoint(${1:i (number)}, ${2:ox (number)}, ${3:oy (number)})",
+        "description": "设置第i个控制点的坐标。索引从1开始。"
+    },
+    "BezierCurve:translate": {
+        "prefix": "BezierCurve:translate",
+        "body": "BezierCurve:translate(${1:dx (number)}, ${2:dy (number)})",
+        "description": "将贝塞尔曲线移动一个偏移量。"
+    },
+    "CompressedData:getFormat": {
+        "prefix": "CompressedData:getFormat",
+        "body": "CompressedData:getFormat()",
+        "description": "获取CompressedData的压缩格式。"
+    },
+    "RandomGenerator:getSeed": {
+        "prefix": "RandomGenerator:getSeed",
+        "body": "RandomGenerator:getSeed()",
+        "description": "获取随机数生成器的状态。由于Lua使用双精度浮点数来表示所有数值，因此状态被分成两个数字——双精度浮点数无法准确表示2^53以上的整数值。"
+    },
+    "RandomGenerator:getState": {
+        "prefix": "RandomGenerator:getState",
+        "body": "RandomGenerator:getState()",
+        "description": "获取随机数生成器的当前状态。这将返回一个不透明的、依赖于实现的字符串，该字符串仅在稍后与RandomGenerator:setState一起使用时才有用。这与RandomGenerator:getSeed不同，getState获取随机数生成器的当前状态，而getSeed获取之前设置的种子数字。状态字符串的值不依赖于当前操作系统。"
+    },
+    "RandomGenerator:random": {
+        "prefix": "RandomGenerator:random",
+        "body": "RandomGenerator:random()",
+        "description": "以平台无关的方式生成一个伪随机数。"
+    },
+    "RandomGenerator:randomNormal": {
+        "prefix": "RandomGenerator:randomNormal",
+        "body": "RandomGenerator:randomNormal(${1:stddev (number)}, ${2:mean (number)})",
+        "description": "获取一个正态分布的伪随机数。"
+    },
+    "RandomGenerator:setSeed": {
+        "prefix": "RandomGenerator:setSeed",
+        "body": "RandomGenerator:setSeed(${1:seed (number)})",
+        "description": "使用指定的整数设置随机数生成器的种子。"
+    },
+    "RandomGenerator:setState": {
+        "prefix": "RandomGenerator:setState",
+        "body": "RandomGenerator:setState(${1:state (string)})",
+        "description": "设置随机数生成器的当前状态。作为此函数参数使用的值是一个不透明的、依赖于实现的字符串，并且应该仅来自之前对RandomGenerator:getState的调用。这与RandomGenerator:setSeed不同，因为setState直接设置RandomGenerator的当前依赖于实现的状态，而setSeed则给它一个新的种子值。状态字符串的效果不依赖于当前操作系统。"
+    },
+    "love.math.compress": {
+        "prefix": "love.math.compress",
+        "body": "love.math.compress(${1:rawstring (string)}, ${2:format (CompressedDataFormat)}, ${3:level (number)})",
+        "description": "使用特定的压缩算法压缩字符串或数据。"
+    },
+    "love.math.decompress": {
+        "prefix": "love.math.decompress",
+        "body": "love.math.decompress(${1:compressedData (CompressedData)})",
+        "description": "解压缩一个压缩数据或之前压缩过的字符串或数据对象。"
+    },
+    "love.math.gammaToLinear": {
+        "prefix": "love.math.gammaToLinear",
+        "body": "love.math.gammaToLinear(${1:r (number)}, ${2:g (number)}, ${3:b (number)})",
+        "description": "将颜色从伽马空间（sRGB）转换为线性空间（RGB）。这在进行伽马校正渲染时很有用，你需要在LÖVE不自动处理转换的情况下，在少数情况下进行线性RGB的数学运算。"
+    },
+    "love.math.getRandomSeed": {
+        "prefix": "love.math.getRandomSeed",
+        "body": "love.math.getRandomSeed()",
+        "description": "获取随机数生成器的种子。由于Lua使用双精度浮点数来表示所有数值，因此状态被分成两个数字——双精度浮点数无法准确表示超过2^53的整数值。"
+    },
+    "love.math.getRandomState": {
+        "prefix": "love.math.getRandomState",
+        "body": "love.math.getRandomState()",
+        "description": "获取随机数生成器的当前状态。这将返回一个不透明的、依赖于实现的字符串，该字符串仅对后续使用 RandomGenerator:setState 有用。这与 RandomGenerator:getSeed 不同，getState 获取的是 RandomGenerator 的当前状态，而 getSeed 获取的是之前设置的种子编号。状态字符串的值不依赖于当前操作系统。"
+    },
+    "love.math.isConvex": {
+        "prefix": "love.math.isConvex",
+        "body": "love.math.isConvex(${1:vertices (table)})",
+        "description": "检查一个多边形是否是凸多边形。在love.physics中的PolygonShapes、某些形式的Mesh，以及使用love.graphics.polygon绘制的多边形必须是简单的凸多边形。"
+    },
+    "love.math.linearToGamma": {
+        "prefix": "love.math.linearToGamma",
+        "body": "love.math.linearToGamma(${1:lr (number)}, ${2:lg (number)}, ${3:lb (number)})",
+        "description": "将颜色从线性空间（RGB）转换为伽马空间（sRGB）。这在将线性RGB颜色值存储在图像中时非常有用，因为线性RGB颜色空间对于暗色的精度低于sRGB，这可能导致在绘图时出现明显的色带。通常情况下，基于屏幕上的外观选择的颜色已经在伽马空间中，不应该被双重转换。使用数学计算的颜色通常处于线性RGB空间。"
+    },
+    "love.math.newBezierCurve": {
+        "prefix": "love.math.newBezierCurve",
+        "body": "love.math.newBezierCurve(${1:vertices (table)})",
+        "description": "创建一个新的贝塞尔曲线对象。控制多边形中的顶点数量决定了曲线的度数，例如三个顶点定义了一个二次（度数2）贝塞尔曲线，四个顶点定义了一个三次（度数3）贝塞尔曲线，等等。"
+    },
+    "love.math.newRandomGenerator": {
+        "prefix": "love.math.newRandomGenerator",
+        "body": "love.math.newRandomGenerator()",
+        "description": "创建一个新的随机数生成器对象，该对象完全独立于其他随机数生成器对象和随机函数。"
+    },
+    "love.math.noise": {
+        "prefix": "love.math.noise",
+        "body": "love.math.noise(${1:x (number)})",
+        "description": "生成1-4维的Simplex或Perlin噪声值。给定相同的参数，返回值总是相同的。Simplex噪声与Perlin噪声密切相关。它被广泛用于程序性内容生成。有许多网页详细讨论了Perlin和Simplex噪声。"
+    },
+    "love.math.random": {
+        "prefix": "love.math.random",
+        "body": "love.math.random()",
+        "description": "以平台无关的方式生成一个伪随机数。"
+    },
+    "love.math.randomNormal": {
+        "prefix": "love.math.randomNormal",
+        "body": "love.math.randomNormal(${1:stddev (number)}, ${2:mean (number)})",
+        "description": "获取一个正态分布的伪随机数。"
+    },
+    "love.math.setRandomSeed": {
+        "prefix": "love.math.setRandomSeed",
+        "body": "love.math.setRandomSeed(${1:seed (number)})",
+        "description": "使用指定的整数设置随机数生成器的种子。"
+    },
+    "love.math.setRandomState": {
+        "prefix": "love.math.setRandomState",
+        "body": "love.math.setRandomState(${1:state (string)})",
+        "description": "获取随机数生成器的当前状态。这会返回一个不透明的、依赖于实现的字符串，该字符串仅对稍后与RandomGenerator:setState一起使用时有用。这与RandomGenerator:getSeed不同，getState获取的是RandomGenerator的当前状态，而getSeed获取的是之前设置的种子号码。状态字符串的值不依赖于当前操作系统。"
+    },
+    "love.math.triangulate": {
+        "prefix": "love.math.triangulate",
+        "body": "love.math.triangulate(${1:polygon (table)})",
+        "description": "对一个简单多边形进行三角剖分。"
+    },
+    "Cursor:getType": {
+        "prefix": "Cursor:getType",
+        "body": "Cursor:getType()",
+        "description": "获取光标（Cursor）的类型。"
+    },
+    "love.mouse.getCursor": {
+        "prefix": "love.mouse.getCursor",
+        "body": "love.mouse.getCursor()",
+        "description": "获取当前的光标。"
+    },
+    "love.mouse.getPosition": {
+        "prefix": "love.mouse.getPosition",
+        "body": "love.mouse.getPosition()",
+        "description": "返回鼠标的当前位置。"
+    },
+    "love.mouse.getRelativeMode": {
+        "prefix": "love.mouse.getRelativeMode",
+        "body": "love.mouse.getRelativeMode()",
+        "description": "获取鼠标是否启用了相对模式。如果启用了相对模式，光标会被隐藏，并且当鼠标移动时不会移动，但仍然会通过love.mousemoved生成相对鼠标移动事件。这允许鼠标在任何方向上无限移动，而不会在屏幕边缘卡住。即使生成了相对鼠标移动事件，相对模式启用时鼠标的报告位置也不会更新。"
+    },
+    "love.mouse.getSystemCursor": {
+        "prefix": "love.mouse.getSystemCursor",
+        "body": "love.mouse.getSystemCursor(${1:ctype (CursorType)})",
+        "description": "获取一个代表系统原生硬件光标的Cursor对象。硬件光标与帧率无关，并且像正常的操作系统光标一样工作。与在鼠标当前坐标处绘制图像不同，硬件光标在鼠标移动和光标位置更新之间永远不会有明显的延迟，即使在低帧率下也是如此。"
+    },
+    "love.mouse.getX": {
+        "prefix": "love.mouse.getX",
+        "body": "love.mouse.getX()",
+        "description": "返回鼠标当前的x坐标位置。"
+    },
+    "love.mouse.getY": {
+        "prefix": "love.mouse.getY",
+        "body": "love.mouse.getY()",
+        "description": "返回鼠标当前的y坐标位置。"
+    },
+    "love.mouse.hasCursor": {
+        "prefix": "love.mouse.hasCursor",
+        "body": "love.mouse.hasCursor()",
+        "description": "获取是否支持光标功能。如果不支持，调用 `love.mouse.newCursor` 和 `love.mouse.getSystemCursor` 将会引发错误。移动设备不支持光标。"
+    },
+    "love.mouse.isDown": {
+        "prefix": "love.mouse.isDown",
+        "body": "love.mouse.isDown(${1:button (number)}, ${2:... (number)})",
+        "description": "检查某个鼠标按钮是否被按下。这个函数不能检测鼠标滚轮的滚动；对于滚动，您必须使用 `love.wheelmoved`（或在0.9.2及更早版本中使用 `love.mousepressed`）回调函数。"
+    },
+    "love.mouse.isGrabbed": {
+        "prefix": "love.mouse.isGrabbed",
+        "body": "love.mouse.isGrabbed()",
+        "description": "检查鼠标是否被捕捉。"
+    },
+    "love.mouse.isVisible": {
+        "prefix": "love.mouse.isVisible",
+        "body": "love.mouse.isVisible()",
+        "description": "检查光标是否可见。"
+    },
+    "love.mouse.newCursor": {
+        "prefix": "love.mouse.newCursor",
+        "body": "love.mouse.newCursor(${1:imageData (ImageData)}, ${2:hotx (number)}, ${3:hoty (number)})",
+        "description": "从图像文件或ImageData创建一个新的硬件光标对象。硬件光标与帧率无关，并且像正常的操作系统光标一样工作。与在鼠标当前坐标处绘制图像不同，硬件光标在鼠标移动和光标位置更新之间永远不会有明显的延迟，即使在低帧率下也是如此。热点是操作系统用来确定点击了什么以及鼠标光标在什么位置的点。例如，正常的箭头指针通常在其图像的左上角有其热点，但十字准线光标可能在中间有热点。"
+    },
+    "love.mouse.setCursor": {
+        "prefix": "love.mouse.setCursor",
+        "body": "love.mouse.setCursor()",
+        "description": "设置当前鼠标光标。在没有参数的情况下调用时，将当前鼠标光标重置为默认光标。"
+    },
+    "love.mouse.setGrabbed": {
+        "prefix": "love.mouse.setGrabbed",
+        "body": "love.mouse.setGrabbed(${1:grab (boolean)})",
+        "description": "获取鼠标并将其限制在窗口内。"
+    },
+    "love.mouse.setPosition": {
+        "prefix": "love.mouse.setPosition",
+        "body": "love.mouse.setPosition(${1:x (number)}, ${2:y (number)})",
+        "description": "设置鼠标的位置。"
+    },
+    "love.mouse.setRelativeMode": {
+        "prefix": "love.mouse.setRelativeMode",
+        "body": "love.mouse.setRelativeMode(${1:enable (boolean)})",
+        "description": "设置鼠标是否启用相对模式。当启用相对模式时，鼠标光标会被隐藏，并且当鼠标移动时不会移动，但仍然会通过 love.mousemoved 生成相对鼠标移动事件。这允许鼠标在任何方向上无限移动，而不会被屏幕边缘卡住。即使生成了相对鼠标移动事件，鼠标报告的位置在启用相对模式时也不会更新。"
+    },
+    "love.mouse.setVisible": {
+        "prefix": "love.mouse.setVisible",
+        "body": "love.mouse.setVisible(${1:visible (boolean)})",
+        "description": "设置光标的可见性。"
+    },
+    "love.mouse.setX": {
+        "prefix": "love.mouse.setX",
+        "body": "love.mouse.setX(${1:x (number)})",
+        "description": "设置鼠标当前的X位置。"
+    },
+    "love.mouse.setY": {
+        "prefix": "love.mouse.setY",
+        "body": "love.mouse.setY(${1:y (number)})",
+        "description": "设置鼠标的当前Y坐标位置。"
+    },
+    "Body:applyAngularImpulse": {
+        "prefix": "Body:applyAngularImpulse",
+        "body": "Body:applyAngularImpulse(${1:impulse (number)})",
+        "description": "对一个物体施加角冲量。这会在瞬间对物体的动量产生一次性的增加。质量较大的物体反应会较小。这种反应不依赖于时间步长，相当于连续施加1秒钟的力。冲量最适合用于给物体一个单一的推动。对于连续推动物体，使用Body:applyForce更好。"
+    },
+    "Body:applyForce": {
+        "prefix": "Body:applyForce",
+        "body": "Body:applyForce(${1:fx (number)}, ${2:fy (number)})",
+        "description": "对刚体应用力。力会推动刚体朝一个方向移动。质量较大的刚体反应会较小。反应还取决于力作用的时间长度：由于力在整个时间步长上持续作用，短暂的时间步长只会短暂推动刚体。因此，力最适合用于多个时间步长，以给刚体一个连续的推动（如重力）。对于独立于时间步长的单次推动，使用Body:applyLinearImpulse更好。如果未给出施加力的位置，则会在刚体的质量中心作用。未指向质量中心的力的部分会导致刚体旋转（取决于旋转惯量）。请注意，力的分量和位置必须以世界坐标给出。"
+    },
+    "Body:applyLinearImpulse": {
+        "prefix": "Body:applyLinearImpulse",
+        "body": "Body:applyLinearImpulse(${1:ix (number)}, ${2:iy (number)})",
+        "description": "对一个物体施加冲量。这会在瞬间对物体的动量进行一次性增加。冲量会将物体推向一个方向。质量较大的物体反应会较小。这种反应不依赖于时间步长，相当于连续施加1秒钟的力。冲量最适合用于给物体一个单一的推动。对于连续推动物体，最好使用Body:applyForce。如果未指定施加冲量的位置，则会在物体的质量中心处作用。未指向质量中心的冲量部分会导致物体旋转（取决于旋转惯量）。请注意，冲量分量和位置必须以世界坐标给出。"
+    },
+    "Body:applyTorque": {
+        "prefix": "Body:applyTorque",
+        "body": "Body:applyTorque(${1:torque (number)})",
+        "description": "对物体施加扭矩。扭矩就像一种力，会改变物体的角速度（旋转）。效果将取决于物体的旋转惯量。"
+    },
+    "Body:destroy": {
+        "prefix": "Body:destroy",
+        "body": "Body:destroy()",
+        "description": "显式销毁物体。当您没有时间等待垃圾回收时，可以使用这个函数立即释放对象，但请注意，如果在调用此函数后尝试使用该对象，将会出现错误。"
+    },
+    "Body:getAngle": {
+        "prefix": "Body:getAngle",
+        "body": "Body:getAngle()",
+        "description": "获取物体的角度。角度以弧度为单位。如果你需要将其转换为度数，请使用math.deg。0弧度的值意味着“向右看”。尽管弧度是逆时针增加的，但由于y轴指向下方，因此从我们的角度来看是顺时针的。"
+    },
+    "Body:getAngularDamping": {
+        "prefix": "Body:getAngularDamping",
+        "body": "Body:getAngularDamping()",
+        "description": "获取Body的角阻尼。角阻尼是角速度随时间减少的速率：一个没有阻尼和外力作用的旋转体将无限期地继续旋转。一个有阻尼的旋转体将逐渐停止旋转。阻尼与摩擦不同——它们可以一起建模。然而，只有阻尼是由Box2D（和LÖVE）提供的。阻尼参数应在0到无穷大之间，0表示无阻尼，无穷大表示完全阻尼。通常你会使用0到0.1之间的阻尼值。"
+    },
+    "Body:getAngularVelocity": {
+        "prefix": "Body:getAngularVelocity",
+        "body": "Body:getAngularVelocity()",
+        "description": "获取Body的角速度。角速度是角度随时间变化的速率。它在World:update中通过施加扭矩、偏心力/冲量和角阻尼来改变。可以直接使用Body:setAngularVelocity来设置。如果您需要位置随时间变化的速率，请使用Body:getLinearVelocity。"
+    },
+    "Body:getContactList": {
+        "prefix": "Body:getContactList",
+        "body": "Body:getContactList()",
+        "description": "获取附加到该Body的所有Contacts的列表。"
+    },
+    "Body:getFixtureList": {
+        "prefix": "Body:getFixtureList",
+        "body": "Body:getFixtureList()",
+        "description": "返回一个包含所有固定装置（fixture）的表。"
+    },
+    "Body:getGravityScale": {
+        "prefix": "Body:getGravityScale",
+        "body": "Body:getGravityScale()",
+        "description": "返回重力缩放因子。"
+    },
+    "Body:getInertia": {
+        "prefix": "Body:getInertia",
+        "body": "Body:getInertia()",
+        "description": "获取物体的转动惯量。转动惯量是指使物体旋转的难度。它可以通过Body:setMass的第四个参数设置，或者通过Body:setMassFromShapes自动设置。"
+    },
+    "Body:getJointList": {
+        "prefix": "Body:getJointList",
+        "body": "Body:getJointList()",
+        "description": "返回一个包含连接到此刚体的关节的表。"
+    },
+    "Body:getLinearDamping": {
+        "prefix": "Body:getLinearDamping",
+        "body": "Body:getLinearDamping()",
+        "description": "获取Body的线性阻尼。线性阻尼是线性速度随时间减少的速率。一个没有阻尼和外力作用的移动物体将无限期地继续移动，就像在太空中的情况一样。一个有阻尼的移动物体会逐渐停止移动。阻尼与摩擦不同——它们可以一起建模。然而，只有阻尼由Box2D（和LÖVE）提供。"
+    },
+    "Body:getLinearVelocity": {
+        "prefix": "Body:getLinearVelocity",
+        "body": "Body:getLinearVelocity()",
+        "description": "获取物体质心的线速度。线速度是位置随时间变化的速率。如果你需要角度随时间变化的速率，请使用Body:getAngularVelocity。如果你需要获取与质心不同的点的线速度：Body:getLinearVelocityFromLocalPoint允许你指定局部坐标中的点。Body:getLinearVelocityFromWorldPoint允许你指定世界坐标中的点。"
+    },
+    "Body:getLinearVelocityFromLocalPoint": {
+        "prefix": "Body:getLinearVelocityFromLocalPoint",
+        "body": "Body:getLinearVelocityFromLocalPoint(${1:x (number)}, ${2:y (number)})",
+        "description": "获取物体上某点的线速度。物体上某点的线速度是物体质心的速度加上该点因物体旋转而产生的线速度。必须用局部坐标来指定物体上的点。使用Body:getLinearVelocityFromWorldPoint，可以用世界坐标来指定这一点。"
+    },
+    "Body:getLinearVelocityFromWorldPoint": {
+        "prefix": "Body:getLinearVelocityFromWorldPoint",
+        "body": "Body:getLinearVelocityFromWorldPoint(${1:x (number)}, ${2:y (number)})",
+        "description": "获取物体上某点的线速度。物体上某点的线速度是物体质心的速度加上该点因物体旋转而产生的线速度。必须以世界坐标给出物体上的点。使用Body:getLinearVelocityFromLocalPoint可以指定以本地坐标表示的点。"
+    },
+    "Body:getLocalCenter": {
+        "prefix": "Body:getLocalCenter",
+        "body": "Body:getLocalCenter()",
+        "description": "获取质心位置在局部坐标中的位置。使用Body:getWorldCenter来获取世界坐标中的质心位置。"
+    },
+    "Body:getLocalPoint": {
+        "prefix": "Body:getLocalPoint",
+        "body": "Body:getLocalPoint(${1:worldX (number)}, ${2:worldY (number)})",
+        "description": "将一个点从世界坐标转换为局部坐标。"
+    },
+    "Body:getLocalVector": {
+        "prefix": "Body:getLocalVector",
+        "body": "Body:getLocalVector(${1:worldX (number)}, ${2:worldY (number)})",
+        "description": "将一个向量从世界坐标转换为本地坐标。"
+    },
+    "Body:getMass": {
+        "prefix": "Body:getMass",
+        "body": "Body:getMass()",
+        "description": "获取物体的质量。"
+    },
+    "Body:getMassData": {
+        "prefix": "Body:getMassData",
+        "body": "Body:getMassData()",
+        "description": "返回质量、其中心以及转动惯量。"
+    },
+    "Body:getPosition": {
+        "prefix": "Body:getPosition",
+        "body": "Body:getPosition()",
+        "description": "获取物体的位置。注意，这可能不是物体的质量中心。"
+    },
+    "Body:getType": {
+        "prefix": "Body:getType",
+        "body": "Body:getType()",
+        "description": "返回该物体的类型。"
+    },
+    "Body:getUserData": {
+        "prefix": "Body:getUserData",
+        "body": "Body:getUserData()",
+        "description": "返回与此刚体关联的Lua值。仅在一个线程中使用此函数。"
+    },
+    "Body:getWorld": {
+        "prefix": "Body:getWorld",
+        "body": "Body:getWorld()",
+        "description": "获取物体所在的世界。"
+    },
+    "Body:getWorldCenter": {
+        "prefix": "Body:getWorldCenter",
+        "body": "Body:getWorldCenter()",
+        "description": "获取世界坐标中的质心位置。使用Body:getLocalCenter来获取局部坐标中的质心。"
+    },
+    "Body:getWorldPoint": {
+        "prefix": "Body:getWorldPoint",
+        "body": "Body:getWorldPoint(${1:localX (number)}, ${2:localY (number)})",
+        "description": "将一个点从本地坐标转换为世界坐标。"
+    },
+    "Body:getWorldPoints": {
+        "prefix": "Body:getWorldPoints",
+        "body": "Body:getWorldPoints(${1:x1 (number)}, ${2:y1 (number)}, ${3:x2 (number)}, ${4:y2 (number)}, ${5:... (number)})",
+        "description": "将多个点从本地坐标转换为世界坐标。"
+    },
+    "Body:getWorldVector": {
+        "prefix": "Body:getWorldVector",
+        "body": "Body:getWorldVector(${1:localX (number)}, ${2:localY (number)})",
+        "description": "将一个向量从本地坐标转换为世界坐标。"
+    },
+    "Body:getX": {
+        "prefix": "Body:getX",
+        "body": "Body:getX()",
+        "description": "获取物体在世界坐标系中的x位置。"
+    },
+    "Body:getY": {
+        "prefix": "Body:getY",
+        "body": "Body:getY()",
+        "description": "获取物体在世界坐标中的y位置。"
+    },
+    "Body:isActive": {
+        "prefix": "Body:isActive",
+        "body": "Body:isActive()",
+        "description": "返回该物体是否在模拟中被积极使用。"
+    },
+    "Body:isAwake": {
+        "prefix": "Body:isAwake",
+        "body": "Body:isAwake()",
+        "description": "返回身体的睡眠状态。"
+    },
+    "Body:isBullet": {
+        "prefix": "Body:isBullet",
+        "body": "Body:isBullet()",
+        "description": "获取一个物体的子弹状态。检查物体碰撞有两种方法：在世界更新时在其位置使用连续碰撞检测（CCD）进行检查（默认方法）。默认方法效率高，但是一个移动非常快的物体有时可能会跳过另一个物体而不产生碰撞。被设置为子弹的物体将使用CCD。这种方法效率较低，但在快速移动时保证不会跳过。请注意，静态物体（质量为零）总是使用CCD，所以即使它不是子弹，你的墙壁也不会让快速移动的物体穿过。"
+    },
+    "Body:isDestroyed": {
+        "prefix": "Body:isDestroyed",
+        "body": "Body:isDestroyed()",
+        "description": "获取物体是否已被销毁。被销毁的物体不能被使用。"
+    },
+    "Body:isFixedRotation": {
+        "prefix": "Body:isFixedRotation",
+        "body": "Body:isFixedRotation()",
+        "description": "返回是否锁定了物体的旋转。"
+    },
+    "Body:isSleepingAllowed": {
+        "prefix": "Body:isSleepingAllowed",
+        "body": "Body:isSleepingAllowed()",
+        "description": "返回该物体的睡眠行为。"
+    },
+    "Body:resetMassData": {
+        "prefix": "Body:resetMassData",
+        "body": "Body:resetMassData()",
+        "description": "重置物体的质量，通过重新计算其固定装置的质量属性来完成。"
+    },
+    "Body:setActive": {
+        "prefix": "Body:setActive",
+        "body": "Body:setActive(${1:active (boolean)})",
+        "description": "设置物体是否在世界中处于活动状态。不活动的物体不会参与模拟，它不会移动或引起任何碰撞。"
+    },
+    "Body:setAngle": {
+        "prefix": "Body:setAngle",
+        "body": "Body:setAngle(${1:angle (number)})",
+        "description": "设置物体的角度。角度以弧度为单位。如果需要从度数转换，使用 `math.rad`。0弧度的值意味着“向右看”。尽管弧度是逆时针增加的，但由于y轴指向下方，从我们的角度来看，它变成了顺时针。通过改变物体的角度，可能会导致它与另一个物体发生碰撞。"
+    },
+    "Body:setAngularDamping": {
+        "prefix": "Body:setAngularDamping",
+        "body": "Body:setAngularDamping(${1:damping (number)})",
+        "description": "设置一个刚体的角阻尼。参见 Body:getAngularDamping 以了解角阻尼的定义。角阻尼可以取0到无穷大之间的任何值。建议保持在0到0.1之间，尽管如此。其他值看起来会不真实。"
+    },
+    "Body:setAngularVelocity": {
+        "prefix": "Body:setAngularVelocity",
+        "body": "Body:setAngularVelocity(${1:w (number)})",
+        "description": "设置一个刚体的角速度。角速度是角度随时间变化的速率。这个函数不会累积任何东西；自上次调用World:update以来应用的任何冲量将会丢失。"
+    },
+    "Body:setAwake": {
+        "prefix": "Body:setAwake",
+        "body": "Body:setAwake(${1:awake (boolean)})",
+        "description": "唤醒物体或使其进入睡眠状态。"
+    },
+    "Body:setBullet": {
+        "prefix": "Body:setBullet",
+        "body": "Body:setBullet(${1:status (boolean)})",
+        "description": "设置一个物体的子弹状态。检查物体碰撞有两种方法：在世界更新时它们的位置（默认）使用连续碰撞检测（CCD）。默认方法是高效的，但是一个移动得非常快的物体有时会跳过另一个物体而不产生碰撞。被设置为子弹的物体将使用CCD。这效率较低，但在快速移动时保证不会跳过。注意，静态物体（质量为零）总是使用CCD，所以即使它不是子弹，你的墙壁也不会让快速移动的物体穿过。"
+    },
+    "Body:setFixedRotation": {
+        "prefix": "Body:setFixedRotation",
+        "body": "Body:setFixedRotation(${1:fixed (boolean)})",
+        "description": "设置一个物体是否具有固定旋转。具有固定旋转的物体不会改变它们旋转的速度。"
+    },
+    "Body:setGravityScale": {
+        "prefix": "Body:setGravityScale",
+        "body": "Body:setGravityScale(${1:scale (number)})",
+        "description": "为该物体设置一个新的重力缩放因子。"
+    },
+    "Body:setInertia": {
+        "prefix": "Body:setInertia",
+        "body": "Body:setInertia(${1:inertia (number)})",
+        "description": "设置一个物体的惯性。这个值也可以通过Body:setMass的第四个参数来设置。"
+    },
+    "Body:setLinearDamping": {
+        "prefix": "Body:setLinearDamping",
+        "body": "Body:setLinearDamping(${1:ld (number)})",
+        "description": "设置一个刚体的线性阻尼。参见刚体：getLinearDamping了解线性阻尼的定义。线性阻尼可以取0到无穷大之间的任何值。建议保持在0到0.1之间，尽管其他值也可以。其他值会使物体看起来“漂浮”。"
+    },
+    "Body:setLinearVelocity": {
+        "prefix": "Body:setLinearVelocity",
+        "body": "Body:setLinearVelocity(${1:x (number)}, ${2:y (number)})",
+        "description": "为刚体设置一个新的线性速度。这个函数不会累积任何东西；自上次调用World:update以来应用的任何冲量将会丢失。"
+    },
+    "Body:setMass": {
+        "prefix": "Body:setMass",
+        "body": "Body:setMass(${1:mass (number)})",
+        "description": "设置千克为单位的质量。"
+    },
+    "Body:setMassData": {
+        "prefix": "Body:setMassData",
+        "body": "Body:setMassData(${1:x (number)}, ${2:y (number)}, ${3:mass (number)}, ${4:inertia (number)})",
+        "description": "覆盖计算出的质数据。"
+    },
+    "Body:setPosition": {
+        "prefix": "Body:setPosition",
+        "body": "Body:setPosition(${1:x (number)}, ${2:y (number)})",
+        "description": "设置物体的位置。注意，这可能不是物体的质心。"
+    },
+    "Body:setSleepingAllowed": {
+        "prefix": "Body:setSleepingAllowed",
+        "body": "Body:setSleepingAllowed(${1:allowed (boolean)})",
+        "description": "设置身体的睡眠行为。"
+    },
+    "Body:setType": {
+        "prefix": "Body:setType",
+        "body": "Body:setType(${1:type (BodyType)})",
+        "description": "设置一个新的刚体类型。"
+    },
+    "Body:setUserData": {
+        "prefix": "Body:setUserData",
+        "body": "Body:setUserData(${1:value (value)})",
+        "description": "将一个Lua值与Body关联。要删除引用，显式传递nil。仅在一个线程中使用此函数。"
+    },
+    "Body:setX": {
+        "prefix": "Body:setX",
+        "body": "Body:setX(${1:x (number)})",
+        "description": "设置物体的x位置。"
+    },
+    "Body:setY": {
+        "prefix": "Body:setY",
+        "body": "Body:setY(${1:y (number)})",
+        "description": "设置物体的y位置。"
+    },
+    "ChainShape:getChildEdge": {
+        "prefix": "ChainShape:getChildEdge",
+        "body": "ChainShape:getChildEdge(${1:index (number)})",
+        "description": "返回形状的一个子形状，作为一个EdgeShape。"
+    },
+    "ChainShape:getPoint": {
+        "prefix": "ChainShape:getPoint",
+        "body": "ChainShape:getPoint(${1:index (number)})",
+        "description": "返回形状的一个点。"
+    },
+    "ChainShape:getPoints": {
+        "prefix": "ChainShape:getPoints",
+        "body": "ChainShape:getPoints()",
+        "description": "返回形状的所有点。"
+    },
+    "ChainShape:getVertexCount": {
+        "prefix": "ChainShape:getVertexCount",
+        "body": "ChainShape:getVertexCount()",
+        "description": "返回形状的顶点数。"
+    },
+    "ChainShape:setNextVertex": {
+        "prefix": "ChainShape:setNextVertex",
+        "body": "ChainShape:setNextVertex(${1:x (number)}, ${2:y (number)})",
+        "description": "设置一个顶点，该顶点建立与下一个形状的连接。这可以帮助防止一个平面形状沿着边缘滑动并移动到新形状时产生不希望的碰撞。"
+    },
+    "ChainShape:setPreviousVertex": {
+        "prefix": "ChainShape:setPreviousVertex",
+        "body": "ChainShape:setPreviousVertex(${1:x (number)}, ${2:y (number)})",
+        "description": "设置一个顶点，该顶点与之前的形状建立连接。这可以帮助防止当一个平面形状沿着边缘滑动并移动到新形状时发生不希望的碰撞。"
+    },
+    "CircleShape:getPoint": {
+        "prefix": "CircleShape:getPoint",
+        "body": "CircleShape:getPoint()",
+        "description": "获取圆形形状的中心点。"
+    },
+    "CircleShape:getRadius": {
+        "prefix": "CircleShape:getRadius",
+        "body": "CircleShape:getRadius()",
+        "description": "获取圆形形状的半径。"
+    },
+    "CircleShape:setPoint": {
+        "prefix": "CircleShape:setPoint",
+        "body": "CircleShape:setPoint(${1:x (number)}, ${2:y (number)})",
+        "description": "设置圆形形状的中心位置。"
+    },
+    "CircleShape:setRadius": {
+        "prefix": "CircleShape:setRadius",
+        "body": "CircleShape:setRadius(${1:radius (number)})",
+        "description": "设置圆的半径。"
+    },
+    "Contact:getFixtures": {
+        "prefix": "Contact:getFixtures",
+        "body": "Contact:getFixtures()",
+        "description": "获取两个接触的形状所在的固定装置。"
+    },
+    "Contact:getFriction": {
+        "prefix": "Contact:getFriction",
+        "body": "Contact:getFriction()",
+        "description": "获取两个接触形状之间的摩擦力。"
+    },
+    "Contact:getNormal": {
+        "prefix": "Contact:getNormal",
+        "body": "Contact:getNormal()",
+        "description": "获取两个接触形状之间的法向量。这个函数返回一个指向从第一个形状到第二个形状的单位向量的坐标。"
+    },
+    "Contact:getPositions": {
+        "prefix": "Contact:getPositions",
+        "body": "Contact:getPositions()",
+        "description": "返回两个碰撞的固定装置的接触点。可以有一个或两个点。"
+    },
+    "Contact:getRestitution": {
+        "prefix": "Contact:getRestitution",
+        "body": "Contact:getRestitution()",
+        "description": "获取两个接触形状之间的恢复系数。"
+    },
+    "Contact:isEnabled": {
+        "prefix": "Contact:isEnabled",
+        "body": "Contact:isEnabled()",
+        "description": "返回接触是否启用。如果在后处理回调中禁用了接触，则将忽略碰撞。"
+    },
+    "Contact:isTouching": {
+        "prefix": "Contact:isTouching",
+        "body": "Contact:isTouching()",
+        "description": "返回两个碰撞的固定装置是否相互接触。"
+    },
+    "Contact:resetFriction": {
+        "prefix": "Contact:resetFriction",
+        "body": "Contact:resetFriction()",
+        "description": "将接触摩擦重置为两个固定装置的混合值。"
+    },
+    "Contact:resetRestitution": {
+        "prefix": "Contact:resetRestitution",
+        "body": "Contact:resetRestitution()",
+        "description": "将接触恢复力重置为两个固定装置的混合值。"
+    },
+    "Contact:setEnabled": {
+        "prefix": "Contact:setEnabled",
+        "body": "Contact:setEnabled(${1:enabled (boolean)})",
+        "description": "启用或禁用接触。"
+    },
+    "Contact:setFriction": {
+        "prefix": "Contact:setFriction",
+        "body": "Contact:setFriction(${1:friction (number)})",
+        "description": "设置接触摩擦力。"
+    },
+    "Contact:setRestitution": {
+        "prefix": "Contact:setRestitution",
+        "body": "Contact:setRestitution(${1:restitution (number)})",
+        "description": "设置接触恢复系数。"
+    },
+    "EdgeShape:getPoints": {
+        "prefix": "EdgeShape:getPoints",
+        "body": "EdgeShape:getPoints()",
+        "description": "返回边缘点的局部坐标。"
+    },
+    "DistanceJoint:getDampingRatio": {
+        "prefix": "DistanceJoint:getDampingRatio",
+        "body": "DistanceJoint:getDampingRatio()",
+        "description": "获取阻尼比。"
+    },
+    "DistanceJoint:getFrequency": {
+        "prefix": "DistanceJoint:getFrequency",
+        "body": "DistanceJoint:getFrequency()",
+        "description": "获取响应速度。"
+    },
+    "DistanceJoint:getLength": {
+        "prefix": "DistanceJoint:getLength",
+        "body": "DistanceJoint:getLength()",
+        "description": "获取两个物体之间的平衡距离。"
+    },
+    "DistanceJoint:setDampingRatio": {
+        "prefix": "DistanceJoint:setDampingRatio",
+        "body": "DistanceJoint:setDampingRatio(${1:ratio (number)})",
+        "description": "设置阻尼比。"
+    },
+    "DistanceJoint:setFrequency": {
+        "prefix": "DistanceJoint:setFrequency",
+        "body": "DistanceJoint:setFrequency(${1:Hz (number)})",
+        "description": "设置响应速度。"
+    },
+    "DistanceJoint:setLength": {
+        "prefix": "DistanceJoint:setLength",
+        "body": "DistanceJoint:setLength(${1:l (number)})",
+        "description": "设置两个物体之间的平衡距离。"
+    },
+    "Fixture:destroy": {
+        "prefix": "Fixture:destroy",
+        "body": "Fixture:destroy()",
+        "description": "销毁固定装置"
+    },
+    "Fixture:getBody": {
+        "prefix": "Fixture:getBody",
+        "body": "Fixture:getBody()",
+        "description": "返回附加到该固定装置的物体。"
+    },
+    "Fixture:getBoundingBox": {
+        "prefix": "Fixture:getBoundingBox",
+        "body": "Fixture:getBoundingBox(${1:index (number)})",
+        "description": "返回该固定装置边界框的点。如果固定装置有多个子部件，可以指定一个1为基数的索引。例如，链形固定装置将有多个子部件。"
+    },
+    "Fixture:getCategory": {
+        "prefix": "Fixture:getCategory",
+        "body": "Fixture:getCategory()",
+        "description": "返回该固定装置所属的类别。"
+    },
+    "Fixture:getDensity": {
+        "prefix": "Fixture:getDensity",
+        "body": "Fixture:getDensity()",
+        "description": "返回该固定装置的密度。"
+    },
+    "Fixture:getFilterData": {
+        "prefix": "Fixture:getFilterData",
+        "body": "Fixture:getFilterData()",
+        "description": "返回固定装置的过滤数据。类别和掩码被编码为一个16位整数的位。"
+    },
+    "Fixture:getFriction": {
+        "prefix": "Fixture:getFriction",
+        "body": "Fixture:getFriction()",
+        "description": "返回该夹具的摩擦力。"
+    },
+    "Fixture:getGroupIndex": {
+        "prefix": "Fixture:getGroupIndex",
+        "body": "Fixture:getGroupIndex()",
+        "description": "返回该固定装置所属的组。如果组是正数，相同组的固定装置将始终发生碰撞；如果是负数，则永远不会发生碰撞。组零表示没有组。组的范围从-32768到32767。"
+    },
+    "Fixture:getMask": {
+        "prefix": "Fixture:getMask",
+        "body": "Fixture:getMask()",
+        "description": "返回固定装置的类别掩码。"
+    },
+    "Fixture:getMassData": {
+        "prefix": "Fixture:getMassData",
+        "body": "Fixture:getMassData()",
+        "description": "返回质量、质心和旋转惯量。"
+    },
+    "Fixture:getRestitution": {
+        "prefix": "Fixture:getRestitution",
+        "body": "Fixture:getRestitution()",
+        "description": "返回该固定装置的恢复系数。"
+    },
+    "Fixture:getShape": {
+        "prefix": "Fixture:getShape",
+        "body": "Fixture:getShape()",
+        "description": "返回夹具的形状。这个形状是对模拟中实际使用的数据的引用。可以在时间步之间更改其值。在父夹具被销毁后，不要在此形状上调用任何函数。如果进一步与之交互，这个形状将指向一个无效的内存地址，可能会导致崩溃。"
+    },
+    "Fixture:getUserData": {
+        "prefix": "Fixture:getUserData",
+        "body": "Fixture:getUserData()",
+        "description": "返回与此固定装置关联的Lua值。仅在一个线程中使用此函数。"
+    },
+    "Fixture:isDestroyed": {
+        "prefix": "Fixture:isDestroyed",
+        "body": "Fixture:isDestroyed()",
+        "description": "获取Fixture是否已被销毁。被销毁的Fixture不能被使用。"
+    },
+    "Fixture:isSensor": {
+        "prefix": "Fixture:isSensor",
+        "body": "Fixture:isSensor()",
+        "description": "返回该固定装置是否为传感器。"
+    },
+    "Fixture:rayCast": {
+        "prefix": "Fixture:rayCast",
+        "body": "Fixture:rayCast(${1:x1 (number)}, ${2:y1 (number)}, ${3:x2 (number)}, ${4:y1 (number)}, ${5:maxFraction (number)}, ${6:childIndex (number)})",
+        "description": "对固定装置的形状进行射线投射，并返回表面法向量和射线击中的位置。如果射线未击中形状，则返回nil。射线从输入线的起点开始，朝向线的第二个点。第四个参数是射线将要行进的最大距离，作为输入线长度的比例因子。childIndex参数用于指定要进行射线投射的父形状的哪个子形状，例如ChainShape。对于ChainShapes，索引1是链上的第一个边缘。对父形状进行射线投射只会测试指定的子形状，因此如果你想测试父形状的每个形状，你必须循环遍历其所有子形状。可以通过将线向量与第三个返回值相乘并加到线起点来计算冲击点的世界位置。hitx, hity = x1 + (x2 - x1) * fraction, y1 + (y2 - y1) * fraction"
+    },
+    "Fixture:setCategory": {
+        "prefix": "Fixture:setCategory",
+        "body": "Fixture:setCategory(${1:category1 (number)}, ${2:category2 (number)}, ${3:... (number)})",
+        "description": "设置固定装置所属的类别。类别最多可以达到16个，用1到16之间的数字表示。"
+    },
+    "Fixture:setDensity": {
+        "prefix": "Fixture:setDensity",
+        "body": "Fixture:setDensity(${1:density (number)})",
+        "description": "设置固定装置的密度。如果需要立即生效，请调用Body:resetMassData。"
+    },
+    "Fixture:setFilterData": {
+        "prefix": "Fixture:setFilterData",
+        "body": "Fixture:setFilterData(${1:categories (number)}, ${2:mask (number)}, ${3:group (number)})",
+        "description": "设置固定装置的过滤数据。组、类别和掩码可以用来定义固定装置的碰撞行为。如果两个固定装置在同一个组中，它们要么总是发生碰撞（如果组是正数），要么从不发生碰撞（如果组是负数）。如果组是零或者它们不匹配，那么接触过滤器会检查固定装置是否使用它们的掩码选择了对方的类别。如果不是这种情况，那么固定装置就不会发生碰撞。如果它们确实选择了对方的类别，那么将使用自定义接触过滤器的返回值。如果没有设置，则它们总是发生碰撞。最多可以有16个类别。类别和掩码被编码为16位整数的位。"
+    },
+    "Fixture:setFriction": {
+        "prefix": "Fixture:setFriction",
+        "body": "Fixture:setFriction(${1:friction (number)})",
+        "description": "设置固定装置的摩擦力。"
+    },
+    "Fixture:setGroupIndex": {
+        "prefix": "Fixture:setGroupIndex",
+        "body": "Fixture:setGroupIndex(${1:group (number)})",
+        "description": "设置固定装置所属的组。如果组是正数，同一组内的固定装置将始终发生碰撞；如果是负数，则永远不会发生碰撞。组零表示没有组。组的范围从-32768到32767。"
+    },
+    "Fixture:setMask": {
+        "prefix": "Fixture:setMask",
+        "body": "Fixture:setMask(${1:mask1 (number)}, ${2:mask2 (number)}, ${3:... (number)})",
+        "description": "设置固定装置的类别掩码。最多可以有16个类别，用1到16之间的数字表示。如果另一个固定装置也选择了这个固定装置的类别，那么这个固定装置将与选定类别中的固定装置发生碰撞。"
+    },
+    "Fixture:setRestitution": {
+        "prefix": "Fixture:setRestitution",
+        "body": "Fixture:setRestitution(${1:restitution (number)})",
+        "description": "设置固定装置的恢复系数。"
+    },
+    "Fixture:setSensor": {
+        "prefix": "Fixture:setSensor",
+        "body": "Fixture:setSensor(${1:sensor (boolean)})",
+        "description": "设置固定装置是否应该作为传感器。传感器不产生碰撞响应，但是开始和结束回调仍然会被调用。"
+    },
+    "Fixture:setUserData": {
+        "prefix": "Fixture:setUserData",
+        "body": "Fixture:setUserData(${1:value (mixed)})",
+        "description": "将一个Lua值与固定装置关联起来。仅在一个线程中使用这个函数。"
+    },
+    "Fixture:testPoint": {
+        "prefix": "Fixture:testPoint",
+        "body": "Fixture:testPoint(${1:x (number)}, ${2:y (number)})",
+        "description": "检查一个点是否在固定装置的形状内部。"
+    },
+    "FrictionJoint:getMaxForce": {
+        "prefix": "FrictionJoint:getMaxForce",
+        "body": "FrictionJoint:getMaxForce()",
+        "description": "获取最大摩擦力，单位为牛顿。"
+    },
+    "FrictionJoint:getMaxTorque": {
+        "prefix": "FrictionJoint:getMaxTorque",
+        "body": "FrictionJoint:getMaxTorque()",
+        "description": "获取最大摩擦扭矩，单位为牛顿米。"
+    },
+    "FrictionJoint:setMaxForce": {
+        "prefix": "FrictionJoint:setMaxForce",
+        "body": "FrictionJoint:setMaxForce(${1:maxForce (number)})",
+        "description": "设置最大摩擦力，单位为牛顿。"
+    },
+    "FrictionJoint:setMaxTorque": {
+        "prefix": "FrictionJoint:setMaxTorque",
+        "body": "FrictionJoint:setMaxTorque(${1:torque (number)})",
+        "description": "设置最大摩擦扭矩，单位为牛顿米。"
+    },
+    "GearJoint:getJoints": {
+        "prefix": "GearJoint:getJoints",
+        "body": "GearJoint:getJoints()",
+        "description": "获取由这个齿轮关节连接的关节。"
+    },
+    "GearJoint:getRatio": {
+        "prefix": "GearJoint:getRatio",
+        "body": "GearJoint:getRatio()",
+        "description": "获取齿轮关节的比例。"
+    },
+    "GearJoint:setRatio": {
+        "prefix": "GearJoint:setRatio",
+        "body": "GearJoint:setRatio(${1:ratio (number)})",
+        "description": "设置齿轮关节的比率。"
+    },
+    "Joint:destroy": {
+        "prefix": "Joint:destroy",
+        "body": "Joint:destroy()",
+        "description": "显式销毁关节。当你没有时间等待垃圾回收时，可以使用这个函数立即释放对象，但请注意，如果你在调用这个函数后尝试使用该对象，将会出现错误。"
+    },
+    "Joint:getAnchors": {
+        "prefix": "Joint:getAnchors",
+        "body": "Joint:getAnchors()",
+        "description": "获取关节的锚点。"
+    },
+    "Joint:getBodies": {
+        "prefix": "Joint:getBodies",
+        "body": "Joint:getBodies()",
+        "description": "获取连接到关节的刚体。"
+    },
+    "Joint:getCollideConnected": {
+        "prefix": "Joint:getCollideConnected",
+        "body": "Joint:getCollideConnected()",
+        "description": "获取连接的刚体是否发生碰撞。"
+    },
+    "Joint:getReactionForce": {
+        "prefix": "Joint:getReactionForce",
+        "body": "Joint:getReactionForce()",
+        "description": "获取作用在关节锚点上的Body 2的反作用力。"
+    },
+    "Joint:getReactionTorque": {
+        "prefix": "Joint:getReactionTorque",
+        "body": "Joint:getReactionTorque(${1:invdt (number)})",
+        "description": "返回作用在第二个物体上的反作用扭矩。"
+    },
+    "Joint:getType": {
+        "prefix": "Joint:getType",
+        "body": "Joint:getType()",
+        "description": "获取表示类型的字符串。"
+    },
+    "Joint:getUserData": {
+        "prefix": "Joint:getUserData",
+        "body": "Joint:getUserData()",
+        "description": "返回与此关节关联的Lua值。"
+    },
+    "Joint:isDestroyed": {
+        "prefix": "Joint:isDestroyed",
+        "body": "Joint:isDestroyed()",
+        "description": "获取关节是否已被销毁。被销毁的关节不能使用。"
+    },
+    "Joint:setUserData": {
+        "prefix": "Joint:setUserData",
+        "body": "Joint:setUserData(${1:value (mixed)})",
+        "description": "将一个Lua值与关节关联。要删除引用，请显式传递nil。"
+    },
+    "MotorJoint:getAngularOffset": {
+        "prefix": "MotorJoint:getAngularOffset",
+        "body": "MotorJoint:getAngularOffset()",
+        "description": "获取连接到关节的两个物体之间的目标角度偏移。"
+    },
+    "MotorJoint:getLinearOffset": {
+        "prefix": "MotorJoint:getLinearOffset",
+        "body": "MotorJoint:getLinearOffset()",
+        "description": "获取连接到关节的两个物体之间的目标线性偏移量。"
+    },
+    "MotorJoint:setAngularOffset": {
+        "prefix": "MotorJoint:setAngularOffset",
+        "body": "MotorJoint:setAngularOffset(${1:angularoffset (number)})",
+        "description": "设置连接到关节的两个刚体之间的目标角度偏移。"
+    },
+    "MotorJoint:setLinearOffset": {
+        "prefix": "MotorJoint:setLinearOffset",
+        "body": "MotorJoint:setLinearOffset(${1:x (number)}, ${2:y (number)})",
+        "description": "设置连接到关节的两个刚体之间的目标线性偏移量。"
+    },
+    "MouseJoint:getDampingRatio": {
+        "prefix": "MouseJoint:getDampingRatio",
+        "body": "MouseJoint:getDampingRatio()",
+        "description": "返回阻尼比。"
+    },
+    "MouseJoint:getFrequency": {
+        "prefix": "MouseJoint:getFrequency",
+        "body": "MouseJoint:getFrequency()",
+        "description": "返回频率。"
+    },
+    "MouseJoint:getMaxForce": {
+        "prefix": "MouseJoint:getMaxForce",
+        "body": "MouseJoint:getMaxForce()",
+        "description": "获取允许的最大力。"
+    },
+    "MouseJoint:getTarget": {
+        "prefix": "MouseJoint:getTarget",
+        "body": "MouseJoint:getTarget()",
+        "description": "获取目标点。"
+    },
+    "MouseJoint:setDampingRatio": {
+        "prefix": "MouseJoint:setDampingRatio",
+        "body": "MouseJoint:setDampingRatio(${1:ratio (number)})",
+        "description": "设置一个新的阻尼比。"
+    },
+    "MouseJoint:setFrequency": {
+        "prefix": "MouseJoint:setFrequency",
+        "body": "MouseJoint:setFrequency(${1:freq (number)})",
+        "description": "设置一个新的频率。"
+    },
+    "MouseJoint:setMaxForce": {
+        "prefix": "MouseJoint:setMaxForce",
+        "body": "MouseJoint:setMaxForce(${1:f (number)})",
+        "description": "设置允许的最大力。"
+    },
+    "MouseJoint:setTarget": {
+        "prefix": "MouseJoint:setTarget",
+        "body": "MouseJoint:setTarget(${1:x (number)}, ${2:y (number)})",
+        "description": "设置目标点。"
+    },
+    "PolygonShape:getPoints": {
+        "prefix": "PolygonShape:getPoints",
+        "body": "PolygonShape:getPoints()",
+        "description": "获取多边形顶点的局部坐标。这个函数有可变数量的返回值。它可以与love.graphics.polygon嵌套使用。这个函数最多可以有16个返回值，因为它为多边形中的每个顶点返回两个值。换句话说，它可以返回最多8个点的坐标。"
+    },
+    "PrismaticJoint:setLimitsEnabled": {
+        "prefix": "PrismaticJoint:setLimitsEnabled",
+        "body": "PrismaticJoint:setLimitsEnabled(${1:enable (boolean)})",
+        "description": "启用或禁用关节的限制。"
+    },
+    "PrismaticJoint:setMotorEnabled": {
+        "prefix": "PrismaticJoint:setMotorEnabled",
+        "body": "PrismaticJoint:setMotorEnabled(${1:enable (boolean)})",
+        "description": "启动或停止关节电机。"
+    },
+    "PrismaticJoint:getJointSpeed": {
+        "prefix": "PrismaticJoint:getJointSpeed",
+        "body": "PrismaticJoint:getJointSpeed()",
+        "description": "获取当前关节角速度。"
+    },
+    "PrismaticJoint:getJointTranslation": {
+        "prefix": "PrismaticJoint:getJointTranslation",
+        "body": "PrismaticJoint:getJointTranslation()",
+        "description": "获取当前关节的平移量。"
+    },
+    "PrismaticJoint:getLimits": {
+        "prefix": "PrismaticJoint:getLimits",
+        "body": "PrismaticJoint:getLimits()",
+        "description": "获取关节限制。"
+    },
+    "PrismaticJoint:getLowerLimit": {
+        "prefix": "PrismaticJoint:getLowerLimit",
+        "body": "PrismaticJoint:getLowerLimit()",
+        "description": "获取下限。"
+    },
+    "PrismaticJoint:getMaxMotorForce": {
+        "prefix": "PrismaticJoint:getMaxMotorForce",
+        "body": "PrismaticJoint:getMaxMotorForce()",
+        "description": "获取最大马达力。"
+    },
+    "PrismaticJoint:getMotorForce": {
+        "prefix": "PrismaticJoint:getMotorForce",
+        "body": "PrismaticJoint:getMotorForce()",
+        "description": "获取当前电机力。"
+    },
+    "PrismaticJoint:getMotorSpeed": {
+        "prefix": "PrismaticJoint:getMotorSpeed",
+        "body": "PrismaticJoint:getMotorSpeed()",
+        "description": "获取电机速度。"
+    },
+    "PrismaticJoint:getUpperLimit": {
+        "prefix": "PrismaticJoint:getUpperLimit",
+        "body": "PrismaticJoint:getUpperLimit()",
+        "description": "获取上限。"
+    },
+    "PrismaticJoint:hasLimitsEnabled": {
+        "prefix": "PrismaticJoint:hasLimitsEnabled",
+        "body": "PrismaticJoint:hasLimitsEnabled()",
+        "description": "检查是否启用了限制。"
+    },
+    "PrismaticJoint:isMotorEnabled": {
+        "prefix": "PrismaticJoint:isMotorEnabled",
+        "body": "PrismaticJoint:isMotorEnabled()",
+        "description": "检查电机是否启用。"
+    },
+    "PrismaticJoint:setLimits": {
+        "prefix": "PrismaticJoint:setLimits",
+        "body": "PrismaticJoint:setLimits(${1:lower (number)}, ${2:upper (number)})",
+        "description": "设置限制。"
+    },
+    "PrismaticJoint:setLowerLimit": {
+        "prefix": "PrismaticJoint:setLowerLimit",
+        "body": "PrismaticJoint:setLowerLimit(${1:lower (number)})",
+        "description": "设置下限。"
+    },
+    "PrismaticJoint:setMaxMotorForce": {
+        "prefix": "PrismaticJoint:setMaxMotorForce",
+        "body": "PrismaticJoint:setMaxMotorForce(${1:f (number)})",
+        "description": "设置最大马达力。"
+    },
+    "PrismaticJoint:setMotorSpeed": {
+        "prefix": "PrismaticJoint:setMotorSpeed",
+        "body": "PrismaticJoint:setMotorSpeed(${1:s (number)})",
+        "description": "设置电机速度。"
+    },
+    "PrismaticJoint:setUpperLimit": {
+        "prefix": "PrismaticJoint:setUpperLimit",
+        "body": "PrismaticJoint:setUpperLimit(${1:upper (number)})",
+        "description": "设置上限。"
+    },
+    "PulleyJoint:getConstant": {
+        "prefix": "PulleyJoint:getConstant",
+        "body": "PulleyJoint:getConstant()",
+        "description": "获取绳子的总长度。"
+    },
+    "PulleyJoint:getGroundAnchors": {
+        "prefix": "PulleyJoint:getGroundAnchors",
+        "body": "PulleyJoint:getGroundAnchors()",
+        "description": "获取地面锚点在世界坐标中的位置。"
+    },
+    "PulleyJoint:getLengthA": {
+        "prefix": "PulleyJoint:getLengthA",
+        "body": "PulleyJoint:getLengthA()",
+        "description": "获取连接到第一个物体的绳子段的当前长度。"
+    },
+    "PulleyJoint:getLengthB": {
+        "prefix": "PulleyJoint:getLengthB",
+        "body": "PulleyJoint:getLengthB()",
+        "description": "获取连接到第二个物体的绳索段的当前长度。"
+    },
+    "PulleyJoint:getMaxLengths": {
+        "prefix": "PulleyJoint:getMaxLengths",
+        "body": "PulleyJoint:getMaxLengths()",
+        "description": "获取绳索段的最大长度。"
+    },
+    "PulleyJoint:getRatio": {
+        "prefix": "PulleyJoint:getRatio",
+        "body": "PulleyJoint:getRatio()",
+        "description": "获取滑轮比率。"
+    },
+    "PulleyJoint:setConstant": {
+        "prefix": "PulleyJoint:setConstant",
+        "body": "PulleyJoint:setConstant(${1:length (number)})",
+        "description": "设置绳子的总长度。为绳子设置新的长度会更新关节的最大长度值。"
+    },
+    "PulleyJoint:setMaxLengths": {
+        "prefix": "PulleyJoint:setMaxLengths",
+        "body": "PulleyJoint:setMaxLengths(${1:max1 (number)}, ${2:max2 (number)})",
+        "description": "设置绳索段的最大长度。物理模块还对绳索段施加了最大值。如果参数超出这些值，将设置最大值而不是请求的值。"
+    },
+    "PulleyJoint:setRatio": {
+        "prefix": "PulleyJoint:setRatio",
+        "body": "PulleyJoint:setRatio(${1:ratio (number)})",
+        "description": "设置滑轮比率。"
+    },
+    "RevoluteJoint:setLimitsEnabled": {
+        "prefix": "RevoluteJoint:setLimitsEnabled",
+        "body": "RevoluteJoint:setLimitsEnabled(${1:enable (boolean)})",
+        "description": "启用或禁用关节限制。"
+    },
+    "RevoluteJoint:setMotorEnabled": {
+        "prefix": "RevoluteJoint:setMotorEnabled",
+        "body": "RevoluteJoint:setMotorEnabled(${1:enable (boolean)})",
+        "description": "启动或停止关节电机。"
+    },
+    "RevoluteJoint:getJointAngle": {
+        "prefix": "RevoluteJoint:getJointAngle",
+        "body": "RevoluteJoint:getJointAngle()",
+        "description": "获取当前的关节角度。"
+    },
+    "RevoluteJoint:getJointSpeed": {
+        "prefix": "RevoluteJoint:getJointSpeed",
+        "body": "RevoluteJoint:getJointSpeed()",
+        "description": "获取当前关节角速度。"
+    },
+    "RevoluteJoint:getLimits": {
+        "prefix": "RevoluteJoint:getLimits",
+        "body": "RevoluteJoint:getLimits()",
+        "description": "获取关节限制。"
+    },
+    "RevoluteJoint:getLowerLimit": {
+        "prefix": "RevoluteJoint:getLowerLimit",
+        "body": "RevoluteJoint:getLowerLimit()",
+        "description": "获取下限。"
+    },
+    "RevoluteJoint:getMaxMotorTorque": {
+        "prefix": "RevoluteJoint:getMaxMotorTorque",
+        "body": "RevoluteJoint:getMaxMotorTorque()",
+        "description": "获取最大马达力。"
+    },
+    "RevoluteJoint:getMotorSpeed": {
+        "prefix": "RevoluteJoint:getMotorSpeed",
+        "body": "RevoluteJoint:getMotorSpeed()",
+        "description": "获取马达速度。"
+    },
+    "RevoluteJoint:getMotorTorque": {
+        "prefix": "RevoluteJoint:getMotorTorque",
+        "body": "RevoluteJoint:getMotorTorque()",
+        "description": "获取当前电机力。"
+    },
+    "RevoluteJoint:getUpperLimit": {
+        "prefix": "RevoluteJoint:getUpperLimit",
+        "body": "RevoluteJoint:getUpperLimit()",
+        "description": "获取上限。"
+    },
+    "RevoluteJoint:hasLimitsEnabled": {
+        "prefix": "RevoluteJoint:hasLimitsEnabled",
+        "body": "RevoluteJoint:hasLimitsEnabled()",
+        "description": "检查是否启用了限制。"
+    },
+    "RevoluteJoint:isMotorEnabled": {
+        "prefix": "RevoluteJoint:isMotorEnabled",
+        "body": "RevoluteJoint:isMotorEnabled()",
+        "description": "检查电机是否启用。"
+    },
+    "RevoluteJoint:setLimits": {
+        "prefix": "RevoluteJoint:setLimits",
+        "body": "RevoluteJoint:setLimits(${1:lower (number)}, ${2:upper (number)})",
+        "description": "设置限制。"
+    },
+    "RevoluteJoint:setLowerLimit": {
+        "prefix": "RevoluteJoint:setLowerLimit",
+        "body": "RevoluteJoint:setLowerLimit(${1:lower (number)})",
+        "description": "设置下限。"
+    },
+    "RevoluteJoint:setMaxMotorTorque": {
+        "prefix": "RevoluteJoint:setMaxMotorTorque",
+        "body": "RevoluteJoint:setMaxMotorTorque(${1:f (number)})",
+        "description": "设置最大马达力。"
+    },
+    "RevoluteJoint:setMotorSpeed": {
+        "prefix": "RevoluteJoint:setMotorSpeed",
+        "body": "RevoluteJoint:setMotorSpeed(${1:s (number)})",
+        "description": "设置电机速度。"
+    },
+    "RevoluteJoint:setUpperLimit": {
+        "prefix": "RevoluteJoint:setUpperLimit",
+        "body": "RevoluteJoint:setUpperLimit(${1:upper (number)})",
+        "description": "设置上限。"
+    },
+    "RopeJoint:getMaxLength": {
+        "prefix": "RopeJoint:getMaxLength",
+        "body": "RopeJoint:getMaxLength()",
+        "description": "获取绳索关节的最大长度。"
+    },
+    "Shape:computeAABB": {
+        "prefix": "Shape:computeAABB",
+        "body": "Shape:computeAABB(${1:tx (number)}, ${2:ty (number)}, ${3:tr (number)}, ${4:childIndex (number)})",
+        "description": "返回变换后形状的边界框的点。"
+    },
+    "Shape:computeMass": {
+        "prefix": "Shape:computeMass",
+        "body": "Shape:computeMass(${1:density (number)})",
+        "description": "计算具有指定密度的形状的质量属性。"
+    },
+    "Shape:getChildCount": {
+        "prefix": "Shape:getChildCount",
+        "body": "Shape:getChildCount()",
+        "description": "返回形状拥有的子对象数量。"
+    },
+    "Shape:getRadius": {
+        "prefix": "Shape:getRadius",
+        "body": "Shape:getRadius()",
+        "description": "获取形状的半径。"
+    },
+    "Shape:getType": {
+        "prefix": "Shape:getType",
+        "body": "Shape:getType()",
+        "description": "获取表示形状的字符串。这个函数对于条件性调试绘图非常有用。"
+    },
+    "Shape:rayCast": {
+        "prefix": "Shape:rayCast",
+        "body": "Shape:rayCast(${1:x1 (number)}, ${2:y1 (number)}, ${3:x2 (number)}, ${4:y2 (number)}, ${5:maxFraction (number)}, ${6:tx (number)}, ${7:ty (number)}, ${8:tr (number)}, ${9:childIndex (number)})",
+        "description": "对形状进行射线投射，并返回射线击中处的表面法向量和线位置。如果射线未击中形状，则返回nil。可以对Shape进行变换以将其置于所需位置。射线从输入线的起点开始，朝第二个点方向前进。第四个参数是射线将行进的最大距离，作为输入线长度的缩放因子。childIndex参数用于指定要进行射线投射的父形状的哪个子形状，例如ChainShape。对于ChainShapes，索引1是链上的第一个边缘。对父形状进行射线投射只会测试指定的子形状，因此如果你想测试父形状的每个形状，你必须遍历其所有子形状。可以通过将线向量乘以第三个返回值并加到线起点来计算冲击点的世界位置。hitx, hity = x1 + (x2 - x1) * fraction, y1 + (y2 - y1) * fraction"
+    },
+    "Shape:testPoint": {
+        "prefix": "Shape:testPoint",
+        "body": "Shape:testPoint(${1:x (number)}, ${2:y (number)})",
+        "description": "检查一个点是否位于形状内部。这对于鼠标与形状的交互特别有用。通过循环遍历所有形状，并使用这个函数测试鼠标位置，我们可以找到鼠标触摸的形状。"
+    },
+    "WeldJoint:getDampingRatio": {
+        "prefix": "WeldJoint:getDampingRatio",
+        "body": "WeldJoint:getDampingRatio()",
+        "description": "返回关节的阻尼比。"
+    },
+    "WeldJoint:getFrequency": {
+        "prefix": "WeldJoint:getFrequency",
+        "body": "WeldJoint:getFrequency()",
+        "description": "返回频率。"
+    },
+    "WeldJoint:setDampingRatio": {
+        "prefix": "WeldJoint:setDampingRatio",
+        "body": "WeldJoint:setDampingRatio(${1:ratio (number)})",
+        "description": "新的阻尼比。"
+    },
+    "WeldJoint:setFrequency": {
+        "prefix": "WeldJoint:setFrequency",
+        "body": "WeldJoint:setFrequency(${1:freq (number)})",
+        "description": "设置一个新的频率。"
+    },
+    "WheelJoint:getJointSpeed": {
+        "prefix": "WheelJoint:getJointSpeed",
+        "body": "WheelJoint:getJointSpeed()",
+        "description": "返回当前关节的平移速度。"
+    },
+    "WheelJoint:getJointTranslation": {
+        "prefix": "WheelJoint:getJointTranslation",
+        "body": "WheelJoint:getJointTranslation()",
+        "description": "返回当前关节的平移量。"
+    },
+    "WheelJoint:getLimits": {
+        "prefix": "WheelJoint:getLimits",
+        "body": "WheelJoint:getLimits()",
+        "description": "获取关节限制。"
+    },
+    "WheelJoint:getMaxMotorTorque": {
+        "prefix": "WheelJoint:getMaxMotorTorque",
+        "body": "WheelJoint:getMaxMotorTorque()",
+        "description": "返回最大电机扭矩。"
+    },
+    "WheelJoint:getMotorSpeed": {
+        "prefix": "WheelJoint:getMotorSpeed",
+        "body": "WheelJoint:getMotorSpeed()",
+        "description": "返回电机的速度。"
+    },
+    "WheelJoint:getMotorTorque": {
+        "prefix": "WheelJoint:getMotorTorque",
+        "body": "WheelJoint:getMotorTorque(${1:invdt (number)})",
+        "description": "返回电机当前的扭矩。"
+    },
+    "WheelJoint:getSpringDampingRatio": {
+        "prefix": "WheelJoint:getSpringDampingRatio",
+        "body": "WheelJoint:getSpringDampingRatio()",
+        "description": "返回阻尼比。"
+    },
+    "WheelJoint:getSpringFrequency": {
+        "prefix": "WheelJoint:getSpringFrequency",
+        "body": "WheelJoint:getSpringFrequency()",
+        "description": "返回弹簧频率。"
+    },
+    "WheelJoint:setMaxMotorTorque": {
+        "prefix": "WheelJoint:setMaxMotorTorque",
+        "body": "WheelJoint:setMaxMotorTorque(${1:maxTorque (number)})",
+        "description": "设置一个新的最大电机扭矩。"
+    },
+    "WheelJoint:setMotorEnabled": {
+        "prefix": "WheelJoint:setMotorEnabled",
+        "body": "WheelJoint:setMotorEnabled(${1:enable (boolean)})",
+        "description": "启动和停止关节电机。"
+    },
+    "WheelJoint:setMotorSpeed": {
+        "prefix": "WheelJoint:setMotorSpeed",
+        "body": "WheelJoint:setMotorSpeed(${1:speed (number)})",
+        "description": "为电机设置一个新的速度。"
+    },
+    "WheelJoint:setSpringDampingRatio": {
+        "prefix": "WheelJoint:setSpringDampingRatio",
+        "body": "WheelJoint:setSpringDampingRatio(${1:ratio (number)})",
+        "description": "设置一个新的阻尼比。"
+    },
+    "WheelJoint:setSpringFrequency": {
+        "prefix": "WheelJoint:setSpringFrequency",
+        "body": "WheelJoint:setSpringFrequency(${1:freq (number)})",
+        "description": "设置一个新的弹簧频率。"
+    },
+    "World:destroy": {
+        "prefix": "World:destroy",
+        "body": "World:destroy()",
+        "description": "销毁世界，包括所有的物体、关节、固定装置及其形状。如果在调用此函数后尝试使用任何被销毁的对象，将会出现错误。"
+    },
+    "World:getBodyCount": {
+        "prefix": "World:getBodyCount",
+        "body": "World:getBodyCount()",
+        "description": "获取世界中的刚体数量。"
+    },
+    "World:getBodyList": {
+        "prefix": "World:getBodyList",
+        "body": "World:getBodyList()",
+        "description": "返回一个包含所有刚体的表。"
+    },
+    "World:getCallbacks": {
+        "prefix": "World:getCallbacks",
+        "body": "World:getCallbacks()",
+        "description": "返回在世界更新期间的回调函数。"
+    },
+    "World:getContactCount": {
+        "prefix": "World:getContactCount",
+        "body": "World:getContactCount()",
+        "description": "返回世界中的接触点数量。"
+    },
+    "World:getContactFilter": {
+        "prefix": "World:getContactFilter",
+        "body": "World:getContactFilter()",
+        "description": "返回用于碰撞过滤的函数。"
+    },
+    "World:getContactList": {
+        "prefix": "World:getContactList",
+        "body": "World:getContactList()",
+        "description": "返回一个包含所有接触点的表格。"
+    },
+    "World:getGravity": {
+        "prefix": "World:getGravity",
+        "body": "World:getGravity()",
+        "description": "获取世界的重力。"
+    },
+    "World:getJointCount": {
+        "prefix": "World:getJointCount",
+        "body": "World:getJointCount()",
+        "description": "获取世界中的关节数量。"
+    },
+    "World:getJointList": {
+        "prefix": "World:getJointList",
+        "body": "World:getJointList()",
+        "description": "返回一个包含所有关节的表。"
+    },
+    "World:isDestroyed": {
+        "prefix": "World:isDestroyed",
+        "body": "World:isDestroyed()",
+        "description": "获取世界是否已被销毁。被销毁的世界不能被使用。"
+    },
+    "World:isLocked": {
+        "prefix": "World:isLocked",
+        "body": "World:isLocked()",
+        "description": "返回世界是否正在更新其状态。这将在World:setCallbacks中的回调函数里返回true。"
+    },
+    "World:isSleepingAllowed": {
+        "prefix": "World:isSleepingAllowed",
+        "body": "World:isSleepingAllowed()",
+        "description": "返回世界的睡眠行为。"
+    },
+    "World:queryBoundingBox": {
+        "prefix": "World:queryBoundingBox",
+        "body": "World:queryBoundingBox(${1:topLeftX (number)}, ${2:topLeftY (number)}, ${3:bottomRightX (number)}, ${4:bottomRightY (number)}, ${5:callback (function)})",
+        "description": "在指定区域内，为每个固定装置调用一个函数。"
+    },
+    "World:rayCast": {
+        "prefix": "World:rayCast",
+        "body": "World:rayCast(${1:x1 (number)}, ${2:y1 (number)}, ${3:x2 (number)}, ${4:y2 (number)}, ${5:callback (function)})",
+        "description": "投射一条射线，并在射线与物体相交时调用一个函数。你不能假设回调函数的顺序。每次函数被调用时，会传递6个参数给它。第一个参数是与射线相交的固定装置。第二和第三个参数是交点的坐标。第四和第五个参数是形状边缘的表面法向量。第六个参数是射线上交点的位置，作为一个从0到1的数字（如果射线长度被返回值改变，甚至可以更高）。射线可以通过返回值来控制。正值设置一个新的射线长度，其中1是默认值。值为0则终止射线。如果回调函数返回-1，则忽略交点，就好像它没有发生一样。在0.8.0版本中有一个bug，传递给回调函数的法向量会被love.physics.getMeter缩放。"
+    },
+    "World:setCallbacks": {
+        "prefix": "World:setCallbacks",
+        "body": "World:setCallbacks(${1:beginContact (function)}, ${2:endContact (function)}, ${3:preSolve (function)}, ${4:postSolve (function)})",
+        "description": "在世界更新期间设置碰撞回调函数。可以传入四个Lua函数作为参数。传入nil值可以移除一个函数。当被调用时，每个函数将接收三个参数。前两个参数是发生碰撞的固定装置，第三个参数是它们之间的接触点。PostSolve回调还会为每个接触点获取法线和切线冲量。"
+    },
+    "World:setContactFilter": {
+        "prefix": "World:setContactFilter",
+        "body": "World:setContactFilter(${1:filter (function)})",
+        "description": "设置一个用于碰撞过滤的函数。如果组和类别过滤没有产生碰撞决定，这个函数会被调用，并以两个固定装置作为参数。该函数应该返回一个布尔值，其中true表示固定装置将会发生碰撞，false表示它们将会相互穿透。"
+    },
+    "World:setGravity": {
+        "prefix": "World:setGravity",
+        "body": "World:setGravity(${1:x (number)}, ${2:y (number)})",
+        "description": "设置世界的重力。"
+    },
+    "World:setSleepingAllowed": {
+        "prefix": "World:setSleepingAllowed",
+        "body": "World:setSleepingAllowed(${1:allowSleep (boolean)})",
+        "description": "设置世界的睡眠行为。一个处于睡眠状态的物体比处于清醒状态时更高效地进行模拟。如果允许睡眠，任何静止的物体都会进入睡眠状态。"
+    },
+    "World:translateOrigin": {
+        "prefix": "World:translateOrigin",
+        "body": "World:translateOrigin(${1:x (number)}, ${2:y (number)})",
+        "description": "翻译世界的原点。在大型世界中，当距离原点很远时，浮点数精度问题变得明显，这很有用。"
+    },
+    "World:update": {
+        "prefix": "World:update",
+        "body": "World:update(${1:dt (number)})",
+        "description": "更新世界的状态。"
+    },
+    "love.physics.getDistance": {
+        "prefix": "love.physics.getDistance",
+        "body": "love.physics.getDistance(${1:fixture1 (Fixture)}, ${2:fixture2 (Fixture)})",
+        "description": "返回两个夹具之间最近的两个点以及它们之间的距离。"
+    },
+    "love.physics.getMeter": {
+        "prefix": "love.physics.getMeter",
+        "body": "love.physics.getMeter()",
+        "description": "获取世界的比例尺。世界比例尺是指每米像素数。尽量保持你的形状大小小于这个比例尺的10倍。这很重要，因为Box2D中的物理效果被调整为适合0.1米到10米大小的物体。所有的物理坐标都会除以这个数值来进行物理计算。"
+    },
+    "love.physics.newBody": {
+        "prefix": "love.physics.newBody",
+        "body": "love.physics.newBody(${1:world (World)}, ${2:x (number)}, ${3:y (number)}, ${4:type (BodyType)})",
+        "description": "创建一个新的物体。物体有三种类型。静态物体不会移动，具有无限质量，并且可以用作关卡边界。动态物体是模拟中的主要角色，它们会与所有物体发生碰撞。运动学物体不会对力做出反应，只会与动态物体发生碰撞。物体的质量在附加或移除固定装置时计算，但可以随时使用Body:setMass或Body:resetMassData进行更改。"
+    },
+    "love.physics.newChainShape": {
+        "prefix": "love.physics.newChainShape",
+        "body": "love.physics.newChainShape(${1:loop (boolean)}, ${2:x1 (number)}, ${3:y1 (number)}, ${4:x2 (number)}, ${5:y2 (number)}, ${6:... (number)})",
+        "description": "创建一个新的链条形状。"
+    },
+    "love.physics.newCircleShape": {
+        "prefix": "love.physics.newCircleShape",
+        "body": "love.physics.newCircleShape(${1:radius (number)})",
+        "description": "创建一个新的圆形形状。"
+    },
+    "love.physics.newDistanceJoint": {
+        "prefix": "love.physics.newDistanceJoint",
+        "body": "love.physics.newDistanceJoint(${1:body1 (Body)}, ${2:body2 (Body)}, ${3:x1 (number)}, ${4:y1 (number)}, ${5:x2 (number)}, ${6:y2 (number)}, ${7:collideConnected (boolean)})",
+        "description": "创建两个物体之间的距离关节。这种关节限制了两个物体上两点之间的距离保持不变。这两个点是以世界坐标指定的，并且假定在创建这个关节时两个物体已经就位。第一个锚点连接到第一个物体，第二个锚点连接到第二个物体，这些点定义了距离关节的长度。"
+    },
+    "love.physics.newEdgeShape": {
+        "prefix": "love.physics.newEdgeShape",
+        "body": "love.physics.newEdgeShape(${1:x1 (number)}, ${2:y1 (number)}, ${3:x2 (number)}, ${4:y2 (number)})",
+        "description": "创建一个边缘形状。"
+    },
+    "love.physics.newFixture": {
+        "prefix": "love.physics.newFixture",
+        "body": "love.physics.newFixture(${1:body (Body)}, ${2:shape (Shape)}, ${3:density (number)})",
+        "description": "创建并附加一个固定装置到一个物体上。"
+    },
+    "love.physics.newFrictionJoint": {
+        "prefix": "love.physics.newFrictionJoint",
+        "body": "love.physics.newFrictionJoint(${1:body1 (Body)}, ${2:body2 (Body)}, ${3:x (number)}, ${4:y (number)}, ${5:collideConnected (boolean)})",
+        "description": "创建两个物体之间的摩擦关节。摩擦关节对一个物体施加摩擦力。"
+    },
+    "love.physics.newGearJoint": {
+        "prefix": "love.physics.newGearJoint",
+        "body": "love.physics.newGearJoint(${1:joint1 (Joint)}, ${2:joint2 (Joint)}, ${3:ratio (number)}, ${4:collideConnected (boolean)})",
+        "description": "创建一个连接两个关节的齿轮关节。齿轮关节连接两个必须是棱柱形或旋转形关节的关节。使用这个关节需要它所使用的关节将其各自的物体连接到地面，并将地面作为第一个物体。在销毁物体和关节时，必须确保在销毁其他关节之前销毁齿轮关节。齿轮关节有一个比率，它决定了连接关节的角值或距离值如何相互关联。公式 coordinate1 + ratio * coordinate2 总是有一个恒定值，这个值在创建齿轮关节时设置。"
+    },
+    "love.physics.newMotorJoint": {
+        "prefix": "love.physics.newMotorJoint",
+        "body": "love.physics.newMotorJoint(${1:body1 (Body)}, ${2:body2 (Body)}, ${3:correctionFactor (number)})",
+        "description": "创建两个物体之间的关节，该关节控制它们之间的相对运动。在创建MotorJoint之后，可以指定位置和旋转偏移，以及为了达到目标偏移而施加到物体上的最大电机力和扭矩。"
+    },
+    "love.physics.newMouseJoint": {
+        "prefix": "love.physics.newMouseJoint",
+        "body": "love.physics.newMouseJoint(${1:body (Body)}, ${2:x (number)}, ${3:y (number)})",
+        "description": "创建一个连接一个物体和鼠标的关节。这个关节实际上将物体连接到世界中的一个固定点。要使其跟随鼠标，必须在每个时间步更新固定点（下面有示例）。使用MouseJoint而不是直接改变物体位置的优势在于，碰撞和其他关节的反应由物理引擎处理。"
+    },
+    "love.physics.newPolygonShape": {
+        "prefix": "love.physics.newPolygonShape",
+        "body": "love.physics.newPolygonShape(${1:x1 (number)}, ${2:y1 (number)}, ${3:x2 (number)}, ${4:y2 (number)}, ${5:... (number)})",
+        "description": "创建一个新的多边形形状。这个形状最多可以有8个顶点，并且必须形成一个凸形状。"
+    },
+    "love.physics.newPrismaticJoint": {
+        "prefix": "love.physics.newPrismaticJoint",
+        "body": "love.physics.newPrismaticJoint(${1:body1 (Body)}, ${2:body2 (Body)}, ${3:x (number)}, ${4:y (number)}, ${5:ax (number)}, ${6:ay (number)}, ${7:collideConnected (boolean)})",
+        "description": "创建两个物体之间的棱柱关节。棱柱关节限制两个物体在指定轴上相对移动。它不允许相对旋转。其定义和操作类似于铰链关节，但是用平移和力代替了角度和扭矩。"
+    },
+    "love.physics.newPulleyJoint": {
+        "prefix": "love.physics.newPulleyJoint",
+        "body": "love.physics.newPulleyJoint(${1:body1 (Body)}, ${2:body2 (Body)}, ${3:gx1 (number)}, ${4:gy1 (number)}, ${5:gx2 (number)}, ${6:gy2 (number)}, ${7:x1 (number)}, ${8:y1 (number)}, ${9:x2 (number)}, ${10:y2 (number)}, ${11:ratio (number)}, ${12:collideConnected (boolean)})",
+        "description": "创建一个滑轮关节，将两个物体连接在一起并连接到地面。滑轮关节模拟了一个滑轮，可以选择性地使用滑轮组。如果比例参数的值与一不同，则模拟的绳子在一侧的延伸速度会比另一侧快。在滑轮关节中，模拟的绳子总长度是常数length1 + ratio * length2，这在创建滑轮关节时设置。如果滑轮关节的一侧完全伸展，其行为可能会变得不可预测。建议使用setMaxLengths方法来限制每侧可以达到的最大长度。"
+    },
+    "love.physics.newRectangleShape": {
+        "prefix": "love.physics.newRectangleShape",
+        "body": "love.physics.newRectangleShape(${1:width (number)}, ${2:height (number)})",
+        "description": "创建矩形多边形形状的简写方法。默认情况下，局部原点位于矩形的中心，而不是像图形那样位于左上角。"
+    },
+    "love.physics.newRevoluteJoint": {
+        "prefix": "love.physics.newRevoluteJoint",
+        "body": "love.physics.newRevoluteJoint(${1:body1 (Body)}, ${2:body2 (Body)}, ${3:x (number)}, ${4:y (number)}, ${5:collideConnected (number)})",
+        "description": "创建两个物体之间的铰链关节。这个关节将两个物体连接到一个点上，它们可以围绕这个点进行旋转。"
+    },
+    "love.physics.newRopeJoint": {
+        "prefix": "love.physics.newRopeJoint",
+        "body": "love.physics.newRopeJoint(${1:body1 (Body)}, ${2:body2 (Body)}, ${3:x1 (number)}, ${4:y1 (number)}, ${5:x2 (number)}, ${6:y2 (number)}, ${7:maxLength (number)}, ${8:collideConnected (boolean)})",
+        "description": "在两个物体之间创建一个关节。它的唯一功能是强制这两个物体之间保持最大距离。"
+    },
+    "love.physics.newWeldJoint": {
+        "prefix": "love.physics.newWeldJoint",
+        "body": "love.physics.newWeldJoint(${1:body1 (Body)}, ${2:body2 (Body)}, ${3:x (number)}, ${4:y (number)}, ${5:collideConnected (boolean)})",
+        "description": "创建两个物体之间的摩擦关节。WeldJoint本质上是将两个物体粘合在一起。"
+    },
+    "love.physics.newWheelJoint": {
+        "prefix": "love.physics.newWheelJoint",
+        "body": "love.physics.newWheelJoint(${1:body1 (Body)}, ${2:body2 (Body)}, ${3:x (number)}, ${4:y (number)}, ${5:ax (number)}, ${6:ay (number)}, ${7:collideConnected (boolean)})",
+        "description": "创建一个轮轴关节。"
+    },
+    "love.physics.newWorld": {
+        "prefix": "love.physics.newWorld",
+        "body": "love.physics.newWorld(${1:xg (number)}, ${2:yg (number)}, ${3:sleep (boolean)})",
+        "description": "创建一个新的世界。"
+    },
+    "love.physics.setMeter": {
+        "prefix": "love.physics.setMeter",
+        "body": "love.physics.setMeter(${1:scale (number)})",
+        "description": "设置像素到米的比例尺。物理模块中的所有坐标都除以这个数字并转换为米，这为直接将对象绘制到屏幕上提供了一种方便的方法，无需进行图形变换。建议创建不超过比例尺10倍大小的形状。这很重要，因为Box2D调整后可以很好地与0.1到10米大小的形状一起工作。默认的米比例尺是30。love.physics.setMeter不会对已创建的对象产生追溯性影响。已创建的对象保留其米坐标，但比例尺因子将影响它们的像素坐标。"
+    },
+    "Decoder:getBitDepth": {
+        "prefix": "Decoder:getBitDepth",
+        "body": "Decoder:getBitDepth()",
+        "description": "返回每个样本的位数。"
+    },
+    "Decoder:getChannels": {
+        "prefix": "Decoder:getChannels",
+        "body": "Decoder:getChannels()",
+        "description": "返回流中的通道数。"
+    },
+    "Decoder:getDuration": {
+        "prefix": "Decoder:getDuration",
+        "body": "Decoder:getDuration()",
+        "description": "获取声音文件的持续时间。它可能不是完全精确的，如果无法确定持续时间，则可能返回-1。"
+    },
+    "Decoder:getSampleRate": {
+        "prefix": "Decoder:getSampleRate",
+        "body": "Decoder:getSampleRate()",
+        "description": "返回解码器的采样率。"
+    },
+    "SoundData:getBitDepth": {
+        "prefix": "SoundData:getBitDepth",
+        "body": "SoundData:getBitDepth()",
+        "description": "返回每样本的位数。"
+    },
+    "SoundData:getChannels": {
+        "prefix": "SoundData:getChannels",
+        "body": "SoundData:getChannels()",
+        "description": "返回流中的频道数量。"
+    },
+    "SoundData:getDuration": {
+        "prefix": "SoundData:getDuration",
+        "body": "SoundData:getDuration()",
+        "description": "返回流中的通道数。"
+    },
+    "SoundData:getSample": {
+        "prefix": "SoundData:getSample",
+        "body": "SoundData:getSample(${1:i (number)})",
+        "description": "获取指定位置的样本。"
+    },
+    "SoundData:getSampleCount": {
+        "prefix": "SoundData:getSampleCount",
+        "body": "SoundData:getSampleCount()",
+        "description": "返回SoundData的样本计数。"
+    },
+    "SoundData:getSampleRate": {
+        "prefix": "SoundData:getSampleRate",
+        "body": "SoundData:getSampleRate()",
+        "description": "返回 SoundData 的采样率。"
+    },
+    "SoundData:setSample": {
+        "prefix": "SoundData:setSample",
+        "body": "SoundData:setSample(${1:i (number)}, ${2:sample (number)})",
+        "description": "设置指定位置的样本。"
+    },
+    "love.sound.newDecoder": {
+        "prefix": "love.sound.newDecoder",
+        "body": "love.sound.newDecoder(${1:file (File)}, ${2:buffer (number)})",
+        "description": "尝试为指定文件中的编码声音数据找到一个解码器。"
+    },
+    "love.sound.newSoundData": {
+        "prefix": "love.sound.newSoundData",
+        "body": "love.sound.newSoundData(${1:filename (string)})",
+        "description": "从文件创建新的SoundData。也可以创建具有自定义采样率、通道和位深度的SoundData。声音数据将被解码到内存中以原始格式存储。建议只创建短声音，如效果音，因为3分钟的歌曲以这种方式使用30MB的内存。"
+    },
+    "love.system.getClipboardText": {
+        "prefix": "love.system.getClipboardText",
+        "body": "love.system.getClipboardText()",
+        "description": "从剪贴板获取文本。"
+    },
+    "love.system.getOS": {
+        "prefix": "love.system.getOS",
+        "body": "love.system.getOS()",
+        "description": "获取当前操作系统。通常情况下，LÖVE会抽象掉需要知道当前操作系统的需求，但在某些情况下，了解当前操作系统可能会很有用（尤其是与os.execute结合使用时）。"
+    },
+    "love.system.getPowerInfo": {
+        "prefix": "love.system.getPowerInfo",
+        "body": "love.system.getPowerInfo()",
+        "description": "获取有关系统电源供应的信息。"
+    },
+    "love.system.getProcessorCount": {
+        "prefix": "love.system.getProcessorCount",
+        "body": "love.system.getProcessorCount()",
+        "description": "获取系统中的CPU核心数。如果启用了像Intel的超线程技术这样的技术，这个数字包括报告的线程数。例如，在启用了超线程技术的4核CPU上，这个函数将返回8。"
+    },
+    "love.system.openURL": {
+        "prefix": "love.system.openURL",
+        "body": "love.system.openURL(${1:url (string)})",
+        "description": "使用用户的网页或文件浏览器打开一个URL。"
+    },
+    "love.system.setClipboardText": {
+        "prefix": "love.system.setClipboardText",
+        "body": "love.system.setClipboardText(${1:text (string)})",
+        "description": "将文本放入剪贴板。"
+    },
+    "love.system.vibrate": {
+        "prefix": "love.system.vibrate",
+        "body": "love.system.vibrate(${1:seconds (number)})",
+        "description": "如果可能的话，使设备震动。目前这只适用于内置震动电机的Android和iOS设备。"
+    },
+    "Thread:getError": {
+        "prefix": "Thread:getError",
+        "body": "Thread:getError()",
+        "description": "如果线程产生了错误，则从线程中检索错误字符串。"
+    },
+    "Thread:start": {
+        "prefix": "Thread:start",
+        "body": "Thread:start()",
+        "description": "启动线程。线程在完成执行后可以重新启动。"
+    },
+    "Thread:wait": {
+        "prefix": "Thread:wait",
+        "body": "Thread:wait()",
+        "description": "等待一个线程完成。这个调用会阻塞直到线程结束。"
+    },
+    "Thread:isRunning": {
+        "prefix": "Thread:isRunning",
+        "body": "Thread:isRunning()",
+        "description": "返回线程是否正在运行。不运行的线程可以使用Thread:start重新启动。"
+    },
+    "Channel:clear": {
+        "prefix": "Channel:clear",
+        "body": "Channel:clear()",
+        "description": "清除频道队列中的所有消息。"
+    },
+    "Channel:demand": {
+        "prefix": "Channel:demand",
+        "body": "Channel:demand()",
+        "description": "从消息队列中检索Channel消息的值并将其移除。消息的值可以是布尔值、字符串、数字、LÖVE用户数据或简单的平面表。它等待直到队列中有消息，然后返回消息值。"
+    },
+    "Channel:getCount": {
+        "prefix": "Channel:getCount",
+        "body": "Channel:getCount()",
+        "description": "检索线程通道队列中的消息数量。"
+    },
+    "Channel:peek": {
+        "prefix": "Channel:peek",
+        "body": "Channel:peek()",
+        "description": "检索队列中的 Channel 消息的值，但将其保留在队列中。消息的值可以是布尔值、字符串、数字或 LÖVE 用户数据。如果队列中没有消息，则返回 nil。"
+    },
+    "Channel:performAtomic": {
+        "prefix": "Channel:performAtomic",
+        "body": "Channel:performAtomic(${1:func (function)}, ${2:arg1 (any)}, ${3:... (any)})",
+        "description": "以原子方式执行指定的函数，相对于这个通道。连续调用同一个通道上的多个方法通常是有用的。然而，如果有多个线程同时调用这个通道的方法，每个线程上的不同调用可能会交错执行（例如，第二个线程的一个或多个调用可能发生在第一个线程的调用之间）。这个方法通过确保调用方法的线程在指定函数返回之前独占访问通道，避免了这个问题。"
+    },
+    "Channel:pop": {
+        "prefix": "Channel:pop",
+        "body": "Channel:pop()",
+        "description": "从消息队列中检索一个频道消息的值，并将其从队列中移除。消息的值可以是布尔值、字符串、数字、LÖVE用户数据或一个简单的平面表。如果队列中没有消息，则返回nil。"
+    },
+    "Channel:push": {
+        "prefix": "Channel:push",
+        "body": "Channel:push(${1:value (value)})",
+        "description": "向线程通道发送一条消息。消息的值可以是布尔值、字符串、数字、LÖVE用户数据，或者一个简单的平面表。不支持外部用户数据（Lua的文件、LuaSocket、ENet等）、函数以及表内的表。"
+    },
+    "Channel:supply": {
+        "prefix": "Channel:supply",
+        "body": "Channel:supply(${1:value (value)})",
+        "description": "向线程通道发送一条消息并等待线程接收它。消息的值可以是布尔值、字符串、数字、LÖVE用户数据，或者一个简单的平面表。不支持外部用户数据（Lua的文件、LuaSocket、ENet等）、函数以及表内的表。"
+    },
+    "love.thread.getChannel": {
+        "prefix": "love.thread.getChannel",
+        "body": "love.thread.getChannel(${1:name (string)})",
+        "description": "创建或检索一个命名线程通道。"
+    },
+    "love.thread.newChannel": {
+        "prefix": "love.thread.newChannel",
+        "body": "love.thread.newChannel()",
+        "description": "创建一个新的未命名线程通道。它们的一个用途是通过Channel:push将新的未命名通道传递给其他线程。"
+    },
+    "love.thread.newThread": {
+        "prefix": "love.thread.newThread",
+        "body": "love.thread.newThread(${1:filename (string)})",
+        "description": "从文件或数据对象创建一个新的线程。"
+    },
+    "love.timer.getAverageDelta": {
+        "prefix": "love.timer.getAverageDelta",
+        "body": "love.timer.getAverageDelta()",
+        "description": "返回过去一秒钟内的平均帧间时间（每秒帧数）。"
+    },
+    "love.timer.getDelta": {
+        "prefix": "love.timer.getDelta",
+        "body": "love.timer.getDelta()",
+        "description": "返回最后两帧之间的时间。"
+    },
+    "love.timer.getFPS": {
+        "prefix": "love.timer.getFPS",
+        "body": "love.timer.getFPS()",
+        "description": "返回当前每秒帧数。"
+    },
+    "love.timer.getTime": {
+        "prefix": "love.timer.getTime",
+        "body": "love.timer.getTime()",
+        "description": "返回一个起始时间未指定的计时器的值。这个函数只应用于计算时间点之间的差异，因为计时器的起始时间是未知的。"
+    },
+    "love.timer.sleep": {
+        "prefix": "love.timer.sleep",
+        "body": "love.timer.sleep(${1:s (number)})",
+        "description": "使程序暂停指定的时间。"
+    },
+    "love.timer.step": {
+        "prefix": "love.timer.step",
+        "body": "love.timer.step()",
+        "description": "测量两个帧之间的时间。调用此函数会改变love.timer.getDelta的返回值。"
+    },
+    "love.touch.getPosition": {
+        "prefix": "love.touch.getPosition",
+        "body": "love.touch.getPosition(${1:id (light userdata)})",
+        "description": "获取指定触摸按压的当前位置，以像素为单位。"
+    },
+    "love.touch.getPressure": {
+        "prefix": "love.touch.getPressure",
+        "body": "love.touch.getPressure(${1:id (light userdata)})",
+        "description": "获取指定触摸按压的当前压力。"
+    },
+    "love.touch.getTouches": {
+        "prefix": "love.touch.getTouches",
+        "body": "love.touch.getTouches()",
+        "description": "获取所有活跃的触摸按压列表。"
+    },
+    "love.video.newVideoStream": {
+        "prefix": "love.video.newVideoStream",
+        "body": "love.video.newVideoStream(${1:filename (string)})",
+        "description": "创建一个新的视频流。目前仅支持Ogg Theora视频文件。视频流不能绘制视频，请参阅love.graphics.newVideo来实现这一点。"
+    },
+    "love.window.close": {
+        "prefix": "love.window.close",
+        "body": "love.window.close()",
+        "description": "关闭窗口。可以使用love.window.setMode重新打开。"
+    },
+    "love.window.fromPixels": {
+        "prefix": "love.window.fromPixels",
+        "body": "love.window.fromPixels(${1:pixelvalue (number)})",
+        "description": "将数字从像素转换为密度无关单位。窗口内的像素密度可能大于（或小于）窗口的“大小”。例如，在启用了高dpi窗口标志的Mac OS X上的视网膜屏幕上，窗口可能占据与800x600窗口相同的物理大小，但窗口内部区域使用1600x1200像素。在这种情况下，love.window.fromPixels(1600)将返回800。这个函数将坐标从像素转换为用户期望它们在屏幕上显示的大小。love.window.toPixels函数则相反。必须启用高dpi窗口标志才能在Mac OS X和iOS上使用Retina屏幕的全部像素密度。该标志目前在Windows和Linux上无效，在Android上实际上始终启用。大多数LÖVE函数返回的值和期望的参数是以像素而不是密度无关单位来表示的。"
+    },
+    "love.window.getDisplayName": {
+        "prefix": "love.window.getDisplayName",
+        "body": "love.window.getDisplayName(${1:displayindex (number)})",
+        "description": "获取一个显示器的名称。"
+    },
+    "love.window.getFullscreen": {
+        "prefix": "love.window.getFullscreen",
+        "body": "love.window.getFullscreen()",
+        "description": "获取窗口是否为全屏模式。"
+    },
+    "love.window.getFullscreenModes": {
+        "prefix": "love.window.getFullscreenModes",
+        "body": "love.window.getFullscreenModes(${1:display (number)})",
+        "description": "获取支持的全屏模式列表。"
+    },
+    "love.window.getIcon": {
+        "prefix": "love.window.getIcon",
+        "body": "love.window.getIcon()",
+        "description": "获取窗口图标。"
+    },
+    "love.window.getMode": {
+        "prefix": "love.window.getMode",
+        "body": "love.window.getMode()",
+        "description": "返回当前的显示模式。"
+    },
+    "love.window.getPixelScale": {
+        "prefix": "love.window.getPixelScale",
+        "body": "love.window.getPixelScale()",
+        "description": "获取与窗口关联的DPI缩放因子。窗口内的像素密度可能大于（或小于）窗口的“大小”。例如，在启用了高DPI窗口标志的Mac OS X上的视网膜屏幕上，窗口可能占据与800x600窗口相同的物理大小，但窗口内部区域使用1600x1200像素。在这种情况下，love.window.getPixelScale()将返回2.0。也可以使用love.window.fromPixels和love.window.toPixels函数在单位之间进行转换。必须启用高DPI窗口标志，才能在Mac OS X和iOS上使用视网膜屏幕的完整像素密度。该标志目前在Windows和Linux上无效，在Android上则始终有效。"
+    },
+    "love.window.getPosition": {
+        "prefix": "love.window.getPosition",
+        "body": "love.window.getPosition()",
+        "description": "获取窗口在屏幕上的位置。窗口位置是在它当前所在的显示坐标空间中。"
+    },
+    "love.window.getTitle": {
+        "prefix": "love.window.getTitle",
+        "body": "love.window.getTitle()",
+        "description": "获取窗口标题。"
+    },
+    "love.window.hasFocus": {
+        "prefix": "love.window.hasFocus",
+        "body": "love.window.hasFocus()",
+        "description": "检查游戏窗口是否具有键盘焦点。"
+    },
+    "love.window.hasMouseFocus": {
+        "prefix": "love.window.hasMouseFocus",
+        "body": "love.window.hasMouseFocus()",
+        "description": "检查游戏窗口是否具有鼠标焦点。"
+    },
+    "love.window.isCreated": {
+        "prefix": "love.window.isCreated",
+        "body": "love.window.isCreated()",
+        "description": "检查窗口是否已创建。"
+    },
+    "love.window.isDisplaySleepEnabled": {
+        "prefix": "love.window.isDisplaySleepEnabled",
+        "body": "love.window.isDisplaySleepEnabled()",
+        "description": "获取程序运行时是否允许显示器进入睡眠状态。默认情况下，显示器睡眠是被禁用的。如果允许显示器睡眠，某些类型的输入（例如，游戏手柄按钮按下）可能无法阻止显示器进入睡眠状态。"
+    },
+    "love.window.isVisible": {
+        "prefix": "love.window.isVisible",
+        "body": "love.window.isVisible()",
+        "description": "检查游戏窗口是否可见。如果窗口没有最小化并且程序没有隐藏，则认为窗口是可见的。"
+    },
+    "love.window.maximize": {
+        "prefix": "love.window.maximize",
+        "body": "love.window.maximize()",
+        "description": "使窗口尽可能大。如果窗口不可调整大小，则此函数无效，因为它本质上是程序性地按下窗口的“最大化”按钮。"
+    },
+    "love.window.minimize": {
+        "prefix": "love.window.minimize",
+        "body": "love.window.minimize()",
+        "description": "最小化窗口到系统的任务栏/停靠栏。"
+    },
+    "love.window.requestAttention": {
+        "prefix": "love.window.requestAttention",
+        "body": "love.window.requestAttention(${1:continuous (boolean)})",
+        "description": "如果窗口不在前台，会导致窗口请求用户的注意。在Windows中，任务栏图标会闪烁；在OS X中，Dock图标会弹跳。"
+    },
+    "love.window.setDisplaySleepEnabled": {
+        "prefix": "love.window.setDisplaySleepEnabled",
+        "body": "love.window.setDisplaySleepEnabled(${1:enable (boolean)})",
+        "description": "设置程序运行时是否允许显示器进入睡眠状态。默认情况下，显示器睡眠是被禁用的。如果允许显示器睡眠，某些类型的输入（例如，游戏手柄按钮按下）可能无法阻止显示器进入睡眠状态。"
+    },
+    "love.window.setFullscreen": {
+        "prefix": "love.window.setFullscreen",
+        "body": "love.window.setFullscreen(${1:fullscreen (boolean)})",
+        "description": "进入或退出全屏模式。当进入全屏模式时，如果连接了多个显示器，将根据窗口当前所在的显示器选择使用的显示器。如果进入全屏模式，窗口大小与显示器的显示模式不匹配（在普通全屏模式下）或者窗口大小与桌面大小不匹配（在“桌面”全屏模式下），窗口将被适当调整大小。当使用此函数退出全屏模式时，窗口将恢复到原始大小。"
+    },
+    "love.window.setIcon": {
+        "prefix": "love.window.setIcon",
+        "body": "love.window.setIcon(${1:imagedata (ImageData)})",
+        "description": "设置窗口图标，直到游戏退出。并非所有操作系统都支持非常大的图标图像。"
+    },
+    "love.window.setMode": {
+        "prefix": "love.window.setMode",
+        "body": "love.window.setMode(${1:width (number)}, ${2:height (number)}, ${3:flags (table)})",
+        "description": "设置窗口的显示模式和属性。如果宽度或高度为0，setMode将使用桌面的宽度和高度。更改显示模式可能会有副作用：例如，画布将被清除，发送到着色器的值将被擦除。确保事先保存画布的内容，或者在需要时重新绘制它们。"
+    },
+    "love.window.setPosition": {
+        "prefix": "love.window.setPosition",
+        "body": "love.window.setPosition(${1:x (number)}, ${2:y (number)}, ${3:display (number)})",
+        "description": "设置窗口在屏幕上的位置。窗口位置是在指定显示器的坐标空间中。"
+    },
+    "love.window.setTitle": {
+        "prefix": "love.window.setTitle",
+        "body": "love.window.setTitle(${1:title (string)})",
+        "description": "设置窗口标题。"
+    },
+    "love.window.showMessageBox": {
+        "prefix": "love.window.showMessageBox",
+        "body": "love.window.showMessageBox(${1:title (string)}, ${2:message (string)}, ${3:type (MessageBoxType)}, ${4:attachtowindow (boolean)})",
+        "description": "在love窗口上方显示一个消息框对话框。消息框包含标题、可选文本和按钮。"
+    },
+    "love.window.toPixels": {
+        "prefix": "love.window.toPixels",
+        "body": "love.window.toPixels(${1:value (number)})",
+        "description": "将一个数字从密度无关单位转换为像素。窗口内的像素密度可能大于（或小于）窗口的“大小”。例如，在启用了高dpi窗口标志的Mac OS X上的视网膜屏幕上，窗口可能占据与800x600窗口相同的物理大小，但窗口内部区域使用1600x1200像素。在这种情况下，love.window.toPixels(800)将返回1600。这用于将坐标从用户期望它们在屏幕上显示的大小转换为像素。love.window.fromPixels则做相反的操作。必须启用高dpi窗口标志才能在Mac OS X和iOS上使用Retina屏幕的全部像素密度。该标志目前在Windows和Linux上无效，在Android上则实际上始终启用。大多数LÖVE函数返回的值和期望的参数是以像素而不是密度无关单位来表示的。"
+    }
+}
