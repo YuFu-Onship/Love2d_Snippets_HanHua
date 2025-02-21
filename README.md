@@ -1,8 +1,10 @@
-以下是插件汉化后的预览效果:
-![预览效果](https://github.com/user-attachments/assets/170f0ecb-4ad3-4da4-a358-a1428c3a6333)
-1.下载并安装Love2d Snippets插件
-2.将json文件复制到C:\Users\UserName\.vscode\extensions\pixelwar.love2dsnippets-2.0.0\snippets文件夹下即可,不同用户的路径会有些许差异,可以使用everything工具快速定位到目标路径
-3.重启vscode
 
-其他:
-  我是借用了ai工具进行翻译的,一些地方可能会差点意思,不过聊胜于无.
+Love2d Snippets 汉化版
+以下是插件汉化后的预览效果: 预览效果
+
+安装步骤
+下载并安装 Love2d Snippets 插件。
+将 json 文件复制到 C:\Users\UserName\.vscode\extensions\pixelwar.love2dsnippets-2.0.0\snippets 文件夹下。不同用户的路径会有些许差异，可以使用 Everything 工具快速定位。
+重启 VSCode。
+其他说明
+本项目使用 AI 工具进行翻译，部分地方可能存在翻译不准确的情况，但总体上仍然可以提高使用体验。
